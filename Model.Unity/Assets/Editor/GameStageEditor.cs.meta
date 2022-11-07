@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 8bc7f50c6c8e5b24e807302a45965c41
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - _gameStageConfig: {fileID: 11400000, guid: 31c5c761c5139884090eb071643c920a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

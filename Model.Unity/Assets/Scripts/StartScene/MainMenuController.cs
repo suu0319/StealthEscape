@@ -1,0 +1,70 @@
+using UnityEngine;
+using UnityEngine.UI;
+using GameLoading;
+using Manager;
+
+public class MainMenuController : MonoBehaviour
+{
+    [SerializeField]
+    private GameObject _mainMenu;
+
+    [SerializeField]
+    private GameObject _GameStage;
+
+    [SerializeField]
+    private Button _startBtn, _levelBtn, _quitBtn, _backBtn;
+
+    private void Awake()
+    {
+        InitMainMenuBtn();
+    }
+
+    /// <summary>
+    /// 開始遊戲
+    /// </summary>
+    private void StartGame()
+    {
+        GameLoadingPanel.Instance.gameObject.SetActive(true);
+        GameLoadingAsync.Instance.LoadGame("Desert");
+        GameStateController.Instance.SwitchGameSceneState();
+    }
+
+    /// <summary>
+    /// 返回主選單UI
+    /// </summary>
+    private void BackMainMenu() 
+    {
+        _GameStage.SetActive(false);
+        _mainMenu.SetActive(true);
+        GameStateController.Instance.SwitchMainMenuState();
+    }
+
+    /// <summary>
+    /// 開啟選擇關卡UI
+    /// </summary>
+    private void ChooseLevel() 
+    {
+        _mainMenu.SetActive(false);
+        _GameStage.SetActive(true);
+        GameStateController.Instance.SwitchGameStageState();
+    }
+
+    /// <summary>
+    /// 退出遊戲
+    /// </summary>
+    private void QuitGame() 
+    {
+        Application.Quit();
+    }
+
+    /// <summary>
+    /// 主選單按鈕註冊OnClick事件
+    /// </summary>
+    private void InitMainMenuBtn() 
+    {
+        _startBtn.onClick.AddListener(StartGame);
+        _levelBtn.onClick.AddListener(ChooseLevel);
+        _quitBtn.onClick.AddListener(QuitGame);
+        _backBtn.onClick.AddListener(BackMainMenu);
+    }
+}

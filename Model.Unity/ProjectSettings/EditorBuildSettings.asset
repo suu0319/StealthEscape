@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 0b2e01c0b71ef4a4e809f959ec24c2b2
+  - enabled: 1
+    path: Assets/Scenes/Desert.unity
+    guid: 9ba92be8ed643d248b59c933e213c4c0
+  - enabled: 1
+    path: Assets/Scenes/DesertEscape.unity
+    guid: 1c876ec7f3b4e2e44af914200cb9eb40
+  m_configObjects: {}
