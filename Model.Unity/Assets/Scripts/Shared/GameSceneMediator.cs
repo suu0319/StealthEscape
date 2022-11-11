@@ -55,14 +55,6 @@ public class GameSceneMediator : BaseMediator
     }
 
     /// <summary>
-    /// 畫面淡出
-    /// </summary>
-    internal virtual void ScreenFadeOut()
-    {
-        GameLoadingPanel.Instance.ScreenFadeOut();
-    }
-
-    /// <summary>
     /// 顯示遊戲場景資料
     /// </summary>
     protected virtual void ShowGameSceneData() { }

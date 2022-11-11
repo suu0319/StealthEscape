@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using GameOver;
 using Manager;
 
 namespace Player 
@@ -33,8 +32,6 @@ namespace Player
         [Header("Operate Button")]
         [SerializeField]
         internal Button AttackBtn;
-        [SerializeField]
-        internal Button OptionBtn;
 
         [Header("Position")]
         [SerializeField]
@@ -156,10 +153,8 @@ namespace Player
             {
                 IsDeath = true;
                 _characterController.enabled = false;
-                RemoveBtnOnClick();
                 _playerStateController.SwitchDeathState();
-                GameOverPanel.Instance.AppearGameOverScreen();
-                GameStateController.Instance.SwitchGameOverState();
+                RemoveBtnOnClick();
             }
         }
     }

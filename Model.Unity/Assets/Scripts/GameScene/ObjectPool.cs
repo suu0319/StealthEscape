@@ -146,7 +146,6 @@ namespace ObjectPool
             objectToSpawn.transform.rotation = rotation;
 
             objectToSpawn.SetActive(true);
-            poolDict[name].Enqueue(objectToSpawn);
 
             return objectToSpawn;
         }

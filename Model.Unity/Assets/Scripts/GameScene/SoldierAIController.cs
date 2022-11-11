@@ -247,6 +247,17 @@ namespace Enemy
             isAttack = false;
         }
 
+        #region 物件池測試
+        /// <summary>
+        /// 回收士兵
+        /// </summary>
+        [ContextMenu("Recycle Soldier")]
+        private void RecycleSoldier()
+        {
+            ObjectPool.ObjectPool.Instance.RecycleToPool("Soldier", this.gameObject);
+        }
+        #endregion
+
 #if UNITY_EDITOR
         /// <summary>
         /// 繪製扇形範圍

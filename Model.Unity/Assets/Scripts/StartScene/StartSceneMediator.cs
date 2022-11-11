@@ -25,7 +25,7 @@ namespace Mediator
 
         private void Start()
         {
-            GameLoadingPanel.Instance.ScreenFadeOut();
+            ScreenFadeOut();
         }
 
         /// <summary>

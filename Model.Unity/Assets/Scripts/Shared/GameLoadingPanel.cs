@@ -57,7 +57,7 @@ namespace GameLoading
         /// <summary>
         /// 讀取畫面淡入
         /// </summary>
-        internal void LoadingFadeIn()
+        internal void ScreenFadeIn()
         {
             _canvasGroup.alpha = 0f;
             DOTween.To(() => _canvasGroup.alpha, x => _canvasGroup.alpha = x, 1, 2f).SetEase(Ease.Linear);

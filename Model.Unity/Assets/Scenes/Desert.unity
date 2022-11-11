@@ -3028,11 +3028,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soldierParentObj: {fileID: 2114907075}
-  soldierName: Soldier
   _spikeTrapParentObj: {fileID: 1031438096}
-  spikeTrapName: SpikeTrap
   _shootTrapParentObj: {fileID: 1889865013}
-  shootTrapName: ShootTrap
 --- !u!1 &1111320960 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8101986421274794323, guid: 074eaddbbb4414347823cdd39f7a7676, type: 3}

@@ -46,7 +46,7 @@ namespace GameLoading
             Debug.Log("載入場景:" + sceneName);
 
             _loadingImage.raycastTarget = true;
-            GameLoadingPanel.Instance.LoadingFadeIn();
+            GameLoadingPanel.Instance.ScreenFadeIn();
             StartCoroutine(LoadingScreenTimer(sceneName));
         }
 

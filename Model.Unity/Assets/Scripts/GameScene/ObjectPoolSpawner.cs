@@ -259,5 +259,16 @@ namespace ObjectPool
                 }
             }
         }
+
+        #region 物件池測試
+        /// <summary>
+        /// 生成士兵
+        /// </summary>
+        [ContextMenu("Spawn Soldier")]
+        private void SpawnSoldier()
+        {
+            ObjectPool.Instance.SpawnFromPool("Soldier", new Vector3(0, 0, 0), Quaternion.identity);
+        }
+        #endregion
     }
 }

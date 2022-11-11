@@ -59,7 +59,6 @@ namespace OptionMenu
         /// </summary>
         internal void OpenOptionMenu()
         {
-            Time.timeScale = 0f;
             _optionMenu.SetActive(true);
             GameStateController.Instance.SwitchGameStopState();
         }
@@ -69,7 +68,6 @@ namespace OptionMenu
         /// </summary>
         internal void ContinueGame()
         {
-            Time.timeScale = 1f;
             _optionMenu.SetActive(false);
             GameStateController.Instance.SwitchGameSceneState();
         }
@@ -79,7 +77,6 @@ namespace OptionMenu
         /// </summary>
         internal void BackMainMenu()
         {
-            Time.timeScale = 1f;
             GameLoadingPanel.Instance.gameObject.SetActive(true);
             GameLoadingAsync.Instance.LoadGame("StartScene");
             GameStateController.Instance.SwitchMainMenuState();

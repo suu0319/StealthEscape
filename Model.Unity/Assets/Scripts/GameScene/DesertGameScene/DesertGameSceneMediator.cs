@@ -20,11 +20,11 @@ namespace Mediator
 
         private void Start()
         {
-            ScreenFadeOut();
             ShowGameSceneData();
             InitOptionMenu();
             InitGameOverMenu();
             GetSceneIndex();
+            ScreenFadeOut();
         }
 
         /// <summary>
