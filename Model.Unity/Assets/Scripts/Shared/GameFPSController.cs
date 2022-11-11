@@ -12,7 +12,7 @@ namespace Manager
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             CalFPS();
         }

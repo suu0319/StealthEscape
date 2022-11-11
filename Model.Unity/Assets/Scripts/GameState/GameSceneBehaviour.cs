@@ -1,5 +1,4 @@
 using UnityEngine;
-using Mediator;
 
 public class GameSceneBehaviour : StateMachineBehaviour
 {

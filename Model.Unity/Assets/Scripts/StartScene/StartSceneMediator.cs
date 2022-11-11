@@ -6,17 +6,13 @@ namespace Mediator
 {
     public class StartSceneMediator : BaseMediator
     {
-        private static StartSceneMediator _instance;
-        public static StartSceneMediator Instance 
-        {
-            get 
-            {
-                return _instance;
-            }
-        }
+        public static StartSceneMediator Instance;
 
+        [Header("Config")]
         [SerializeField]
         internal GameStageConfig GameStageConfig;
+
+        [Header("Script")]
         [SerializeField]
         internal GameStageController GameStageController;
         [SerializeField]
@@ -37,13 +33,13 @@ namespace Mediator
         /// </summary>
         protected override void InitSingleton()
         {
-            if (_instance != null && _instance != this)
+            if (Instance != null && Instance != this)
             {
                 Destroy(this.gameObject);
             }
             else
             {
-                _instance = this;
+                Instance = this;
             }
         }
     }

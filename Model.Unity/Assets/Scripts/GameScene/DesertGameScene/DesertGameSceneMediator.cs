@@ -6,15 +6,9 @@ namespace Mediator
 {
     public class DesertGameSceneMediator : GameSceneMediator
     {
-        private static DesertGameSceneMediator _instance;
-        public static DesertGameSceneMediator Instance
-        {
-            get 
-            {
-                return _instance;
-            }
-        }
+        public static DesertGameSceneMediator Instance;
 
+        [Header("Script")]
         [SerializeField]
         internal PintuPuzzleTrigger PintuPuzzleTrigger;
 
@@ -38,14 +32,14 @@ namespace Mediator
         /// </summary>
         protected override void InitSingleton()
         {
-            if (_instance != null && _instance != this)
+            if (Instance != null && Instance != this)
             {
                 Destroy(this.gameObject);
             }
             else
             {
-                _instance = this;
-            }   
+                Instance = this;
+            }
         }
 
         /// <summary>
@@ -53,17 +47,38 @@ namespace Mediator
         /// </summary>
         protected override void ShowGameSceneData() 
         {
-            Debug.Log("作弊模式: " + GameManager.Instance.GameSceneData.IsCheat);
-            Debug.Log("玩家速度: " + GameManager.Instance.GameSceneData.PlayerSpeed);
-            Debug.Log("關卡名稱: " + GameManager.Instance.GameSceneData.Name);
-            Debug.Log("關卡難度: " + GameManager.Instance.GameSceneData.Level);
-            Debug.Log("關卡音樂: " + GameManager.Instance.GameSceneData.BGM);
-            Debug.Log("士兵敵人數量: " + GameManager.Instance.GameSceneData.SoldierEnemyAmount);
-            Debug.Log("士兵敵人速度: " + GameManager.Instance.GameSceneData.SoldierEnemySpeed);
-            Debug.Log("地刺陷阱數量: " + GameManager.Instance.GameSceneData.SpikeTrapAmount);
-            Debug.Log("地刺陷阱速度: " + GameManager.Instance.GameSceneData.SpikeTrapInterval);
-            Debug.Log("箭矢陷阱數量: " + GameManager.Instance.GameSceneData.ShootTrapAmount);
-            Debug.Log("箭矢陷阱速度: " + GameManager.Instance.GameSceneData.ShootTrapInterval);
+            GameSceneData gameSceneData = GameManager.Instance.GameSceneData;
+
+            Debug.Log("作弊模式: " + gameSceneData.IsCheat);
+            Debug.Log("玩家速度: " + gameSceneData.PlayerSpeed);
+            Debug.Log("關卡名稱: " + gameSceneData.Name);
+            Debug.Log("關卡音樂: " + gameSceneData.BGM);
+
+            if (!gameSceneData.IsManual)
+            {
+                Debug.Log("關卡難度: " + gameSceneData.Level);
+            }
+
+            Debug.Log("士兵敵人數量: " + gameSceneData.SoldierAmount);
+
+            if (!gameSceneData.IsManual) 
+            {
+                Debug.Log("士兵敵人速度: " + gameSceneData.SoldierSpeed);
+            }
+
+            Debug.Log("地刺陷阱數量: " + gameSceneData.SpikeTrapAmount);
+
+            if (!gameSceneData.IsManual)
+            {
+                Debug.Log("地刺陷阱間隔: " + gameSceneData.SpikeTrapInterval);
+            }
+
+            Debug.Log("箭矢陷阱數量: " + gameSceneData.ShootTrapAmount);
+
+            if (!gameSceneData.IsManual)
+            {
+                Debug.Log("箭矢陷阱間隔: " + gameSceneData.ShootTrapInterval);
+            }
         }
     }
 }

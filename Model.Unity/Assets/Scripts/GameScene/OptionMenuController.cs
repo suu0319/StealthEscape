@@ -7,40 +7,41 @@ namespace OptionMenu
 {
     public class OptionMenuController : MonoBehaviour
     {
-        private static OptionMenuController _instance;
-        public static OptionMenuController Instance
-        {
-            get
-            {
-                return _instance;
-            }
-        }
+        public static OptionMenuController Instance;
+
+        [Header("GameObject")]
+        [SerializeField]
+        private GameObject _optionMenu;
+
+        [Header("Operate Button")]
+        [SerializeField]
+        internal Button OpenBtn;
+        [SerializeField]
+        internal Button ContinueBtn;
+        [SerializeField]
+        internal Button BackMainMenuBtn;
+        [SerializeField]
+        internal Button QuitGameBtn;
 
         private void Awake()
         {
-            Init();
+            InitSingleton();
         }
 
         /// <summary>
         /// Singleton初始化
         /// </summary>
-        private void Init()
+        private void InitSingleton()
         {
-            if (_instance != null && _instance != this)
+            if (Instance != null && Instance != this)
             {
                 Destroy(this.gameObject);
             }
             else
             {
-                _instance = this;
+                Instance = this;
             }
         }
-
-        [SerializeField]
-        private GameObject _optionMenu;
-
-        [SerializeField]
-        internal Button OpenBtn, ContinueBtn, BackMainMenuBtn, QuitGameBtn;
 
         /// <summary>
         /// 註冊選項選單Button OnClick事件

@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - m_ViewDataDictionary: {instanceID: 0}
   - _gameStageConfig: {fileID: 11400000, guid: 31c5c761c5139884090eb071643c920a, type: 2}
+  - _patrolPointsConfig: {fileID: 11400000, guid: b6404747c3263db4791dc31770e6b056, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

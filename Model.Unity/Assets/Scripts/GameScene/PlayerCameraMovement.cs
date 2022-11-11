@@ -5,6 +5,7 @@ namespace Player
 {
     public class PlayerCameraMovement : MonoBehaviour
     {
+        [Header("Touch Sensitivity")]
         [SerializeField]
         private float touchSensitivity_x = 30f;
         [SerializeField]

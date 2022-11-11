@@ -8,11 +8,13 @@ using Manager;
 
 public class GameSceneMediator : BaseMediator
 {
+    [Header("Audio")]
     [SerializeField]
     protected AudioSource AudioSource;
 
+    [Header("SceneData")]
     [SerializeField]
-    public string SceneName { get; set; }
+    public string SceneName;
 
     protected override void InitSingleton() { }
 
@@ -21,6 +23,7 @@ public class GameSceneMediator : BaseMediator
     /// </summary>
     protected virtual void InitGameSceneData()
     {
+        GameManager.Instance.GetStageIndex();
         GameManager.Instance.InitGameSceneData();
 
         AudioSource.clip = GameManager.Instance.GameSceneData.BGM;

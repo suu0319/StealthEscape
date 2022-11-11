@@ -29,13 +29,15 @@ namespace GameStage
         /// </summary>
         private void InitScrollView()
         {
-            for (int i = 0; i < StartSceneMediator.Instance.GameStageConfig.StageDataList.Count; i++)
+            List<GameStageData> gameStageDataList = StartSceneMediator.Instance.GameStageConfig.StageDataList;
+
+            for (int i = 0; i < gameStageDataList.Count; i++)
             {
                 _datas.Add(new GameStageItemData()
                 {
                     Idx = i,
-                    BtnImage = StartSceneMediator.Instance.GameStageConfig.StageDataList[i].Image,
-                    Title = StartSceneMediator.Instance.GameStageConfig.StageDataList[i].Title
+                    BtnImage = gameStageDataList[i].Image,
+                    Title = gameStageDataList[i].SceneName
                 }); ;
             }
 

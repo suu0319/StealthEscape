@@ -1,38 +1,30 @@
 using System.Collections;
 using UnityEngine;
 using Player;
-using Manager;
 
 namespace Trap 
 {
     public class ShootTrap : BaseTrap
     {
         [SerializeField]
+        internal float Speed = 100f;
+
+        [Header("Rigidbody")]
+        [SerializeField]
         private Rigidbody _shootTrapRig;
 
-        [SerializeField]
-        private float force = 100f;
-
+        [Header("Position")]
         [SerializeField]
         private Vector3 originalPos;
 
         private void Start()
         {
-            Init();
             StartCoroutine(OpenCloseTrap());
         }
 
         protected override void OnTriggerEnter(Collider other)
         {
             EnterTrapTrigger(other);
-        }
-
-        /// <summary>
-        /// 初始化
-        /// </summary>
-        protected override void Init()
-        {
-            interval = GameManager.Instance.GameSceneData.ShootTrapInterval;
         }
 
         /// <summary>
@@ -57,7 +49,7 @@ namespace Trap
         private void Shoot()
         {
             Vector3 fwd = transform.TransformDirection(Vector3.up);
-            _shootTrapRig.velocity = fwd * force;
+            _shootTrapRig.velocity = fwd * Speed;
         }
 
         /// <summary>
@@ -76,7 +68,7 @@ namespace Trap
         /// <returns></returns>
         protected override IEnumerator OpenCloseTrap()
         {
-            yield return new WaitForSeconds(interval);
+            yield return new WaitForSeconds(Interval);
             _audioSource.Play();
             Shoot();
         }

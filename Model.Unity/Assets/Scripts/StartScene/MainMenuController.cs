@@ -5,14 +5,21 @@ using Manager;
 
 public class MainMenuController : MonoBehaviour
 {
+    [Header("GameObject")]
     [SerializeField]
     private GameObject _mainMenu;
-
     [SerializeField]
     private GameObject _GameStage;
 
+    [Header("Operate Button")]
     [SerializeField]
-    private Button _startBtn, _levelBtn, _quitBtn, _backBtn;
+    private Button _startBtn;
+    [SerializeField]
+    private Button _levelBtn;
+    [SerializeField]
+    private Button _quitBtn;
+    [SerializeField]
+    private Button _backBtn;
 
     private void Awake()
     {

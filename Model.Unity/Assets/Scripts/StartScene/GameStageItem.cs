@@ -8,12 +8,15 @@ namespace GameStage
 {
     public class GameStageItem : MonoBehaviour, IScrollCell
     {
+        [Header("Item Image")]
         [SerializeField]
         private Image _btnImage;
 
+        [Header("Item Button")]
         [SerializeField]
         private Button _btn;
 
+        [Header("Item Text")]
         [SerializeField]
         private Text _title;
 

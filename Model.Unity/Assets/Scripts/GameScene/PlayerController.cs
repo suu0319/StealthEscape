@@ -7,6 +7,9 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
+        public static PlayerController Instance;
+
+        [Header("Script")]
         [SerializeField]
         private CharacterController _characterController;
 
@@ -16,38 +19,36 @@ namespace Player
         [SerializeField]
         private PlayerCameraMovement _cameraMovement;
 
-        [SerializeField]
-        private BoxCollider _detectAttackTrigger;
-
+        [Header("Animation")]
         [SerializeField]
         internal Animator Animator;
 
+        [Header("Audio")]
         [SerializeField]
         private AudioSource _audioSource;
 
         [SerializeField]
         private AudioClip[] _audioClips;
 
+        [Header("Operate Button")]
+        [SerializeField]
+        internal Button AttackBtn;
+        [SerializeField]
+        internal Button OptionBtn;
+
+        [Header("Position")]
         [SerializeField]
         internal Transform PlayerTransform;
 
+        [Header("Other")]
         [SerializeField]
-        internal Button AttackBtn, OptionBtn;
-
+        private BoxCollider _detectAttackTrigger;
+        
         internal bool IsDeath = false;
-
-        private static PlayerController _instance;
-        public static PlayerController Instance
-        {
-            get
-            {
-                return _instance;
-            }
-        }
 
         private void Awake()
         {
-            Init();
+            InitSingleton();
             InitBtnOnClick();
         }
 
@@ -59,15 +60,15 @@ namespace Player
         /// <summary>
         /// Singleton初始化
         /// </summary>
-        private void Init()
+        private void InitSingleton()
         {
-            if (_instance != null && _instance != this)
+            if (Instance != null && Instance != this)
             {
                 Destroy(this.gameObject);
             }
             else
             {
-                _instance = this;
+                Instance = this;
             }
         }
 

@@ -4,6 +4,7 @@ namespace Player
 {
     public class PlayerStateController : MonoBehaviour
     {
+        [Header("Animation")]
         [SerializeField]
         private Animator _animator;
 

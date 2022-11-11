@@ -2758,18 +2758,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf47ed6fbcc35a14495e1a54c0fc85f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _soldierAIController: {fileID: 8719508983362485258}
   _soldierAIStateController: {fileID: 3960982582606747440}
-  _agent: {fileID: 7514488641338393144}
+  Agent: {fileID: 7514488641338393144}
   _animator: {fileID: 3291007380683796669}
   _audioSource: {fileID: 8852071982936239568}
   _audioClips:
   - {fileID: 8300000, guid: d13e3605414e8534593682c16e9d2090, type: 3}
   - {fileID: 8300000, guid: f867b21b239fdc24fb891fd55effdea2, type: 3}
-  _patrolPoint:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  playerPosition: {x: 0, y: 0, z: 0}
+  PatrolPoint: []
   _alertSprite: {fileID: 1113319046}
   _distance: 0
   _alertRadius: 6.55

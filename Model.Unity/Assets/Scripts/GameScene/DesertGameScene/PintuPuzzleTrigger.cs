@@ -5,12 +5,15 @@ namespace Puzzle
 {
     public class PintuPuzzleTrigger : MonoBehaviour
     {
+        [Header("Audio")]
         [SerializeField]
         internal AudioSource AudioSource;
 
+        [Header("GameObject")]
         [SerializeField]
         internal GameObject PintuPuzzleObj;
 
+        [Header("Operate Button")]
         [SerializeField]
         internal Button EventBtn;
 

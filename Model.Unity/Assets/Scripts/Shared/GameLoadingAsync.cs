@@ -7,15 +7,9 @@ namespace GameLoading
 {
     public class GameLoadingAsync : MonoBehaviour
     {
-        private static GameLoadingAsync _instance;
-        public static GameLoadingAsync Instance 
-        {
-            get 
-            {
-                return _instance;
-            }
-        }
+        public static GameLoadingAsync Instance;
 
+        [Header("Loading Image")]
         [SerializeField]
         private Image _loadingImage;
 
@@ -25,21 +19,21 @@ namespace GameLoading
 
         private void Awake()
         {
-            Init();
+            InitSingleton();
         }
 
         /// <summary>
         /// Singleton初始化
         /// </summary>
-        private void Init()
+        private void InitSingleton()
         {
-            if (_instance != null && _instance != this)
+            if (Instance != null && Instance != this)
             {
                 Destroy(this.gameObject);
             }
             else
             {
-                _instance = this;
+                Instance = this;
             }
         }
 

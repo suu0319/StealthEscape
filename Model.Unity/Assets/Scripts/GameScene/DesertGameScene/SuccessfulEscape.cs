@@ -1,17 +1,21 @@
 using UnityEngine;
 using DG.Tweening;
 using GameLoading;
-using Mediator;
 using Manager;
 
 public class SuccessfulEscape : MonoBehaviour
 {
+    [Header("GameObject")]
     [SerializeField]
     private GameObject _successfulEscapePanel;
 
+    [Header("Animation")]
     [SerializeField]
-    private Animator _boatAnimator, _playerAnimator;
+    private Animator _boatAnimator;
+    [SerializeField]
+    private Animator _playerAnimator;
 
+    [Header("CanvasGroup")]
     [SerializeField]
     private CanvasGroup _canvasGroupBackground;
 
@@ -25,7 +29,7 @@ public class SuccessfulEscape : MonoBehaviour
     /// </summary>
     private void Init()
     {
-        DesertGameSceneMediator.Instance.ScreenFadeOut();
+        GameLoadingPanel.Instance.ScreenFadeOut();
 
         var time = 0;
 

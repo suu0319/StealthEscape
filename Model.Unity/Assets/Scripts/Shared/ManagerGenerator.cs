@@ -4,9 +4,9 @@ namespace Manager
 {
     public class ManagerGenerator : MonoBehaviour
     {
+        [Header("GameObject")]
         [SerializeField]
         private GameObject _gameManager;
-
         [SerializeField]
         private GameObject _canvas;
 

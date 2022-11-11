@@ -1,32 +1,23 @@
 using System.Collections;
 using UnityEngine;
 using Player;
-using Manager;
 
 namespace Trap 
 {
     public class SpikeTrap : BaseTrap
     {
+        [Header("Animation")]
         [SerializeField]
         private Animator _animator;
 
         private void Start()
         {
-            Init();
             StartCoroutine(OpenCloseTrap());
         }
 
         protected override void OnTriggerEnter(Collider other)
         {
             EnterTrapTrigger(other);
-        }
-
-        /// <summary>
-        /// 初始化
-        /// </summary>
-        protected override void Init()
-        {
-            interval = GameManager.Instance.GameSceneData.SpikeTrapInterval;
         }
 
         /// <summary>
@@ -49,9 +40,9 @@ namespace Trap
         {
             _audioSource.Play();
             _animator.SetTrigger("Open");
-            yield return new WaitForSeconds(interval);
+            yield return new WaitForSeconds(Interval);
             _animator.SetTrigger("Close");
-            yield return new WaitForSeconds(interval);
+            yield return new WaitForSeconds(Interval);
 
             StartCoroutine(OpenCloseTrap());
         }

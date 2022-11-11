@@ -5,6 +5,7 @@ namespace Player
 {
     public class PlayerMovement : MonoBehaviour
     {
+        [Header("Script")]
         [SerializeField]
         private CharacterController _characterController;
 
@@ -14,26 +15,29 @@ namespace Player
         [SerializeField]
         internal FixedJoystick Joystick;
 
+        [Header("Transform")]
         [SerializeField]
         private Transform _camera;
         [SerializeField]
         private Transform _groundCheck;
 
-        [SerializeField]
-        private LayerMask groundMask;
-
+        [Header("Float Value")]
         [SerializeField]
         private float speed = 6f;
         private float gravity = -9.81f;
         private float groundDistance = 0.3f;
-
         [SerializeField]
         private float turnSmoothTime = 0.1f;
         private float turnSmoothVelocity;
 
+        [Space]
+        [Header("Other")]
+        [SerializeField]
+        private LayerMask groundMask;
         [SerializeField]
         private bool isGrounded = true;
 
+        [Header("Vector3")]
         private Vector3 velocity;
         internal Vector3 Direction;
 

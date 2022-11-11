@@ -4,9 +4,11 @@ using DG.Tweening;
 
 public class GameStagePanel : MonoBehaviour
 {
+    [Header("Text")]
     [SerializeField]
     private Text _failLoadMsg;
 
+    [Header("CanvasGroup")]
     [SerializeField]
     internal CanvasGroup CanvasGroup;
 

@@ -1,31 +1,39 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEditor;
 using DG.Tweening;
 using Player;
-using Manager;
 
 namespace Enemy
 {
     public class SoldierAIController : MonoBehaviour
     {
+        [Header("Script")]
+        [SerializeField]
+        private SoldierAIController _soldierAIController;
         [SerializeField]
         private SoldierAIStateController _soldierAIStateController;
+        private PlayerController _playerController;
 
+        [Header("NavMesh")]
         [SerializeField]
-        private NavMeshAgent _agent;
+        internal NavMeshAgent Agent;
 
+        [Header("Animation")]
         [SerializeField]
         private Animator _animator;
 
+        [Header("Audio")]
         [SerializeField]
         private AudioSource _audioSource;
 
         [SerializeField]
         private AudioClip[] _audioClips;
 
+        [Header("DestPoint")]
         [SerializeField]
-        private Transform[] _patrolPoint;
+        internal List<Vector3> PatrolPoint = new List<Vector3>();
 
         private int destpoints = 0;
 
@@ -36,6 +44,7 @@ namespace Enemy
         private bool isDeath = false;
 
         #region 扇形範圍相關variable
+        [Header("AlertRange")]
         [SerializeField]
         private SpriteRenderer _alertSprite;
 
@@ -73,7 +82,7 @@ namespace Enemy
         /// </summary>
         private void Init()
         {
-            _agent.speed = GameManager.Instance.GameSceneData.SoldierEnemySpeed;
+            _playerController = PlayerController.Instance;
             _forwardAlertAngle = _alertAngle / 2;
             _alertSprite.color = _patrolStateColor;
         }
@@ -90,7 +99,7 @@ namespace Enemy
             {
                 TrackState();
             }
-            else if (_agent.remainingDistance < 0.2f)
+            else if (Agent.remainingDistance < 0.2f)
             {
                 PatrolState();
             }
@@ -113,8 +122,8 @@ namespace Enemy
         /// </summary>
         private void CalAlertSector()
         {
-            _distance = Vector3.Distance(transform.position, PlayerController.Instance.PlayerTransform.position);
-            _positionDistance = PlayerController.Instance.PlayerTransform.position - transform.position;
+            _distance = Vector3.Distance(transform.position, _playerController.PlayerTransform.position);
+            _positionDistance = _playerController.PlayerTransform.position - transform.position;
             _angle = Vector3.Angle(_positionDistance, transform.forward);
         }
 
@@ -123,8 +132,8 @@ namespace Enemy
         /// </summary>
         private void PatrolState()
         {
-            _agent.SetDestination(_patrolPoint[destpoints].position);
-            destpoints = (destpoints + 1) % _patrolPoint.Length;
+            Agent.SetDestination(PatrolPoint[destpoints]);
+            destpoints = (destpoints + 1) % PatrolPoint.Count;
         }
 
         /// <summary>
@@ -134,18 +143,19 @@ namespace Enemy
         {
             if (!_animator.GetBool("Track"))
             {
-                _agent.speed = GameManager.Instance.GameSceneData.SoldierEnemySpeed * 1.5f;
+                Agent.speed *= 1.5f;
                 _soldierAIStateController.SwitchTracklState();
             }
 
             _alertSprite.color = _trackStateColor;
-            _agent.SetDestination(PlayerController.Instance.PlayerTransform.position);
+            Agent.SetDestination(_playerController.PlayerTransform.position);
 
             if (PlayerController.Instance.IsDeath) 
             {
+                Agent.speed = 0f;
                 _soldierAIStateController.SwitchIdleState();
             }
-            else if ((!isAttack) && (_agent.remainingDistance < 2.5f))
+            else if ((!isAttack) && (Agent.remainingDistance < 2.5f))
             {
                 isAttack = true;
                 _soldierAIStateController.SwitchAttackState();
@@ -177,10 +187,10 @@ namespace Enemy
         {
             if (!isDeath) 
             {
-                if ((_distance <= 3f) && (!PlayerController.Instance.IsDeath))
+                if ((_distance <= 3f) && (!_playerController.IsDeath))
                 {
-                    _agent.speed = 0f;
-                    PlayerController.Instance.DetectDeath();
+                    Agent.speed = 0f;
+                    _playerController.DetectDeath();
                     _soldierAIStateController.SwitchIdleState();
                 }
             }
@@ -194,9 +204,9 @@ namespace Enemy
             if (!isDeath) 
             {
                 isDeath = true;
-                _agent.enabled = false;
+                Agent.enabled = false;
                 _soldierAIStateController.SwitchDeathState();
-                GetComponent<SoldierAIController>().enabled = false;
+                _soldierAIController.enabled = false;
             }
         }
 

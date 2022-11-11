@@ -4,15 +4,9 @@ namespace Manager
 {
     public class GameStateController : MonoBehaviour
     {
-        private static GameStateController _instance;
-        public static GameStateController Instance 
-        {
-            get 
-            {
-                return _instance;
-            }
-        }
+        public static GameStateController Instance;
 
+        [Header("Animation")]
         [SerializeField]
         private Animator _animator;
 
@@ -26,13 +20,13 @@ namespace Manager
         /// </summary>
         private void InitSingleton()
         {
-            if (_instance != null && _instance != this)
+            if (Instance != null && Instance != this)
             {
                 Destroy(this.gameObject);
             }
             else
             {
-                _instance = this;
+                Instance = this;
             }
         }
 

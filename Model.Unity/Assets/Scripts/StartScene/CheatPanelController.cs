@@ -5,6 +5,7 @@ public class CheatPanelController : MonoBehaviour
 {
     public static bool IsCheat = false;
 
+    [Header("Toggle")]
     [SerializeField]
     private Toggle cheatTogle;
 

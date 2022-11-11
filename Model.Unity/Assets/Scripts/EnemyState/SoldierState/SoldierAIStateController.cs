@@ -4,6 +4,7 @@ namespace Enemy
 {
     public class SoldierAIStateController : MonoBehaviour
     {
+        [Header("Animation")]
         [SerializeField]
         private Animator _animator;
 

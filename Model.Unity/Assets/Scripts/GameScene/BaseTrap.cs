@@ -5,18 +5,15 @@ namespace Trap
 {
     public abstract class BaseTrap : MonoBehaviour
     {
+        [Header("Audio")]
         [SerializeField]
         protected AudioSource _audioSource;
 
+        [Header("Float Value")]
         [SerializeField]
-        protected float interval = 2f;
+        internal float Interval;
 
         protected abstract void OnTriggerEnter(Collider other);
-
-        /// <summary>
-        /// 初始化
-        /// </summary>
-        protected abstract void Init();
 
         /// <summary>
         /// 進入陷阱(開)範圍

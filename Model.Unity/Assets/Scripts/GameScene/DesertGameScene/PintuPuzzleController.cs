@@ -9,12 +9,24 @@ namespace Puzzle
 {
 	public class PintuPuzzleController : MonoBehaviour
 	{
+		[Header("Player Operate Button")]
 		[SerializeField]
-		private GameObject _joyStick, _attackBtnObj, _optionBtnObj, _eventBtnObj, _closeBtnObj, _pintuPuzzleObj;
+		private GameObject _joyStick;
+		[SerializeField]
+		private GameObject _attackBtnObj;
+		[SerializeField]
+		private GameObject _optionBtnObj;
+		[SerializeField]
+		private GameObject _eventBtnObj;
+		[SerializeField]
+		private GameObject _closeBtnObj;
+		[SerializeField]
+		private GameObject _pintuPuzzleObj;
 
 		[SerializeField]
 		private GameObject[] _correctPintu;
 
+		[Header("Close Button")]
 		[SerializeField]
 		private Button _closeBtn;
 
@@ -89,16 +101,19 @@ namespace Puzzle
 
 				if (touch.phase == TouchPhase.Moved && raycastResults.Count > 0)
 				{
-					if (raycastResults[0].gameObject.tag == "PintuUI") 
+					GameObject raycastResultsFirst = raycastResults[0].gameObject;
+
+					if (raycastResultsFirst.tag == "PintuUI") 
 					{
-						raycastResults[0].gameObject.transform.position = Input.mousePosition;
+						raycastResultsFirst.transform.position = Input.mousePosition;
 					}
 
 					if (raycastResults.Count == 2)
 					{
-						int temp = raycastResults[0].gameObject.transform.GetSiblingIndex();
-						raycastResults[0].gameObject.transform.SetSiblingIndex(raycastResults[1].gameObject.transform.GetSiblingIndex());
-						raycastResults[1].gameObject.transform.SetSiblingIndex(temp);
+						GameObject raycastResultsSecond = raycastResults[1].gameObject;
+						int temp = raycastResultsFirst.transform.GetSiblingIndex();
+						raycastResultsFirst.transform.SetSiblingIndex(raycastResultsSecond.transform.GetSiblingIndex());
+						raycastResultsSecond.transform.SetSiblingIndex(temp);
 
 						if (VerifyPintuPuzzle()) 
 						{

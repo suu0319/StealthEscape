@@ -5,35 +5,31 @@ namespace GameOver
 {
     public class GameOverPanel : MonoBehaviour
     {
-        private static GameOverPanel _instance;
-        public static GameOverPanel Instance
-        {
-            get
-            {
-                return _instance;
-            }
-        }
+        public static GameOverPanel Instance;
 
+        [Header("CanvasGroup")]
         [SerializeField]
-        private CanvasGroup _canvasGroupBackground, _canvasGroupMenu;
+        private CanvasGroup _canvasGroupBackground;
+        [SerializeField]
+        private CanvasGroup _canvasGroupMenu;
 
         private void Awake()
         {
-            Init();
+            InitSingleton();
         }
 
         /// <summary>
         /// Singleton初始化
         /// </summary>
-        private void Init()
+        private void InitSingleton()
         {
-            if (_instance != null && _instance != this)
+            if (Instance != null && Instance != this)
             {
                 Destroy(this.gameObject);
             }
             else
             {
-                _instance = this;
+                Instance = this;
             }
         }
 

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae4a32dc957df84cb49c6468483328f, type: 3}
+  m_Name: SoldierPatrolPointsConfig
+  m_EditorClassIdentifier: 
+  PatrolPointsDataList:
+  - {fileID: 11400000, guid: d41446e840b97504c8549e16f3aaa241, type: 2}
+  - {fileID: 11400000, guid: 7e6934ae36dc4d043a4e78608f029db4, type: 2}
+  - {fileID: 11400000, guid: 9f67763e3c26ace4db534c1d14d28623, type: 2}
+  - {fileID: 11400000, guid: 40bbaeaa79a690741a7ef59285f887b4, type: 2}
+  - {fileID: 11400000, guid: 183697f8b20e9bf45a7dbaeb3989cd89, type: 2}
+  - {fileID: 11400000, guid: dd1f8fb7415a77b45b258f1bfc4a2bab, type: 2}
+  - {fileID: 11400000, guid: 13da4e81f75f1c145a998b445be18c1b, type: 2}
+  - {fileID: 11400000, guid: d5d0e89676a2a824ca05b85776257c6f, type: 2}
+  - {fileID: 11400000, guid: 0c9812c3011ebeb498787fe20ffb6399, type: 2}
+  - {fileID: 11400000, guid: 109c0cbe6bd90b8459f8f2e674498b4c, type: 2}
+  - {fileID: 11400000, guid: 603645919f11ff947874582e61000ec9, type: 2}
+  - {fileID: 11400000, guid: e62b79bd8a632c140a1a49cdb781f36a, type: 2}
+  - {fileID: 11400000, guid: 46d49f3f450722946a1b18afa374f748, type: 2}
+  - {fileID: 11400000, guid: 332f3f5f1c5541b4a84a7622df22690e, type: 2}
+  - {fileID: 11400000, guid: 45230ff9d474c234a85381f6f574e7b4, type: 2}
+  - {fileID: 11400000, guid: d72d272913c3e124bbd94040b02bbedc, type: 2}
