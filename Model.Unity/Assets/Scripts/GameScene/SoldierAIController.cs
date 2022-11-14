@@ -41,6 +41,8 @@ namespace Enemy
 
         private bool canTrack = false;
 
+        private bool isCalculate = false;
+
         private bool isDeath = false;
 
         #region 扇形範圍相關variable
@@ -108,7 +110,7 @@ namespace Enemy
             {
                 TrackState();
             }
-            else if (_distance <= 8f) 
+            else if ((_distance <= 8f) && (!isCalculate))
             {
                 EnterAlertDistance();
             }
@@ -208,12 +210,13 @@ namespace Enemy
         }
 
         /// <summary>
-        /// 進入警戒範圍距離內
+        /// 進入警戒範圍距離(周遭)內
         /// </summary>
         private void EnterAlertDistance()
         {
             if (!_animator.GetBool("Track") && (!canTrack))
             {
+                isCalculate = true;
                 canTrack = false;
                 var time = 0;
                 DOTween.To(() => time, x => time = x, 1, 3f).onComplete += (() => VerifyPlayerInAlertDistance());
@@ -221,13 +224,17 @@ namespace Enemy
         }
 
         /// <summary>
-        /// 驗證警戒範圍距離內
+        /// 驗證玩家在警戒範圍(周遭)距離內
         /// </summary>
         private void VerifyPlayerInAlertDistance()
         {
             if (_distance <= 8f) 
             {
                 canTrack = true;
+            }
+            else 
+            {
+                isCalculate = false;
             }
         }
 
