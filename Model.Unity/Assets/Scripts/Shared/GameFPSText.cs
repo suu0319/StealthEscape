@@ -9,6 +9,6 @@ public class GameFPSText : MonoBehaviour
 
     private void Update()
     {
-        _fpsText.text = "FPS:" + GameFPSController.Fps.ToString();
+        _fpsText.text = "" + GameFPSController.Fps;
     }
 }

@@ -4,6 +4,10 @@ namespace Manager
 {
     public class GameFPSController : MonoBehaviour
     {
+        private float showTime = 1f;
+        private float deltaTime = 0f;
+        private int count = 0;
+
         internal static int Fps;
 
         private void Awake()
@@ -32,7 +36,16 @@ namespace Manager
         {
             if (Time.timeScale == 1f) 
             {
-                Fps = (int)(1f / Time.smoothDeltaTime);
+                count++;
+                deltaTime += Time.smoothDeltaTime;
+
+                if (deltaTime >= showTime) 
+                {
+                    Fps = (int)(count / deltaTime);
+
+                    count = 0;
+                    deltaTime = 0f;
+                }              
             }
         }
     }

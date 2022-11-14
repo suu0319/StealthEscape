@@ -236,7 +236,7 @@ namespace GameStage
 
 				#region 關卡箭矢陷阱速度(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				gameStageData.ShootTrapIntervalAuto = EditorGUILayout.FloatField("ShootTrapInterval", stageShootTrapIntervalAuto);
+				gameStageData.ShootTrapIntervalAuto = EditorGUILayout.FloatField("ShootTrap Interval", stageShootTrapIntervalAuto);
 				EditorGUILayout.EndHorizontal();
 				#endregion
 			}

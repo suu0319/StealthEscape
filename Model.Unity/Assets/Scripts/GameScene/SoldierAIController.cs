@@ -103,19 +103,16 @@ namespace Enemy
             {
                 PatrolState();
             }
-        }
 
-        #region Trigger偵測玩家是否在範圍內(3秒即切換至追擊狀態)
-        private void OnTriggerEnter(Collider other)
-        {
-            ResetAlertTrigger(other);
+            if ((!_animator.GetBool("Track")) && (canTrack))
+            {
+                TrackState();
+            }
+            else if (_distance <= 8f) 
+            {
+                EnterAlertDistance();
+            }
         }
-
-        private void OnTriggerStay(Collider other)
-        {
-            DetectAlertTrigger(other);
-        }
-        #endregion
 
         /// <summary>
         /// 計算警戒範圍
@@ -211,31 +208,26 @@ namespace Enemy
         }
 
         /// <summary>
-        /// 判斷警戒範圍Trigger(是否有玩家)
+        /// 進入警戒範圍距離內
         /// </summary>
-        /// <param name="other">Collider物件</param>
-        private void DetectAlertTrigger(Collider other) 
+        private void EnterAlertDistance()
         {
-            if ((!_animator.GetBool("Track")) && (other.gameObject.tag == "Player"))
+            if (!_animator.GetBool("Track") && (!canTrack))
             {
-                if (canTrack)
-                {
-                    TrackState();
-                }
+                canTrack = false;
+                var time = 0;
+                DOTween.To(() => time, x => time = x, 1, 3f).onComplete += (() => VerifyPlayerInAlertDistance());
             }
         }
 
         /// <summary>
-        /// 重製警戒範圍Trigger
+        /// 驗證警戒範圍距離內
         /// </summary>
-        /// <param name="other">Collider物件</param>
-        private void ResetAlertTrigger(Collider other)
+        private void VerifyPlayerInAlertDistance()
         {
-            if ((!_animator.GetBool("Track")) && (other.gameObject.tag == "Player"))
+            if (_distance <= 8f) 
             {
-                canTrack = false;
-                var time = 0;
-                DOTween.To(() => time, x => time = x, 1, 3f).onComplete += (() => canTrack = true);
+                canTrack = true;
             }
         }
 
