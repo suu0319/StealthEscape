@@ -3119,7 +3119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainMenu: {fileID: 1968706319}
-  _GameStage: {fileID: 1705689399}
+  _gameStage: {fileID: 1705689399}
   _startBtn: {fileID: 1764015899}
   _levelBtn: {fileID: 1864352439}
   _quitBtn: {fileID: 1586368118}

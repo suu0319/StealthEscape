@@ -9,7 +9,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     private GameObject _mainMenu;
     [SerializeField]
-    private GameObject _GameStage;
+    private GameObject _gameStage;
 
     [Header("Operate Button")]
     [SerializeField]
@@ -41,7 +41,7 @@ public class MainMenuController : MonoBehaviour
     /// </summary>
     private void BackMainMenu() 
     {
-        _GameStage.SetActive(false);
+        _gameStage.SetActive(false);
         _mainMenu.SetActive(true);
         GameStateController.Instance.SwitchMainMenuState();
     }
@@ -52,7 +52,7 @@ public class MainMenuController : MonoBehaviour
     private void ChooseLevel() 
     {
         _mainMenu.SetActive(false);
-        _GameStage.SetActive(true);
+        _gameStage.SetActive(true);
         GameStateController.Instance.SwitchGameStageState();
     }
 

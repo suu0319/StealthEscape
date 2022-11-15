@@ -4,14 +4,11 @@ using Manager;
 
 namespace Player 
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : Player
     {
         public static PlayerController Instance;
 
         [Header("Script")]
-        [SerializeField]
-        private CharacterController _characterController;
-
         [SerializeField]
         private PlayerStateController _playerStateController;
 
@@ -152,7 +149,7 @@ namespace Player
             if ((!isCheat) && (!IsDeath))
             {
                 IsDeath = true;
-                _characterController.enabled = false;
+                CharacterController.enabled = false;
                 _playerStateController.SwitchDeathState();
                 RemoveBtnOnClick();
             }

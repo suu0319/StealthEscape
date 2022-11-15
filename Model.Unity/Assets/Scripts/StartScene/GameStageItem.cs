@@ -24,7 +24,7 @@ namespace GameStage
         /// 設定實例出來的元素GameObject
         /// </summary>
         /// <param name="data">元素資料</param>
-        public void BindData(GameStageItemData data)
+        internal void BindData(GameStageItemData data)
         {
             _btnImage.sprite = data.BtnImage;
 

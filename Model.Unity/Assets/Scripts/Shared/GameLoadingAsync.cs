@@ -41,7 +41,7 @@ namespace GameLoading
         /// 載入場景
         /// </summary>
         /// <param name="sceneName">場景名稱</param>
-        public void LoadGame(string sceneName) 
+        internal void LoadGame(string sceneName)
         {
             Debug.Log("載入場景:" + sceneName);
 

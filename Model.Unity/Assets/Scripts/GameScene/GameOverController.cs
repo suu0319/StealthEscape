@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using GameLoading;
+using Mediator;
 using Manager;
 
 namespace GameOver 

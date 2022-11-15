@@ -305,10 +305,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fae959565e2254bb94b897a242745c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1837578014456969224}
+  Interval: 0
+  Speed: 100
   _shootTrapRig: {fileID: 7377415504747474501}
-  _audioSource: {fileID: 1837578014456969224}
-  interval: 3
-  force: 50
   originalPos: {x: 0, y: -2, z: 0}
 --- !u!54 &7377415504747474501
 Rigidbody:

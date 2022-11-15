@@ -67,10 +67,10 @@ namespace Enemy
         private Vector3 _positionDistance;
 
         [SerializeField]
-        Color32 _patrolStateColor;
+        private Color32 _patrolStateColor;
 
         [SerializeField]
-        Color32 _trackStateColor;
+        private Color32 _trackStateColor;
         #endregion
 
         private void Start()

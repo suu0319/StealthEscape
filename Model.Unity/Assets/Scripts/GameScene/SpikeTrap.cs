@@ -38,7 +38,7 @@ namespace Trap
         /// <returns></returns>
         protected override IEnumerator OpenCloseTrap()
         {
-            _audioSource.Play();
+            AudioSource.Play();
             _animator.SetTrigger("Open");
             yield return new WaitForSeconds(Interval);
             _animator.SetTrigger("Close");

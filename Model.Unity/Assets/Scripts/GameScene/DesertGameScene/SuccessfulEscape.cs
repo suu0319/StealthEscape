@@ -54,7 +54,7 @@ public class SuccessfulEscape : MonoBehaviour
     /// </summary>
     private void AppearEscapeScreen()
     {
-        var time = 0;
+        var time = 0;  
 
         _successfulEscapePanel.SetActive(true);
         _canvasGroupBackground.DOFade(1, 5f).SetEase(Ease.Linear).onComplete += (() => DOTween.To(() => time, x => time = x, 1, 5f).onComplete += BackMainMenu);

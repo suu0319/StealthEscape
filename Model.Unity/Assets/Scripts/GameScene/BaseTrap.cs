@@ -7,7 +7,7 @@ namespace Trap
     {
         [Header("Audio")]
         [SerializeField]
-        protected AudioSource _audioSource;
+        protected AudioSource AudioSource;
 
         [Header("Float Value")]
         [SerializeField]

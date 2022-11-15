@@ -69,7 +69,7 @@ namespace Trap
         protected override IEnumerator OpenCloseTrap()
         {
             yield return new WaitForSeconds(Interval);
-            _audioSource.Play();
+            AudioSource.Play();
             Shoot();
         }
     }

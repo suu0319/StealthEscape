@@ -3,12 +3,9 @@ using Manager;
 
 namespace Player 
 {
-    public class PlayerMovement : MonoBehaviour
+    public class PlayerMovement : Player
     {
         [Header("Script")]
-        [SerializeField]
-        private CharacterController _characterController;
-
         [SerializeField]
         private PlayerController _playerController;
 
@@ -75,7 +72,7 @@ namespace Player
             }
 
             velocity.y += gravity * Time.deltaTime;
-            _characterController.Move(velocity * Time.deltaTime);
+            CharacterController.Move(velocity * Time.deltaTime);
 
             float horizontal = Joystick.Horizontal;
             float vertical = Joystick.Vertical;
@@ -90,7 +87,7 @@ namespace Player
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                _characterController.Move(moveDir.normalized * speed * Time.deltaTime);
+                CharacterController.Move(moveDir.normalized * speed * Time.deltaTime);
             }
         }
     }

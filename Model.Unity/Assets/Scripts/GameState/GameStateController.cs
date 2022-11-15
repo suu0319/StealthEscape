@@ -34,15 +34,15 @@ namespace Manager
         /// <summary>
         /// 切換主選單狀態
         /// </summary>
-        public void SwitchMainMenuState()
+        internal void SwitchMainMenuState()
         {
             _animator.SetTrigger("MainMenu");
         }
 
         /// <summary>
         /// 切換選擇關卡狀態
-        /// </summary>
-        public void SwitchGameStageState()
+        /// </summary> 
+        internal void SwitchGameStageState()
         {
             _animator.SetTrigger("GameStage");
         }
@@ -50,7 +50,7 @@ namespace Manager
         /// <summary>
         /// 切換遊戲場景狀態
         /// </summary>
-        public void SwitchGameSceneState()
+        internal void SwitchGameSceneState()
         {
             _animator.SetTrigger("GameScene");
         }
@@ -58,7 +58,7 @@ namespace Manager
         /// <summary>
         /// 切換遊戲暫停狀態
         /// </summary>
-        public void SwitchGameStopState() 
+        internal void SwitchGameStopState() 
         {
             _animator.SetTrigger("GameStop");
         }
@@ -66,7 +66,7 @@ namespace Manager
         /// <summary>
         /// 切換遊戲失敗狀態
         /// </summary>
-        public void SwitchGameOverState()
+        internal void SwitchGameOverState()
         {
             _animator.SetTrigger("GameOver");
         }
@@ -74,7 +74,7 @@ namespace Manager
         /// <summary>
         /// 切換遊戲過關狀態
         /// </summary>
-        public void SwitchGameClearState()
+        internal void SwitchGameClearState()
         {
             _animator.SetTrigger("GameClear");
         }

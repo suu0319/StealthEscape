@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671e1ccb4edf25d4695c9035b35102d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterController: {fileID: 1006542935975132468}
+  CharacterController: {fileID: 1006542935975132468}
   _playerStateController: {fileID: 1006542935975132457}
   _cameraMovement: {fileID: 1006542935975132470}
   Animator: {fileID: 1006542935975132458}
@@ -280,7 +280,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 42351cf6d4f12b242b0fb880399056de, type: 3}
   - {fileID: 8300000, guid: cf38a6eaa648ad345be5abb530476350, type: 3}
   AttackBtn: {fileID: 0}
-  OptionBtn: {fileID: 0}
   PlayerTransform: {fileID: 1006542935975132469}
   _detectAttackTrigger: {fileID: 1006542936850454852}
 --- !u!114 &1006542935975132471
@@ -295,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894c29e1cc9d53848863e9e704fcf5e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterController: {fileID: 1006542935975132468}
+  CharacterController: {fileID: 1006542935975132468}
   _playerController: {fileID: 1006542935975132456}
   Joystick: {fileID: 0}
   _camera: {fileID: 0}
@@ -332,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b48d36dc51bded49bd7e2d3f9f88b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 1006542935975132458}
+  Animator: {fileID: 1006542935975132458}
 --- !u!1 &1006542936482643105
 GameObject:
   m_ObjectHideFlags: 0
