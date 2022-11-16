@@ -120,7 +120,7 @@ namespace ObjectPool
                     break;
 
                 default:
-                    Debug.LogWarning("Pool with name doest't exist");
+                    Debug.LogError("Pool with name doest't exist");
                     break;
             }
         }
@@ -136,7 +136,7 @@ namespace ObjectPool
         {
             if (!poolDict.ContainsKey(name))
             {
-                Debug.LogWarning("Pool with name doest't exist");
+                Debug.LogError("Pool with name doest't exist");
                 return null;
             }
 

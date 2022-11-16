@@ -12,7 +12,7 @@ namespace GameStage
 		[SerializeField]
 		private GameStageConfig _gameStageConfig;
 
-		GameStageData gameStageData;
+		private GameStageData _gameStageData;
 
 		#region 全域相關
 		private bool isCheat = false;
@@ -26,7 +26,7 @@ namespace GameStage
 		#region 關卡相關(基本)
 		private Level stageLevel;
 		private Sprite _stageImage;
-		private string stageTitle;
+		private string stageSceneName;
 		private int stageNum = 0;
 		private AudioClip _stageBGM;
 
@@ -114,31 +114,31 @@ namespace GameStage
 			EditorGUILayout.EndScrollView();
 
 			#region Variable縮寫
-			gameStageData = _gameStageConfig.StageDataList[stageNum];
+			_gameStageData = _gameStageConfig.StageDataList[stageNum];
 			#endregion
 
 			#region Editor、GameStageConfig資料同步
-			stageLevel = gameStageData.Level;
-			_stageImage = gameStageData.Image;
-			stageTitle = gameStageData.SceneName;
-			_stageBGM = gameStageData.BGM;
+			stageLevel = _gameStageData.Level;
+			_stageImage = _gameStageData.Image;
+			stageSceneName = _gameStageData.SceneName;
+			_stageBGM = _gameStageData.BGM;
 
-			_stageSoldierDataList = gameStageData.SoldierDataList;
+			_stageSoldierDataList = _gameStageData.SoldierDataList;
 			stageSoldierAmount = _stageSoldierDataList.Count;
 
-			_stageSpikeTrapDataList = gameStageData.SpikeTrapDataList;
+			_stageSpikeTrapDataList = _gameStageData.SpikeTrapDataList;
 			stageSpikeTrapAmount = _stageSpikeTrapDataList.Count;
 
-			_stageShootTrapDataList = gameStageData.ShootTrapDataList;
+			_stageShootTrapDataList = _gameStageData.ShootTrapDataList;
 			stageShootTrapAmount = _stageShootTrapDataList.Count;
 
 
-			stageSoldierAmountAuto = gameStageData.SoldierAmountAuto;
-			stageSoldierSpeedAuto = gameStageData.SoldierSpeedAuto;
-			stageSpikeTrapAmountAuto = gameStageData.SpikeTrapAmountAuto;
-			stageSpikeTrapIntervalAuto = gameStageData.SpikeTrapIntervalAuto;
-			stageShootTrapAmountAuto = gameStageData.ShootTrapAmountAuto;
-			stageShootTrapIntervalAuto = gameStageData.ShootTrapIntervalAuto;
+			stageSoldierAmountAuto = _gameStageData.SoldierAmountAuto;
+			stageSoldierSpeedAuto = _gameStageData.SoldierSpeedAuto;
+			stageSpikeTrapAmountAuto = _gameStageData.SpikeTrapAmountAuto;
+			stageSpikeTrapIntervalAuto = _gameStageData.SpikeTrapIntervalAuto;
+			stageShootTrapAmountAuto = _gameStageData.ShootTrapAmountAuto;
+			stageShootTrapIntervalAuto = _gameStageData.ShootTrapIntervalAuto;
 
 			#endregion
 
@@ -171,20 +171,20 @@ namespace GameStage
 			#region 關卡縮圖
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.PrefixLabel("Image");
-			gameStageData.Image = (Sprite)EditorGUILayout.ObjectField(_stageImage, typeof(Sprite), true);
+			_gameStageData.Image = (Sprite)EditorGUILayout.ObjectField(_stageImage, typeof(Sprite), true);
 			EditorGUILayout.EndHorizontal();
 			#endregion
 
 			#region 關卡標題
 			EditorGUILayout.BeginHorizontal();
-			gameStageData.SceneName = EditorGUILayout.TextField("SceneName", stageTitle);
+			_gameStageData.SceneName = EditorGUILayout.TextField("SceneName", stageSceneName);
 			EditorGUILayout.EndHorizontal();
 			#endregion
 
 			#region 關卡音樂
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.PrefixLabel("BGM");
-			gameStageData.BGM = (AudioClip)EditorGUILayout.ObjectField(_stageBGM, typeof(AudioClip), true);
+			_gameStageData.BGM = (AudioClip)EditorGUILayout.ObjectField(_stageBGM, typeof(AudioClip), true);
 			EditorGUILayout.EndHorizontal();
 			#endregion
 
@@ -197,7 +197,7 @@ namespace GameStage
 			{
 				#region 關卡難度(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				gameStageData.Level = (Level)EditorGUILayout.EnumPopup("Level", stageLevel);
+				_gameStageData.Level = (Level)EditorGUILayout.EnumPopup("Level", stageLevel);
 				InitStageLevelAutoSettings();
 				EditorGUILayout.EndHorizontal();
 				#endregion
@@ -206,37 +206,37 @@ namespace GameStage
 
 				#region 關卡士兵敵人數量(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				gameStageData.SoldierAmountAuto = EditorGUILayout.IntField("Soldier Amount", stageSoldierAmountAuto);
+				_gameStageData.SoldierAmountAuto = EditorGUILayout.IntField("Soldier Amount", stageSoldierAmountAuto);
 				EditorGUILayout.EndHorizontal();
 				#endregion
 
 				#region 關卡士兵敵人速度(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				gameStageData.SoldierSpeedAuto = EditorGUILayout.FloatField("Soldier Speed", stageSoldierSpeedAuto);
+				_gameStageData.SoldierSpeedAuto = EditorGUILayout.FloatField("Soldier Speed", stageSoldierSpeedAuto);
 				EditorGUILayout.EndHorizontal();
 				#endregion
 
 				#region 關卡地刺陷阱數量(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				gameStageData.SpikeTrapAmountAuto = EditorGUILayout.IntField("SpikeTrap Amount", stageSpikeTrapAmountAuto);
+				_gameStageData.SpikeTrapAmountAuto = EditorGUILayout.IntField("SpikeTrap Amount", stageSpikeTrapAmountAuto);
 				EditorGUILayout.EndHorizontal();
 				#endregion
 
 				#region 關卡地刺陷阱速度(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				gameStageData.SpikeTrapIntervalAuto = EditorGUILayout.FloatField("SpikeTrap Interval", stageSpikeTrapIntervalAuto);
+				_gameStageData.SpikeTrapIntervalAuto = EditorGUILayout.FloatField("SpikeTrap Interval", stageSpikeTrapIntervalAuto);
 				EditorGUILayout.EndHorizontal();
 				#endregion
 
 				#region 關卡箭矢陷阱數量(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				gameStageData.ShootTrapAmountAuto = EditorGUILayout.IntField("ShootTrap Amount", stageShootTrapAmountAuto);
+				_gameStageData.ShootTrapAmountAuto = EditorGUILayout.IntField("ShootTrap Amount", stageShootTrapAmountAuto);
 				EditorGUILayout.EndHorizontal();
 				#endregion
 
 				#region 關卡箭矢陷阱速度(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				gameStageData.ShootTrapIntervalAuto = EditorGUILayout.FloatField("ShootTrap Interval", stageShootTrapIntervalAuto);
+				_gameStageData.ShootTrapIntervalAuto = EditorGUILayout.FloatField("ShootTrap Interval", stageShootTrapIntervalAuto);
 				EditorGUILayout.EndHorizontal();
 				#endregion
 			}
@@ -258,9 +258,9 @@ namespace GameStage
 				GUILayout.Label("Soldier Enemy Settings", EditorStyles.largeLabel);
 				#region 關卡士兵敵人設定
 				EditorGUILayout.BeginHorizontal();
-				stageSoldierAmount = EditorGUILayout.IntField("Soldier Amount", gameStageData.SoldierDataList.Count);
+				stageSoldierAmount = EditorGUILayout.IntField("Soldier Amount", _gameStageData.SoldierDataList.Count);
 
-				RefreshEnemyTrapDataList("Soldier", stageSoldierAmount, gameStageData.SoldierDataList);
+				RefreshEnemyTrapDataList("Soldier", stageSoldierAmount, _gameStageData.SoldierDataList);
 
 				EditorGUILayout.EndHorizontal();
 
@@ -274,12 +274,19 @@ namespace GameStage
 
 					if (stageSoldierAmountFoldout)
 					{
-						for (int i = 0; i < _stageSoldierDataList.Count; i++)
+                        try 
 						{
-							EditorGUILayout.BeginHorizontal();
-							gameStageData.SoldierDataList[i].Speed = EditorGUILayout.FloatField("Soldier " + (i + 1) + " Speed:", _stageSoldierDataList[i].Speed);
-							gameStageData.SoldierDataList[i].PatrolPointsData = (PatrolPointsData)EditorGUILayout.ObjectField("\tPatrolPoints:", _stageSoldierDataList[i].PatrolPointsData, gameStageData.SoldierPatrolPointsConfig.PatrolPointsDataList[0].GetType(), true);
-							EditorGUILayout.EndHorizontal();
+							for (int i = 0; i < _stageSoldierDataList.Count; i++)
+							{
+								EditorGUILayout.BeginHorizontal();
+								_gameStageData.SoldierDataList[i].Speed = EditorGUILayout.FloatField("Soldier " + (i + 1) + " Speed:", _stageSoldierDataList[i].Speed);
+								_gameStageData.SoldierDataList[i].PatrolPointsData = (PatrolPointsData)EditorGUILayout.ObjectField("\tPatrolPoints:", _stageSoldierDataList[i].PatrolPointsData, _gameStageData.SoldierPatrolPointsConfig.PatrolPointsDataList[0].GetType(), true);
+								EditorGUILayout.EndHorizontal();
+							}
+						}
+						catch (System.Exception e)
+						{
+							Debug.LogError("GameStageData.SoldierPatrolPointsConfig is null, " + e.Message);
 						}
 					}
 				}
@@ -289,9 +296,9 @@ namespace GameStage
 				GUILayout.Label("SpikeTrap Settings", EditorStyles.largeLabel);
 				#region 關卡地刺陷阱設定
 				EditorGUILayout.BeginHorizontal();
-				stageSpikeTrapAmount = EditorGUILayout.IntField("SpikeTrap Amount", gameStageData.SpikeTrapDataList.Count);
+				stageSpikeTrapAmount = EditorGUILayout.IntField("SpikeTrap Amount", _gameStageData.SpikeTrapDataList.Count);
 
-				RefreshEnemyTrapDataList("SpikeTrap", stageSpikeTrapAmount, gameStageData.SpikeTrapDataList);
+				RefreshEnemyTrapDataList("SpikeTrap", stageSpikeTrapAmount, _gameStageData.SpikeTrapDataList);
 
 				EditorGUILayout.EndHorizontal();
 
@@ -305,12 +312,19 @@ namespace GameStage
 
 					if (stageSpikeTrapAmountFoldout)
 					{
-						for (int i = 0; i < _stageSpikeTrapDataList.Count; i++)
+                        try 
 						{
-							EditorGUILayout.BeginHorizontal();
-							gameStageData.SpikeTrapDataList[i].Interval = EditorGUILayout.FloatField("SpikeTrap " + (i + 1) + " Interval:", _stageSpikeTrapDataList[i].Interval);
-							gameStageData.SpikeTrapDataList[i].PositionData = (PositionData)EditorGUILayout.ObjectField("\tPosition:", _stageSpikeTrapDataList[i].PositionData, gameStageData.SpikeTrapPositionConfig.PositionDataList[0].GetType(), true);
-							EditorGUILayout.EndHorizontal();
+							for (int i = 0; i < _stageSpikeTrapDataList.Count; i++)
+							{
+								EditorGUILayout.BeginHorizontal();
+								_gameStageData.SpikeTrapDataList[i].Interval = EditorGUILayout.FloatField("SpikeTrap " + (i + 1) + " Interval:", _stageSpikeTrapDataList[i].Interval);
+								_gameStageData.SpikeTrapDataList[i].PositionData = (PositionData)EditorGUILayout.ObjectField("\tPosition:", _stageSpikeTrapDataList[i].PositionData, _gameStageData.SpikeTrapPositionConfig.PositionDataList[0].GetType(), true);
+								EditorGUILayout.EndHorizontal();
+							}
+						}
+						catch (System.Exception e)
+						{
+							Debug.LogError("GameStageData.SpikeTrapPositionConfig is null, " + e.Message);
 						}
 					}
 				}
@@ -320,9 +334,9 @@ namespace GameStage
 				GUILayout.Label("ShootTrap Settings", EditorStyles.largeLabel);
 				#region 關卡箭矢陷阱設定
 				EditorGUILayout.BeginHorizontal();
-				stageShootTrapAmount = EditorGUILayout.IntField("ShootTrap Amount", gameStageData.ShootTrapDataList.Count);
+				stageShootTrapAmount = EditorGUILayout.IntField("ShootTrap Amount", _gameStageData.ShootTrapDataList.Count);
 
-				RefreshEnemyTrapDataList("ShootTrap", stageShootTrapAmount, gameStageData.ShootTrapDataList);
+				RefreshEnemyTrapDataList("ShootTrap", stageShootTrapAmount, _gameStageData.ShootTrapDataList);
 				
 				EditorGUILayout.EndHorizontal();
 
@@ -336,13 +350,20 @@ namespace GameStage
 
 					if (stageShootTrapAmountFoldout)
 					{
-						for (int i = 0; i < _stageShootTrapDataList.Count; i++)
+                        try 
 						{
-							EditorGUILayout.BeginHorizontal();
-							gameStageData.ShootTrapDataList[i].Interval = EditorGUILayout.FloatField("ShootTrap " + (i + 1) + " Interval:", _stageShootTrapDataList[i].Interval);
-							gameStageData.ShootTrapDataList[i].Speed = EditorGUILayout.FloatField("\tSpeed:", _stageShootTrapDataList[i].Speed);
-							gameStageData.ShootTrapDataList[i].PositionData = (PositionData)EditorGUILayout.ObjectField("\tPosition:", _stageShootTrapDataList[i].PositionData, gameStageData.ShootTrapPositionConfig.PositionDataList[0].GetType(), true);
-							EditorGUILayout.EndHorizontal();
+							for (int i = 0; i < _stageShootTrapDataList.Count; i++)
+							{
+								EditorGUILayout.BeginHorizontal();
+								_gameStageData.ShootTrapDataList[i].Interval = EditorGUILayout.FloatField("ShootTrap " + (i + 1) + " Interval:", _stageShootTrapDataList[i].Interval);
+								_gameStageData.ShootTrapDataList[i].Speed = EditorGUILayout.FloatField("\tSpeed:", _stageShootTrapDataList[i].Speed);
+								_gameStageData.ShootTrapDataList[i].PositionData = (PositionData)EditorGUILayout.ObjectField("\tPosition:", _stageShootTrapDataList[i].PositionData, _gameStageData.ShootTrapPositionConfig.PositionDataList[0].GetType(), true);
+								EditorGUILayout.EndHorizontal();
+							}
+						}
+						catch (System.Exception e)
+						{
+							Debug.LogError("GameStageData.ShootTrapPositionConfig is null, " + e.Message);
 						}
 					}
 				}
@@ -378,19 +399,19 @@ namespace GameStage
 						switch (name)
 						{
 							case soldierName:
-								gameStageData.SoldierDataList.Add(new SoldierData());
+								_gameStageData.SoldierDataList.Add(new SoldierData());
 								break;
 
 							case spikeTrapName:
-								gameStageData.SpikeTrapDataList.Add(new SpikeTrapData());
+								_gameStageData.SpikeTrapDataList.Add(new SpikeTrapData());
 								break;
 
 							case shootTrapName:
-								gameStageData.ShootTrapDataList.Add(new ShootTrapData());
+								_gameStageData.ShootTrapDataList.Add(new ShootTrapData());
 								break;
 
 							default:
-								Debug.LogWarning("Soldier or Trap doesn't Exist");
+								Debug.LogError("Soldier or Trap doesn't Exist");
 								break;
 						}
 					}

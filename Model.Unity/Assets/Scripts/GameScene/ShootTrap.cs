@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Player;
 
-namespace Trap 
+namespace Trap
 {
     public class ShootTrap : BaseTrap
     {
@@ -18,6 +18,9 @@ namespace Trap
         private Vector3 originalPos;
 
         private WaitForSeconds interval;
+
+        private bool isShoot = false;
+        private bool isRecycle = false;
 
         private void Start()
         {
@@ -40,8 +43,9 @@ namespace Trap
             {
                 PlayerController.Instance.DetectDeath();
             }
-            else if (other.gameObject.tag == "Map")
+            else if ((other.gameObject.tag == "Map") && (!isRecycle))
             {
+                isRecycle = true;
                 Recycle();
             }
         }
@@ -72,8 +76,16 @@ namespace Trap
         protected override IEnumerator OpenCloseTrap()
         {
             yield return interval;
-            AudioSource.Play();
-            Shoot();
+
+            isShoot = false;
+            isRecycle = false;
+
+            if (!isShoot)
+            {
+                isShoot = true;
+                AudioSource.Play();
+                Shoot();
+            }
         }
     }
 }

@@ -1,6 +1,5 @@
 using UnityEngine;
 using GameStage;
-using GameLoading;
 
 namespace Mediator 
 {
