@@ -17,8 +17,11 @@ namespace Trap
         [SerializeField]
         private Vector3 originalPos;
 
+        private WaitForSeconds interval;
+
         private void Start()
         {
+            interval = new WaitForSeconds(Interval);
             StartCoroutine(OpenCloseTrap());
         }
 
@@ -57,9 +60,9 @@ namespace Trap
         /// </summary>
         private void Recycle()
         {
-            StartCoroutine(OpenCloseTrap());
             _shootTrapRig.velocity = Vector3.zero;
             _shootTrapRig.gameObject.transform.localPosition = originalPos;
+            StartCoroutine(OpenCloseTrap());
         }
 
         /// <summary>
@@ -68,7 +71,7 @@ namespace Trap
         /// <returns></returns>
         protected override IEnumerator OpenCloseTrap()
         {
-            yield return new WaitForSeconds(Interval);
+            yield return interval;
             AudioSource.Play();
             Shoot();
         }

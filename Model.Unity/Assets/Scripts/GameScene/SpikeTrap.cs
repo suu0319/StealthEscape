@@ -10,8 +10,11 @@ namespace Trap
         [SerializeField]
         private Animator _animator;
 
+        private WaitForSeconds interval;
+
         private void Start()
         {
+            interval = new WaitForSeconds(Interval);
             StartCoroutine(OpenCloseTrap());
         }
 
@@ -40,9 +43,9 @@ namespace Trap
         {
             AudioSource.Play();
             _animator.SetTrigger("Open");
-            yield return new WaitForSeconds(Interval);
+            yield return interval;
             _animator.SetTrigger("Close");
-            yield return new WaitForSeconds(Interval);
+            yield return interval;
 
             StartCoroutine(OpenCloseTrap());
         }

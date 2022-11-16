@@ -15,10 +15,11 @@ namespace GameLoading
 
         internal int LoadingPercent = 0;
 
-        private float fadeInSecond = 2f;
+        private WaitForSeconds fadeInSecond;
 
         private void Awake()
         {
+            fadeInSecond = new WaitForSeconds(2f);
             InitSingleton();
         }
 
@@ -55,7 +56,7 @@ namespace GameLoading
         /// </summary>
         private IEnumerator LoadingScreenTimer(string sceneName) 
         {
-            yield return new WaitForSeconds(fadeInSecond);
+            yield return fadeInSecond;
 
             AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
             async.allowSceneActivation = false;
