@@ -45,7 +45,7 @@ namespace Mediator
         /// <summary>
         /// 顯示遊戲場景資料
         /// </summary>
-        protected override void ShowGameSceneData() 
+        protected override void ShowGameSceneData()
         {
             GameSceneData gameSceneData = GameManager.Instance.GameSceneData;
 
@@ -61,7 +61,7 @@ namespace Mediator
 
             Debug.Log("士兵敵人數量: " + gameSceneData.SoldierAmount);
 
-            if (!gameSceneData.IsManual) 
+            if (!gameSceneData.IsManual)
             {
                 Debug.Log("士兵敵人速度: " + gameSceneData.SoldierSpeed);
             }

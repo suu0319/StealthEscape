@@ -1,6 +1,6 @@
 using ModelState;
 
-namespace Player 
+namespace Player
 {
     public class PlayerStateController : ModelStateController
     {

@@ -61,7 +61,7 @@ namespace ObjectPool
         /// <param name="enemyData">敵人資料List</param>
         private void CreateEnemy<T>(string name, List<T> enemyDataList) where T : EnemyData
         {
-            try 
+            try
             {
                 for (int i = 0; i < enemyDataList.Count; i++)
                 {
@@ -88,7 +88,7 @@ namespace ObjectPool
                     }
                 }
             }
-            catch (System.Exception e) 
+            catch (System.Exception e)
             {
                 Debug.LogError("EnemyDataList資料缺失: " + e.Message);
             }
@@ -102,7 +102,7 @@ namespace ObjectPool
         /// <param name="trapDataList">陷阱資料List</param>
         private void CreateTrap<T>(string name, List<T> trapDataList) where T: TrapData
         {
-            try 
+            try
             {
                 for (int i = 0; i < trapDataList.Count; i++)
                 {
@@ -145,7 +145,7 @@ namespace ObjectPool
         /// <param name="stageNum">關卡編號</param>
         private void RandomCreate(string name, int stageNum)
         {
-            try 
+            try
             {
                 int trapAmount = 0;
                 GameStageData gameStageData = GameManager.Instance.GameStageConfig.StageDataList[stageNum];
@@ -187,7 +187,7 @@ namespace ObjectPool
         /// <param name="positionData">座標資料</param>
         private void RandomCreateSoldierLoop(string name, int amount, int stageNum, List<PatrolPointsData> positionData)
         {
-            try 
+            try
             {
                 int num = 0;
                 List<int> randomExistList = new List<int>();
@@ -243,7 +243,7 @@ namespace ObjectPool
         /// <param name="positionData">座標資料</param>
         private void RandomCreateTrapLoop(string name, int amount, int stageNum, List<PositionData> positionData)
         {
-            try 
+            try
             {
                 int num = 0;
                 List<int> randomExistList = new List<int>();
@@ -302,7 +302,7 @@ namespace ObjectPool
         [ContextMenu("Spawn Soldier")]
         private void SpawnSoldier()
         {
-            try 
+            try
             {
                 ObjectPool.Instance.SpawnFromPool("Soldier", new Vector3(0, 0, 0), Quaternion.identity);
             }

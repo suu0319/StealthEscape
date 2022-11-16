@@ -14,7 +14,7 @@ public class EscapeTrigger : MonoBehaviour
 
     private void EnterEscapeTrigger(Collider other)
     {
-        if (other.gameObject.tag == "Player") 
+        if (other.gameObject.tag == "Player")
         {
             GameLoadingPanel.Instance.gameObject.SetActive(true);
             GameLoadingAsync.Instance.LoadGame(escapeSceneName);

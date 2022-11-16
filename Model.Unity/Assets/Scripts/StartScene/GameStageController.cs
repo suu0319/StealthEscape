@@ -5,7 +5,7 @@ using GameLoading;
 using Mediator;
 using Manager;
 
-namespace GameStage 
+namespace GameStage
 {
     public class GameStageController : MonoBehaviour
     {
@@ -14,7 +14,7 @@ namespace GameStage
         /// </summary>
         internal void LoadGame()
         {
-           if (StartSceneMediator.Instance.GameStagePanel.CanvasGroup.alpha == 0f) 
+           if (StartSceneMediator.Instance.GameStagePanel.CanvasGroup.alpha == 0f)
             {
                 GameLoadingPanel.Instance.gameObject.SetActive(true);
                 string sceneName = EventSystem.current.currentSelectedGameObject.GetComponent<Image>().sprite.name;

@@ -1,4 +1,4 @@
-namespace Trap 
+namespace Trap
 {
     public class TrapData : IEditorLayout
     {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using GameLoading;
 
-namespace Mediator 
+namespace Mediator
 {
     public abstract class BaseMediator : MonoBehaviour
     {

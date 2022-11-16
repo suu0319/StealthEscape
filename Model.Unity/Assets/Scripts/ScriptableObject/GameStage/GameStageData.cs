@@ -4,7 +4,7 @@ using Enemy;
 using Trap;
 using Position;
 
-namespace GameStage 
+namespace GameStage
 {
     [System.Serializable]
     public class GameStageData
@@ -37,7 +37,7 @@ namespace GameStage
         #endregion
     }
 
-    public enum Level 
+    public enum Level
     {
         Easy,
         Normal,

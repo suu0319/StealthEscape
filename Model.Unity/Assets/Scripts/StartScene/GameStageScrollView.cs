@@ -38,7 +38,7 @@ namespace GameStage
                     Idx = i,
                     BtnImage = gameStageDataList[i].Image,
                     Title = gameStageDataList[i].SceneName
-                }); ;
+                });
             }
 
             _scrollRect.DoAwake(this);

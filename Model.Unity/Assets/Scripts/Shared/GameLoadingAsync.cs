@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-namespace GameLoading 
+namespace GameLoading
 {
     public class GameLoadingAsync : MonoBehaviour
     {
@@ -54,7 +54,7 @@ namespace GameLoading
         /// <summary>
         /// 讀取畫面(非同步)
         /// </summary>
-        private IEnumerator LoadingScreenTimer(string sceneName) 
+        private IEnumerator LoadingScreenTimer(string sceneName)
         {
             yield return fadeInSecond;
 

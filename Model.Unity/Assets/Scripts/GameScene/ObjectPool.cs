@@ -82,7 +82,7 @@ namespace ObjectPool
         /// </summary>
         /// <param name="pool">物件池</param>
         /// <param name="gameStageData">關卡資料</param>
-        private void DetectObjectType(Pool pool, GameStageData gameStageData) 
+        private void DetectObjectType(Pool pool, GameStageData gameStageData)
         {
             switch (pool.Name)
             {

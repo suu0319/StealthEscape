@@ -1,7 +1,7 @@
 using UnityEngine;
 using Cinemachine;
 
-namespace Player 
+namespace Player
 {
     public class PlayerCameraMovement : MonoBehaviour
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Player;
 
-namespace Trap 
+namespace Trap
 {
     public class SpikeTrap : BaseTrap
     {

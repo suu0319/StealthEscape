@@ -39,7 +39,7 @@ public class MainMenuController : MonoBehaviour
     /// <summary>
     /// 返回主選單UI
     /// </summary>
-    private void BackMainMenu() 
+    private void BackMainMenu()
     {
         _gameStage.SetActive(false);
         _mainMenu.SetActive(true);
@@ -49,7 +49,7 @@ public class MainMenuController : MonoBehaviour
     /// <summary>
     /// 開啟選擇關卡UI
     /// </summary>
-    private void ChooseLevel() 
+    private void ChooseLevel()
     {
         _mainMenu.SetActive(false);
         _gameStage.SetActive(true);
@@ -59,7 +59,7 @@ public class MainMenuController : MonoBehaviour
     /// <summary>
     /// 退出遊戲
     /// </summary>
-    private void QuitGame() 
+    private void QuitGame()
     {
         Application.Quit();
     }
@@ -67,7 +67,7 @@ public class MainMenuController : MonoBehaviour
     /// <summary>
     /// 主選單按鈕註冊OnClick事件
     /// </summary>
-    private void InitMainMenuBtn() 
+    private void InitMainMenuBtn()
     {
         _startBtn.onClick.AddListener(StartGame);
         _levelBtn.onClick.AddListener(ChooseLevel);

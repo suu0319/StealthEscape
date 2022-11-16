@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Position 
+namespace Position
 {
     public class PatrolPointsData : ScriptableObject
     {

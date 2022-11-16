@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Manager 
+namespace Manager
 {
     public class ManagerGenerator : MonoBehaviour
     {
@@ -18,7 +18,7 @@ namespace Manager
         /// <summary>
         /// 初始化生成
         /// </summary>
-        private void Init() 
+        private void Init()
         {
             GenerateManager(_gameManager);
             GenerateManager(_canvas);

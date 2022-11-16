@@ -1,7 +1,7 @@
 using UnityEngine;
 using GameStage;
 
-namespace Mediator 
+namespace Mediator
 {
     public class StartSceneMediator : BaseMediator
     {

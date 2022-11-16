@@ -8,7 +8,7 @@ public class CoroutineTest : MonoBehaviour
         StartCoroutine(Test());
     }
 
-    IEnumerator Test() 
+    IEnumerator Test()
     {
         print("1");
 

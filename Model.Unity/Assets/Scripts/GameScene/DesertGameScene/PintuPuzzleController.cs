@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using Mediator;
 using DG.Tweening;
 
-namespace Puzzle 
+namespace Puzzle
 {
 	public class PintuPuzzleController : MonoBehaviour
 	{
@@ -103,7 +103,7 @@ namespace Puzzle
 				{
 					GameObject raycastResultsFirst = raycastResults[0].gameObject;
 
-					if (raycastResultsFirst.tag == "PintuUI") 
+					if (raycastResultsFirst.tag == "PintuUI")
 					{
 						raycastResultsFirst.transform.position = Input.mousePosition;
 					}
@@ -115,7 +115,7 @@ namespace Puzzle
 						raycastResultsFirst.transform.SetSiblingIndex(raycastResultsSecond.transform.GetSiblingIndex());
 						raycastResultsSecond.transform.SetSiblingIndex(temp);
 
-						if (VerifyPintuPuzzle()) 
+						if (VerifyPintuPuzzle())
 						{
 							Debug.Log("拼圖謎題過關");
 							QuitPintuPuzzle();
@@ -125,7 +125,7 @@ namespace Puzzle
 
 							DesertGameSceneMediator.Instance.PintuPuzzleTrigger.AudioSource.Play();
 						}
-                        else 
+                        else
 						{
 							isChange = true;
 
@@ -148,7 +148,7 @@ namespace Puzzle
 		/// <returns></returns>
 		private bool VerifyPintuPuzzle()
 		{
-			for (int i = 0; i < _correctPintu.Length; i++) 
+			for (int i = 0; i < _correctPintu.Length; i++)
 			{
 				if (i == _correctPintu.Length - 1) 
 				{
@@ -158,7 +158,7 @@ namespace Puzzle
 				{
 					continue;
 				}
-                else 
+                else
 				{
 					break;
 				}

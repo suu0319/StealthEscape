@@ -13,7 +13,7 @@ public class DeltaTimeCompare : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Random.Range(0, 2f) == 1f) 
+        if (Random.Range(0, 2f) == 1f)
         {
             Debug.Log(i);
             i = 10;

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using GameLoading;
 using Manager;
 
-namespace OptionMenu 
+namespace OptionMenu
 {
     public class OptionMenuController : MonoBehaviour
     {

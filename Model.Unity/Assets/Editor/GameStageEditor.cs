@@ -11,7 +11,6 @@ namespace GameStage
 	{
 		[SerializeField]
 		private GameStageConfig _gameStageConfig;
-
 		private GameStageData _gameStageData;
 
 		#region 全域相關
@@ -274,7 +273,7 @@ namespace GameStage
 
 					if (stageSoldierAmountFoldout)
 					{
-                        try 
+						try
 						{
 							for (int i = 0; i < _stageSoldierDataList.Count; i++)
 							{
@@ -312,7 +311,7 @@ namespace GameStage
 
 					if (stageSpikeTrapAmountFoldout)
 					{
-                        try 
+						try
 						{
 							for (int i = 0; i < _stageSpikeTrapDataList.Count; i++)
 							{
@@ -350,7 +349,7 @@ namespace GameStage
 
 					if (stageShootTrapAmountFoldout)
 					{
-                        try 
+						try
 						{
 							for (int i = 0; i < _stageShootTrapDataList.Count; i++)
 							{

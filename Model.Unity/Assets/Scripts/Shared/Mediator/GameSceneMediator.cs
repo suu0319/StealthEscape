@@ -4,7 +4,7 @@ using OptionMenu;
 using GameOver;
 using Manager;
 
-namespace Mediator 
+namespace Mediator
 {
     public class GameSceneMediator : BaseMediator
     {

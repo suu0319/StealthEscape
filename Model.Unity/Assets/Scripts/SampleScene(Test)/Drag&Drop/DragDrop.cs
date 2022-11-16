@@ -9,7 +9,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     [SerializeField]
     private CanvasGroup _canvasGroup;
 
-    public void OnPointerDown(PointerEventData eventData) 
+    public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("OnPointerDown");
     }

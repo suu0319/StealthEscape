@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Puzzle 
+namespace Puzzle
 {
     public class PintuPuzzleTrigger : MonoBehaviour
     {

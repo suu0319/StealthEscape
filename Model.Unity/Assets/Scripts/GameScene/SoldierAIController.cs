@@ -149,7 +149,7 @@ namespace Enemy
             _alertSprite.color = _trackStateColor;
             Agent.SetDestination(_playerController.PlayerTransform.position);
 
-            if (PlayerController.Instance.IsDeath) 
+            if (PlayerController.Instance.IsDeath)
             {
                 Agent.speed = 0f;
                 _soldierAIStateController.SwitchIdleState();
@@ -164,7 +164,7 @@ namespace Enemy
         /// <summary>
         /// 播放攻擊音效
         /// </summary>
-        private void PlayAttackSFX() 
+        private void PlayAttackSFX()
         {
             _audioSource.clip = _audioClips[0];
             _audioSource.Play();
@@ -182,9 +182,9 @@ namespace Enemy
         /// <summary>
         /// 判定攻擊(Animation Event)
         /// </summary>
-        private void DetectAttack() 
+        private void DetectAttack()
         {
-            if (!isDeath) 
+            if (!isDeath)
             {
                 if ((_distance <= 3f) && (!_playerController.IsDeath))
                 {
@@ -198,9 +198,9 @@ namespace Enemy
         /// <summary>
         /// 判斷死亡
         /// </summary>
-        internal void DetectDeath() 
+        internal void DetectDeath()
         {
-            if (!isDeath) 
+            if (!isDeath)
             {
                 isDeath = true;
                 Agent.enabled = false;
@@ -228,11 +228,11 @@ namespace Enemy
         /// </summary>
         private void VerifyPlayerInAlertDistance()
         {
-            if (_distance <= 8f) 
+            if (_distance <= 8f)
             {
                 canTrack = true;
             }
-            else 
+            else
             {
                 isCalculate = false;
             }

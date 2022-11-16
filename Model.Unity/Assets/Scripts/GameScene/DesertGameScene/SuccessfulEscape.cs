@@ -39,7 +39,7 @@ public class SuccessfulEscape : MonoBehaviour
     /// <summary>
     /// 播放逃脫動畫
     /// </summary>
-    private void PlayEscapeAnimation() 
+    private void PlayEscapeAnimation()
     {
         var time = 0;
 

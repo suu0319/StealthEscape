@@ -1,7 +1,7 @@
 using UnityEngine;
 using Manager;
 
-namespace Player 
+namespace Player
 {
     public class PlayerMovement : Player
     {

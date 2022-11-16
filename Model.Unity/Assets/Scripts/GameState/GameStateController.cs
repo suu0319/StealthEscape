@@ -58,7 +58,7 @@ namespace Manager
         /// <summary>
         /// 切換遊戲暫停狀態
         /// </summary>
-        internal void SwitchGameStopState() 
+        internal void SwitchGameStopState()
         {
             _animator.SetTrigger("GameStop");
         }

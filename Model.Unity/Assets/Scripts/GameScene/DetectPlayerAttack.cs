@@ -1,7 +1,7 @@
 using UnityEngine;
 using Enemy;
 
-namespace Player 
+namespace Player
 {
     public class DetectPlayerAttack : MonoBehaviour
     {

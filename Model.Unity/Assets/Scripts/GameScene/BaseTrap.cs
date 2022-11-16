@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Trap 
+namespace Trap
 {
     public abstract class BaseTrap : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-namespace GameOver 
+namespace GameOver
 {
     public class GameOverPanel : MonoBehaviour
     {

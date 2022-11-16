@@ -4,7 +4,7 @@ using GameLoading;
 using Mediator;
 using Manager;
 
-namespace GameOver 
+namespace GameOver
 {
     public class GameOverController : MonoBehaviour
     {

@@ -17,7 +17,7 @@ public class GameStagePanel : MonoBehaviour
     /// </summary>
     internal void AppearDisabledGameMsg()
     {
-        if (CanvasGroup.alpha == 0f) 
+        if (CanvasGroup.alpha == 0f)
         {
             Sequence sequence = DOTween.Sequence();
 

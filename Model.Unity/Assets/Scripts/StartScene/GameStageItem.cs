@@ -38,7 +38,7 @@ namespace GameStage
 
                 _btn.onClick.AddListener(StartSceneMediator.Instance.GameStageController.LoadGame);
             }
-            else 
+            else
             {
                 _btn.onClick.AddListener(StartSceneMediator.Instance.GameStagePanel.AppearDisabledGameMsg);
             }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Manager 
+namespace Manager
 {
     public class GameFPSController : MonoBehaviour
     {
@@ -15,7 +15,6 @@ namespace Manager
             SetFPSLimit();
         }
 
-        // Update is called once per frame
         private void Update()
         {
             CalFPS();
@@ -24,7 +23,7 @@ namespace Manager
         /// <summary>
         /// 設定FPS限幀數
         /// </summary>
-        private void SetFPSLimit() 
+        private void SetFPSLimit()
         {
             Application.targetFrameRate = 60;
         }
@@ -34,18 +33,18 @@ namespace Manager
         /// </summary>
         private void CalFPS()
         {
-            if (Time.timeScale == 1f) 
+            if (Time.timeScale == 1f)
             {
                 count++;
                 deltaTime += Time.smoothDeltaTime;
 
-                if (deltaTime >= showTime) 
+                if (deltaTime >= showTime)
                 {
                     Fps = (int)(count / deltaTime);
 
                     count = 0;
                     deltaTime = 0f;
-                }              
+                }
             }
         }
     }

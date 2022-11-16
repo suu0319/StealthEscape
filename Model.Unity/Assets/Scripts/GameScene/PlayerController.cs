@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Manager;
 
-namespace Player 
+namespace Player
 {
     public class PlayerController : Player
     {
@@ -67,7 +67,7 @@ namespace Player
         }
 
         /// <summary>
-        /// 攻擊Button註冊切換至alert State
+        /// 攻擊Button註冊切換至Attack State
         /// </summary>
         private void InitBtnOnClick()
         {
@@ -77,7 +77,7 @@ namespace Player
         /// <summary>
         /// 刪除攻擊Button註冊(玩家死亡)
         /// </summary>
-        internal void RemoveBtnOnClick() 
+        internal void RemoveBtnOnClick()
         {
             AttackBtn.onClick.RemoveListener(Attack);
         }
@@ -100,7 +100,7 @@ namespace Player
         /// <summary>
         /// 攻擊
         /// </summary>
-        private void Attack() 
+        private void Attack()
         {
             _playerStateController.SwitchAttackState();
         }
@@ -108,7 +108,7 @@ namespace Player
         /// <summary>
         /// 播放攻擊音效
         /// </summary>
-        private void PlayAttackSFX() 
+        private void PlayAttackSFX()
         {
             _audioSource.clip = _audioClips[0];
             _audioSource.Play();
@@ -128,7 +128,7 @@ namespace Player
         /// </summary>
         private void DetectAttack()
         {     
-            _detectAttackTrigger.enabled = true;    
+            _detectAttackTrigger.enabled = true;
         }
 
         /// <summary>

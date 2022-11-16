@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameStage 
+namespace GameStage
 {
     [CreateAssetMenu(fileName = "GameStageConfig", menuName = "StartScene/CreateGameStageConfig")]
     public class GameStageConfig : ScriptableObject
