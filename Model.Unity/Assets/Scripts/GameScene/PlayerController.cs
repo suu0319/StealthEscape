@@ -12,9 +12,6 @@ namespace Player
         [SerializeField]
         private PlayerStateController _playerStateController;
 
-        [SerializeField]
-        private PlayerCameraMovement _cameraMovement;
-
         [Header("Animation")]
         [SerializeField]
         internal Animator Animator;
@@ -46,11 +43,6 @@ namespace Player
             InitBtnOnClick();
         }
 
-        private void Update()
-        {
-            CheckMoving();
-        }
-
         /// <summary>
         /// Singleton初始化
         /// </summary>
@@ -80,21 +72,6 @@ namespace Player
         internal void RemoveBtnOnClick()
         {
             AttackBtn.onClick.RemoveListener(Attack);
-        }
-
-        /// <summary>
-        /// 檢查是否移動中
-        /// </summary>
-        private void CheckMoving()
-        {
-            if ((Animator.GetFloat("Speed") == 0f) && (!IsDeath))
-            {
-                _cameraMovement.enabled = true;
-            }
-            else
-            {
-                _cameraMovement.enabled = false;
-            }
         }
 
         /// <summary>

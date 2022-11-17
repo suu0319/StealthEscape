@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Manager;
 
 namespace Player
@@ -8,9 +9,12 @@ namespace Player
         [Header("Script")]
         [SerializeField]
         private PlayerController _playerController;
-
         [SerializeField]
         internal FixedJoystick Joystick;
+
+        [Header("InputActions")]
+        [SerializeField]
+        private PlayerInput _playerInput;
 
         [Header("Transform")]
         [SerializeField]
@@ -66,7 +70,7 @@ namespace Player
         {
             isGrounded = Physics.CheckSphere(_groundCheck.position, groundDistance, groundMask);
 
-            if (isGrounded && velocity.y < 0) 
+            if (isGrounded && velocity.y < 0)
             {
                 velocity.y = -2f;
             }
@@ -74,8 +78,9 @@ namespace Player
             velocity.y += gravity * Time.deltaTime;
             CharacterController.Move(velocity * Time.deltaTime);
 
-            float horizontal = Joystick.Horizontal;
-            float vertical = Joystick.Vertical;
+            Vector2 input = _playerInput.actions["Move"].ReadValue<Vector2>();
+            float horizontal = input.x;
+            float vertical = input.y;
 
             Direction = new Vector3(horizontal, 0f, vertical).normalized;
             _playerController.Animator.SetFloat("Speed", Direction.magnitude);

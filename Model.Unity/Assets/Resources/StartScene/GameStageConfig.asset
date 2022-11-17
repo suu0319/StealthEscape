@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac86548ea93d604b9b05f51d806e088, type: 3}
   m_Name: GameStageConfig
   m_EditorClassIdentifier: 
-  IsCheat: 1
+  IsCheat: 0
   PlayerSpeed: 6
   StageDataList:
-  - Level: 1
+  - Level: 2
     Image: {fileID: 21300000, guid: 00c75b5a063ba8945afc7ca039fb840c, type: 3}
     SceneName: Desert
     BGM: {fileID: 8300000, guid: f0e1d6b6919b5d444a5e42a7faf68d75, type: 3}
-    IsManual: 0
-    SoldierAmountAuto: 13
-    SoldierSpeedAuto: 5
-    SpikeTrapAmountAuto: 60
-    SpikeTrapIntervalAuto: 3
-    ShootTrapAmountAuto: 13
-    ShootTrapIntervalAuto: 4
+    IsManual: 1
+    SoldierAmountAuto: 16
+    SoldierSpeedAuto: 6
+    SpikeTrapAmountAuto: 75
+    SpikeTrapIntervalAuto: 2
+    ShootTrapAmountAuto: 16
+    ShootTrapIntervalAuto: 3
     SoldierDataList:
     - Speed: 6
       PatrolPointsData: {fileID: 11400000, guid: d41446e840b97504c8549e16f3aaa241, type: 2}

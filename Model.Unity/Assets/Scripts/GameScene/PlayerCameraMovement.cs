@@ -11,18 +11,16 @@ namespace Player
         [SerializeField]
         private float touchSensitivity_y = 30f;
 
-        private void OnEnable()
-        {
-            Debug.Log("可以操作Camera");
+        [Header("Other")]
+        [SerializeField]
+        private bool isPlayerMove = false;
 
+        [SerializeField]
+        private RectTransform _joystickHandle;
+
+        private void Start()
+        {
             CinemachineCore.GetInputAxis = HandleAxisInput;
-        }
-
-        private void OnDisable()
-        {
-            Debug.Log("操作角色，無法操作Camera");
-
-            CinemachineCore.GetInputAxis = HandAxisZero;
         }
 
         /// <summary>
@@ -35,22 +33,63 @@ namespace Player
             switch (axisName)
             {
                 case "Mouse X":
-                    if (Input.touchCount > 0)
+                    if (Input.touchCount >= 2)
                     {
+                        if (isPlayerMove == true)
+                        {
+                            return Input.touches[Input.touches.Length - 1].deltaPosition.x / touchSensitivity_x;
+                        }
+                        else
+                        {
+                            return Input.touches[0].deltaPosition.x / touchSensitivity_x;
+                        }
+                    }
+                    else if (Input.touchCount == 1)
+                    {
+                        if (_joystickHandle.anchoredPosition != Vector2.zero)
+                        {
+                            isPlayerMove = true;
+                        }
+
                         return Input.touches[0].deltaPosition.x / touchSensitivity_x;
                     }
                     else
                     {
+                        if (!isPlayerMove)
+                        {
+                            isPlayerMove = false;
+                        }
+                        
                         return Input.GetAxis(axisName);
                     }
 
                 case "Mouse Y":
-                    if (Input.touchCount > 0)
+                    if (Input.touchCount >= 2)
                     {
+                        if (isPlayerMove == true)
+                        {
+                            return Input.touches[Input.touches.Length - 1].deltaPosition.y / touchSensitivity_y;
+                        }
+                        else
+                        {
+                            return Input.touches[0].deltaPosition.y / touchSensitivity_y;
+                        }
+                    }
+                    else if (Input.touchCount == 1)
+                    {
+                        if (_joystickHandle.anchoredPosition != Vector2.zero)
+                        {
+                            isPlayerMove = true;
+                        }
+
                         return Input.touches[0].deltaPosition.y / touchSensitivity_y;
                     }
                     else
                     {
+                        if (!isPlayerMove)
+                        {
+                            isPlayerMove = false;
+                        }
                         return Input.GetAxis(axisName);
                     }
 
@@ -59,16 +98,6 @@ namespace Player
                     break;
             }
 
-            return 0f;
-        }
-
-        /// <summary>
-        /// 無觸碰輸入值
-        /// </summary>
-        /// <param name="axisName">None</param>
-        /// <returns></returns>
-        private float HandAxisZero(string axisName)
-        {
             return 0f;
         }
     }
