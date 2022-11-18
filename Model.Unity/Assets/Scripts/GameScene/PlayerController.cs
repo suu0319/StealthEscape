@@ -4,7 +4,7 @@ using Manager;
 
 namespace Player
 {
-    public class PlayerController : Player
+    public class PlayerController : MonoBehaviour, IModelEvent
     {
         public static PlayerController Instance;
 
@@ -32,6 +32,8 @@ namespace Player
         internal Transform PlayerTransform;
 
         [Header("Other")]
+        [SerializeField]
+        private CharacterController _characterController;
         [SerializeField]
         private BoxCollider _detectAttackTrigger;
         
@@ -85,7 +87,7 @@ namespace Player
         /// <summary>
         /// 播放攻擊音效
         /// </summary>
-        private void PlayAttackSFX()
+        public void PlayAttackSFX()
         {
             _audioSource.clip = _audioClips[0];
             _audioSource.Play();
@@ -94,7 +96,7 @@ namespace Player
         /// <summary>
         /// 播放士兵死亡音效
         /// </summary>
-        private void PlayDeathSFX()
+        public void PlayDeathSFX()
         {
             _audioSource.clip = _audioClips[1];
             _audioSource.Play();
@@ -103,7 +105,7 @@ namespace Player
         /// <summary>
         /// 判定攻擊(Animation Event)
         /// </summary>
-        private void DetectAttack()
+        public void DetectAttack()
         {     
             _detectAttackTrigger.enabled = true;
         }
@@ -119,14 +121,14 @@ namespace Player
         /// <summary>
         /// 切換死亡狀態
         /// </summary>
-        internal void DetectDeath()
+        public void DetectDeath()
         {
             bool isCheat = (GameManager.Instance.GameSceneData.IsCheat || CheatPanelController.IsCheat);
 
             if ((!isCheat) && (!IsDeath))
             {
                 IsDeath = true;
-                CharacterController.enabled = false;
+                _characterController.enabled = false;
                 _playerStateController.SwitchDeathState();
                 RemoveBtnOnClick();
             }

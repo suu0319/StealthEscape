@@ -7,7 +7,7 @@ using Player;
 
 namespace Enemy
 {
-    public class SoldierAIController : MonoBehaviour
+    public class SoldierAIController : MonoBehaviour, IModelEvent
     {
         [Header("Script")]
         [SerializeField]
@@ -164,7 +164,7 @@ namespace Enemy
         /// <summary>
         /// 播放攻擊音效
         /// </summary>
-        private void PlayAttackSFX()
+        public void PlayAttackSFX()
         {
             _audioSource.clip = _audioClips[0];
             _audioSource.Play();
@@ -173,7 +173,7 @@ namespace Enemy
         /// <summary>
         /// 播放死亡音效
         /// </summary>
-        private void PlayDeathSFX()
+        public void PlayDeathSFX()
         {
             _audioSource.clip = _audioClips[1];
             _audioSource.Play();
@@ -182,7 +182,7 @@ namespace Enemy
         /// <summary>
         /// 判定攻擊(Animation Event)
         /// </summary>
-        private void DetectAttack()
+        public void DetectAttack()
         {
             if (!isDeath)
             {
@@ -198,7 +198,7 @@ namespace Enemy
         /// <summary>
         /// 判斷死亡
         /// </summary>
-        internal void DetectDeath()
+        public void DetectDeath()
         {
             if (!isDeath)
             {

@@ -4,7 +4,7 @@ using Manager;
 
 namespace Player
 {
-    public class PlayerMovement : Player
+    public class PlayerMovement : MonoBehaviour
     {
         [Header("Script")]
         [SerializeField]
@@ -31,8 +31,9 @@ namespace Player
         private float turnSmoothTime = 0.1f;
         private float turnSmoothVelocity;
 
-        [Space]
         [Header("Other")]
+        [SerializeField]
+        private CharacterController _characterController;
         [SerializeField]
         private LayerMask groundMask;
         [SerializeField]
@@ -76,7 +77,7 @@ namespace Player
             }
 
             velocity.y += gravity * Time.deltaTime;
-            CharacterController.Move(velocity * Time.deltaTime);
+            _characterController.Move(velocity * Time.deltaTime);
 
             Vector2 input = _playerInput.actions["Move"].ReadValue<Vector2>();
             float horizontal = input.x;
@@ -92,7 +93,7 @@ namespace Player
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                CharacterController.Move(moveDir.normalized * speed * Time.deltaTime);
+                _characterController.Move(moveDir.normalized * speed * Time.deltaTime);
             }
         }
     }
