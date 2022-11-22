@@ -11409,6 +11409,10 @@ PrefabInstance:
       propertyPath: Joystick
       value: 
       objectReference: {fileID: 1157524630}
+    - target: {fileID: 5171245354990567686, guid: c9af0ca24206a2b42a7d8d4aa6c4ada7, type: 3}
+      propertyPath: _characterController
+      value: 
+      objectReference: {fileID: 5171245354193887401}
     - target: {fileID: 5171245354990567687, guid: c9af0ca24206a2b42a7d8d4aa6c4ada7, type: 3}
       propertyPath: _joystickHandle
       value: 
@@ -11421,5 +11425,14 @@ PrefabInstance:
       propertyPath: JoystickHandle
       value: 
       objectReference: {fileID: 455596508}
+    - target: {fileID: 5171245354990567705, guid: c9af0ca24206a2b42a7d8d4aa6c4ada7, type: 3}
+      propertyPath: _characterController
+      value: 
+      objectReference: {fileID: 5171245354193887401}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9af0ca24206a2b42a7d8d4aa6c4ada7, type: 3}
+--- !u!143 &5171245354193887401 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 5171245354990567685, guid: c9af0ca24206a2b42a7d8d4aa6c4ada7, type: 3}
+  m_PrefabInstance: {fileID: 5171245354193887400}
+  m_PrefabAsset: {fileID: 0}

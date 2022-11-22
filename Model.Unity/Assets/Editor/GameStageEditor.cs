@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -16,10 +17,6 @@ namespace GameStage
 		#region 全域相關
 		private bool isCheat = false;
 		private float playerSpeed = 6f;
-
-		private const string soldierName = "Soldier";
-		private const string spikeTrapName = "SpikeTrap";
-		private const string shootTrapName = "ShootTrap";
 		#endregion
 
 		#region 關卡相關(基本)
@@ -259,7 +256,7 @@ namespace GameStage
 				EditorGUILayout.BeginHorizontal();
 				stageSoldierAmount = EditorGUILayout.IntField("Soldier Amount", _gameStageData.SoldierDataList.Count);
 
-				RefreshEnemyTrapDataList("Soldier", stageSoldierAmount, _gameStageData.SoldierDataList);
+				RefreshEnemyTrapDataList<SoldierData>(stageSoldierAmount, _gameStageData.SoldierDataList);
 
 				EditorGUILayout.EndHorizontal();
 
@@ -283,7 +280,7 @@ namespace GameStage
 								EditorGUILayout.EndHorizontal();
 							}
 						}
-						catch (System.Exception e)
+						catch (Exception e)
 						{
 							Debug.LogError("GameStageData.SoldierPatrolPointsConfig is null, " + e.Message);
 						}
@@ -297,7 +294,7 @@ namespace GameStage
 				EditorGUILayout.BeginHorizontal();
 				stageSpikeTrapAmount = EditorGUILayout.IntField("SpikeTrap Amount", _gameStageData.SpikeTrapDataList.Count);
 
-				RefreshEnemyTrapDataList("SpikeTrap", stageSpikeTrapAmount, _gameStageData.SpikeTrapDataList);
+				RefreshEnemyTrapDataList<SpikeTrapData>(stageSpikeTrapAmount, _gameStageData.SpikeTrapDataList);
 
 				EditorGUILayout.EndHorizontal();
 
@@ -321,7 +318,7 @@ namespace GameStage
 								EditorGUILayout.EndHorizontal();
 							}
 						}
-						catch (System.Exception e)
+						catch (Exception e)
 						{
 							Debug.LogError("GameStageData.SpikeTrapPositionConfig is null, " + e.Message);
 						}
@@ -335,7 +332,7 @@ namespace GameStage
 				EditorGUILayout.BeginHorizontal();
 				stageShootTrapAmount = EditorGUILayout.IntField("ShootTrap Amount", _gameStageData.ShootTrapDataList.Count);
 
-				RefreshEnemyTrapDataList("ShootTrap", stageShootTrapAmount, _gameStageData.ShootTrapDataList);
+				RefreshEnemyTrapDataList<ShootTrapData>(stageShootTrapAmount, _gameStageData.ShootTrapDataList);
 				
 				EditorGUILayout.EndHorizontal();
 
@@ -360,7 +357,7 @@ namespace GameStage
 								EditorGUILayout.EndHorizontal();
 							}
 						}
-						catch (System.Exception e)
+						catch (Exception e)
 						{
 							Debug.LogError("GameStageData.ShootTrapPositionConfig is null, " + e.Message);
 						}
@@ -377,10 +374,9 @@ namespace GameStage
 		/// 刷新物件資料List
 		/// </summary>
 		/// <typeparam name="T">IEditorLayout</typeparam>
-		/// <param name="name">物件名稱</param>
 		/// <param name="amount">物件數量</param>
 		/// <param name="objDataList">物件資料List</param>
-		private void RefreshEnemyTrapDataList<T>(string name, int amount, List<T> objDataList) where T : IEditorLayout
+		private void RefreshEnemyTrapDataList<T>(int amount, List<T> objDataList) where T : IEditorLayout
 		{
 			if (objDataList.Count != amount)
 			{
@@ -395,17 +391,17 @@ namespace GameStage
 				{
 					for (int i = objDataList.Count; i < amount; i++)
 					{
-						switch (name)
+						switch (typeof(T))
 						{
-							case soldierName:
+							case Type t when t == typeof(SoldierData):
 								_gameStageData.SoldierDataList.Add(new SoldierData());
 								break;
 
-							case spikeTrapName:
+							case Type t when t == typeof(SpikeTrapData):
 								_gameStageData.SpikeTrapDataList.Add(new SpikeTrapData());
 								break;
 
-							case shootTrapName:
+							case Type t when t == typeof(ShootTrapData):
 								_gameStageData.ShootTrapDataList.Add(new ShootTrapData());
 								break;
 

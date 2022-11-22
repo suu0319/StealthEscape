@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Enemy;
@@ -41,25 +42,24 @@ namespace ObjectPool
 
             if (!gameSceneData.IsManual)
             {
-                RandomCreate(soldierName, gameSceneData.StageIndex);
-                RandomCreate(spikeTrapName, gameSceneData.StageIndex);
-                RandomCreate(shootTrapName, gameSceneData.StageIndex);
+                RandomCreate<SoldierData>(gameSceneData.StageIndex);
+                RandomCreate<SpikeTrapData>(gameSceneData.StageIndex);
+                RandomCreate<ShootTrapData>(gameSceneData.StageIndex);
             }
             else
             {
-                CreateEnemy(soldierName, gameStageData.SoldierDataList);
-                CreateTrap(spikeTrapName, gameStageData.SpikeTrapDataList);
-                CreateTrap(shootTrapName, gameStageData.ShootTrapDataList);
+                CreateEnemy<SoldierData>(gameStageData.SoldierDataList);
+                CreateTrap<SpikeTrapData>(gameStageData.SpikeTrapDataList);
+                CreateTrap<ShootTrapData>(gameStageData.ShootTrapDataList);
             }
         }
 
         /// <summary>
         /// 生成敵人
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="name">敵人名稱</param>
-        /// <param name="enemyData">敵人資料List</param>
-        private void CreateEnemy<T>(string name, List<T> enemyDataList) where T : EnemyData
+        /// <typeparam name="T">EnemyData</typeparam>
+        /// <param name="enemyDataList">enemyDataList</param>
+        private void CreateEnemy<T>(List<T> enemyDataList) where T : EnemyData
         {
             try
             {
@@ -69,9 +69,9 @@ namespace ObjectPool
 
                     GameObject soldierObj = ObjectPool.Instance.SpawnFromPool(soldierName, patrolPosition[0], Quaternion.identity);
 
-                    switch (name)
+                    switch (typeof(T))
                     {
-                        case soldierName:
+                        case Type t when t == typeof(SoldierData):
                             SoldierAIController soldierAIController = soldierObj.GetComponent<SoldierAIController>();
                             soldierObj.transform.parent = _soldierParentObj.transform;
                             soldierAIController.Agent.speed = enemyDataList[i].Speed;
@@ -88,7 +88,7 @@ namespace ObjectPool
                     }
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 Debug.LogError("EnemyDataList資料缺失: " + e.Message);
             }
@@ -97,10 +97,9 @@ namespace ObjectPool
         /// <summary>
         /// 生成陷阱
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="name">陷阱名稱</param>
-        /// <param name="trapDataList">陷阱資料List</param>
-        private void CreateTrap<T>(string name, List<T> trapDataList) where T: TrapData
+        /// <typeparam name="T">TrapData</typeparam>
+        /// <param name="trapDataList">trapDataList</param>
+        private void CreateTrap<T>(List<T> trapDataList) where T: TrapData
         {
             try
             {
@@ -109,19 +108,19 @@ namespace ObjectPool
                     Vector3 position = trapDataList[i].PositionData.Position;
                     Quaternion rotation = trapDataList[i].PositionData.Rotation;
 
-                    GameObject trapObj = ObjectPool.Instance.SpawnFromPool(name, position, rotation);
-
-                    switch (name)
+                    switch (typeof(T))
                     {
-                        case spikeTrapName:
-                            SpikeTrap spikeTrap = trapObj.GetComponentInChildren<SpikeTrap>();
-                            trapObj.transform.parent = _spikeTrapParentObj.transform;
+                        case Type t when t == typeof(SpikeTrapData):
+                            GameObject spikeTrapObj = ObjectPool.Instance.SpawnFromPool(spikeTrapName, position, rotation);
+                            SpikeTrap spikeTrap = spikeTrapObj.GetComponentInChildren<SpikeTrap>();
+                            spikeTrapObj.transform.parent = _spikeTrapParentObj.transform;
                             spikeTrap.Interval = trapDataList[i].Interval;
                             break;
 
-                        case shootTrapName:
-                            ShootTrap shootTrap = trapObj.GetComponentInChildren<ShootTrap>();
-                            trapObj.transform.parent = _shootTrapParentObj.transform;
+                        case Type t when t == typeof(ShootTrapData):
+                            GameObject shootTrapObj = ObjectPool.Instance.SpawnFromPool(shootTrapName, position, rotation);
+                            ShootTrap shootTrap = shootTrapObj.GetComponentInChildren<ShootTrap>();
+                            shootTrapObj.transform.parent = _shootTrapParentObj.transform;
                             shootTrap.Interval = trapDataList[i].Interval;
                             shootTrap.Speed = (trapDataList[i] as ShootTrapData).Speed;
                             break;
@@ -132,7 +131,7 @@ namespace ObjectPool
                     }
                 }
             }        
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 Debug.LogError("TrapDataList資料缺失: " + e.Message);
             }
@@ -143,28 +142,28 @@ namespace ObjectPool
         /// </summary>
         /// <param name="name">物件名稱</param>
         /// <param name="stageNum">關卡編號</param>
-        private void RandomCreate(string name, int stageNum)
+        private void RandomCreate<T>(int stageNum)
         {
             try
             {
-                int trapAmount = 0;
+                int objAmount = 0;
                 GameStageData gameStageData = GameManager.Instance.GameStageConfig.StageDataList[stageNum];
 
-                switch (name)
+                switch (typeof(T))
                 {
-                    case soldierName:
-                        trapAmount = GameManager.Instance.GameSceneData.SoldierAmount;
-                        RandomCreateSoldierLoop(name, trapAmount, stageNum, gameStageData.SoldierPatrolPointsConfig.PatrolPointsDataList);
+                    case Type t when t == typeof(SoldierData):
+                        objAmount = GameManager.Instance.GameSceneData.SoldierAmount;
+                        RandomCreateSoldierLoop<SoldierData>(objAmount, stageNum, gameStageData.SoldierPatrolPointsConfig.PatrolPointsDataList);
                         break;
 
-                    case spikeTrapName:
-                        trapAmount = GameManager.Instance.GameSceneData.SpikeTrapAmount;
-                        RandomCreateTrapLoop(name, trapAmount, stageNum, gameStageData.SpikeTrapPositionConfig.PositionDataList);
+                    case Type t when t == typeof(SpikeTrapData):
+                        objAmount = GameManager.Instance.GameSceneData.SpikeTrapAmount;
+                        RandomCreateTrapLoop<SpikeTrapData>(objAmount, stageNum, gameStageData.SpikeTrapPositionConfig.PositionDataList);
                         break;
 
-                    case shootTrapName:
-                        trapAmount = GameManager.Instance.GameSceneData.ShootTrapAmount;
-                        RandomCreateTrapLoop(name, trapAmount, stageNum, gameStageData.ShootTrapPositionConfig.PositionDataList);
+                    case Type t when t == typeof(ShootTrapData):
+                        objAmount = GameManager.Instance.GameSceneData.ShootTrapAmount;
+                        RandomCreateTrapLoop<ShootTrapData>(objAmount, stageNum, gameStageData.ShootTrapPositionConfig.PositionDataList);
                         break;
 
                     default:
@@ -172,7 +171,7 @@ namespace ObjectPool
                         break;
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 Debug.LogError("GameStageConfig.StageDataList資料缺失: " + e.Message);
             }
@@ -181,32 +180,30 @@ namespace ObjectPool
         /// <summary>
         /// 隨機生成士兵Loop
         /// </summary>
-        /// <param name="name">物件名稱</param>
-        /// <param name="amount">物件數量</param>
+        /// <param name="amount">士兵數量</param>
         /// <param name="stageNum">關卡編號</param>
         /// <param name="positionData">座標資料</param>
-        private void RandomCreateSoldierLoop(string name, int amount, int stageNum, List<PatrolPointsData> positionData)
+        private void RandomCreateSoldierLoop<T>(int amount, int stageNum, List<PatrolPointsData> positionData) where T : EnemyData
         {
             try
             {
-                int num = 0;
-                List<int> randomExistList = new List<int>();
-
                 GameStageData gameStageData = GameManager.Instance.GameStageConfig.StageDataList[stageNum];
-                int soldierAmount = GameManager.Instance.GameSceneData.SoldierAmount;
+
+                int num = 0;
+                int soldierAmount = gameStageData.SoldierPatrolPointsConfig.PatrolPointsDataList.Count;
+                List<int> randomExistList = new List<int>();
 
                 while (num < amount)
                 {
-                    int random = Random.Range(0, 2);
-                    int randomIndex = Random.Range(0, soldierAmount);
+                    int randomIndex = UnityEngine.Random.Range(0, soldierAmount);
 
                     Vector3[] patrolPosition = positionData[randomIndex].Position;
 
-                    if ((random == 1) && (!randomExistList.Contains(randomIndex)))
+                    if (!randomExistList.Contains(randomIndex))
                     {
-                        switch (name)
+                        switch (typeof(T))
                         {
-                            case soldierName:
+                            case Type t when t == typeof(SoldierData):
                                 GameObject soldierObj = ObjectPool.Instance.SpawnFromPool(soldierName, patrolPosition[0], Quaternion.identity);
                                 SoldierAIController soldierAIController = soldierObj.GetComponent<SoldierAIController>();
                                 soldierObj.transform.parent = _soldierParentObj.transform;
@@ -228,7 +225,7 @@ namespace ObjectPool
                     }
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 Debug.LogError("GameStageConfig.StageDataList資料缺失: " + e.Message);
             }
@@ -237,31 +234,46 @@ namespace ObjectPool
         /// <summary>
         /// 隨機生成陷阱Loop
         /// </summary>
-        /// <param name="name">物件名稱</param>
-        /// <param name="amount">物件數量</param>
+        /// <param name="amount">陷阱數量</param>
         /// <param name="stageNum">關卡編號</param>
         /// <param name="positionData">座標資料</param>
-        private void RandomCreateTrapLoop(string name, int amount, int stageNum, List<PositionData> positionData)
+        private void RandomCreateTrapLoop<T>(int amount, int stageNum, List<PositionData> positionData) where T : TrapData
         {
             try
             {
-                int num = 0;
-                List<int> randomExistList = new List<int>();
                 GameStageData gameStageData = GameManager.Instance.GameStageConfig.StageDataList[stageNum];
+
+                int num = 0;
+                int trapAmount = 0;
+                List<int> randomExistList = new List<int>();
+
+                switch (typeof(T))
+                {
+                    case Type t when t == typeof(SpikeTrapData):
+                        trapAmount = gameStageData.SpikeTrapPositionConfig.PositionDataList.Count;
+                        break;
+
+                    case Type t when t == typeof(ShootTrapData):
+                        trapAmount = gameStageData.ShootTrapPositionConfig.PositionDataList.Count;
+                        break;
+
+                    default:
+                        Debug.LogError("Trap doesn't Exist");
+                        break;
+                }
 
                 while (num < amount)
                 {
-                    int random = Random.Range(0, 2);
-                    int randomIndex = Random.Range(0, amount);
+                    int randomIndex = UnityEngine.Random.Range(0, trapAmount);
 
                     Vector3 position = positionData[randomIndex].Position;
                     Quaternion rotation = positionData[randomIndex].Rotation;
 
-                    if ((random == 1) && (!randomExistList.Contains(randomIndex)))
+                    if (!randomExistList.Contains(randomIndex))
                     {
-                        switch (name)
+                        switch (typeof(T))
                         {
-                            case spikeTrapName:
+                            case Type t when t == typeof(SpikeTrapData):
                                 GameObject spikeTrapObj = ObjectPool.Instance.SpawnFromPool(spikeTrapName, position, rotation);
                                 SpikeTrap spikeTrap = spikeTrapObj.GetComponentInChildren<SpikeTrap>();
                                 spikeTrapObj.transform.parent = _spikeTrapParentObj.transform;
@@ -271,7 +283,7 @@ namespace ObjectPool
                                 num++;
                                 break;
 
-                            case shootTrapName:
+                            case Type t when t == typeof(ShootTrapData):
                                 GameObject shootTrapObj = ObjectPool.Instance.SpawnFromPool(shootTrapName, position, rotation);
                                 ShootTrap shootTrap = shootTrapObj.GetComponentInChildren<ShootTrap>();
                                 shootTrapObj.transform.parent = _shootTrapParentObj.transform;
@@ -289,7 +301,7 @@ namespace ObjectPool
                     }
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 Debug.LogError("GameStageConfig.StageDataList資料缺失: " + e.Message);
             }
@@ -306,7 +318,7 @@ namespace ObjectPool
             {
                 ObjectPool.Instance.SpawnFromPool("Soldier", new Vector3(0, 0, 0), Quaternion.identity);
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 Debug.LogError("物件池已空: " + e.Message);
             }
