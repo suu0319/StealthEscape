@@ -253,7 +253,7 @@ namespace Enemy
         [ContextMenu("Recycle Soldier")]
         private void RecycleSoldier()
         {
-            ObjectPool.ObjectPool.Instance.RecycleToPool("Soldier", this.gameObject);
+            ObjectPool.ObjectPool.Instance.RecycleToPool("Soldier", gameObject);
         }
         #endregion
 
