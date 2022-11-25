@@ -1,6 +1,8 @@
+using Position;
+
 namespace Trap
 {
-    public class TrapData : IEditorLayout
+    public class TrapData
     {
         public float Interval;
 

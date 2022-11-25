@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShootTrapPositionData 3
   m_EditorClassIdentifier: 
   Position: {x: -40.32, y: 1, z: -19.23}
-  Rotation: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
+  Rotation: {x: 0, y: 0, z: 0.70710677, w: -0.70710677}

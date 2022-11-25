@@ -10,7 +10,7 @@ public class AddListener : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*Buttons[0].onClick.AddListener(Test0);
+        Buttons[0].onClick.AddListener(Test0);
         Buttons[1].onClick.AddListener(Test1);
         Buttons[2].onClick.AddListener(Test2);
         Buttons[3].onClick.AddListener(Test3);
@@ -19,7 +19,7 @@ public class AddListener : MonoBehaviour
         Buttons[6].onClick.AddListener(Test6);
         Buttons[7].onClick.AddListener(Test7);
         Buttons[8].onClick.AddListener(Test8);
-        Buttons[9].onClick.AddListener(Test9);*/
+        Buttons[9].onClick.AddListener(Test9);
     }
 
     public void Test0() 

@@ -6,7 +6,7 @@ using Manager;
 
 namespace Mediator
 {
-    public class GameSceneMediator : BaseMediator
+    public abstract class GameSceneMediator : BaseMediator
     {
         [Header("SceneData")]
         [SerializeField]
@@ -21,7 +21,7 @@ namespace Mediator
         /// <summary>
         /// 初始化遊戲場景資料
         /// </summary>
-        protected virtual void InitGameSceneData()
+        protected void InitGameSceneData()
         {
             GameManager.Instance.GetStageIndex();
             GameManager.Instance.InitGameSceneData();
@@ -33,7 +33,7 @@ namespace Mediator
         /// <summary>
         /// 初始化選項選單
         /// </summary>
-        protected virtual void InitOptionMenu()
+        protected void InitOptionMenu()
         {
             OptionMenuController.Instance.AddOnClickListener();
         }
@@ -41,7 +41,7 @@ namespace Mediator
         /// <summary>
         /// 初始化死亡畫面(新增OnClick Event)
         /// </summary>
-        protected virtual void InitGameOverMenu()
+        protected void InitGameOverMenu()
         {
             GameOverController.Instance.AddOnClickListener();
         }
@@ -49,7 +49,7 @@ namespace Mediator
         /// <summary>
         /// 取得場景名稱
         /// </summary>
-        protected virtual void GetSceneIndex()
+        protected void GetSceneIndex()
         {
             SceneName = SceneManager.GetActiveScene().name;
         }
@@ -57,6 +57,6 @@ namespace Mediator
         /// <summary>
         /// 顯示遊戲場景資料
         /// </summary>
-        protected virtual void ShowGameSceneData() { }
+        protected abstract void ShowGameSceneData();
     }
 }

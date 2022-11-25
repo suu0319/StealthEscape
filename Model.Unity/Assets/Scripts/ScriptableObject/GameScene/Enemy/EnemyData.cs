@@ -2,7 +2,7 @@ using Position;
 
 namespace Enemy
 {
-    public class EnemyData : IEditorLayout
+    public class EnemyData
     {
         public float Speed;
 

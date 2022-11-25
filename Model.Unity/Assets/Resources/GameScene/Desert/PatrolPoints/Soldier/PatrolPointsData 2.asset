@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27887f8c1fa2e0a4ea90897a2e670344, type: 3}
   m_Name: PatrolPointsData 2
   m_EditorClassIdentifier: 
-  name: "\u7B2C3\u7D44"
   Position:
   - {x: 14.74, y: 1.5, z: -31.279999}
   - {x: 14.35, y: 1.5, z: -68.39}

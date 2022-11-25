@@ -31,19 +31,19 @@ namespace GameStage
 
 		#region 關卡士兵敵人設定
 		private List<SoldierData> _stageSoldierDataList;
-		private bool stageSoldierAmountFoldout;
+		private bool isShowStageSoldierAmountFoldout;
 		private int stageSoldierAmount;
 		#endregion
 
 		#region 關卡地刺陷阱人設定
 		private List<SpikeTrapData> _stageSpikeTrapDataList;
-		private bool stageSpikeTrapAmountFoldout;
+		private bool isShowStageSpikeTrapAmountFoldout;
 		private int stageSpikeTrapAmount;
 		#endregion
 
 		#region 關卡箭矢陷阱人設定
 		private List<ShootTrapData> _stageShootTrapDataList;
-		private bool stageShootTrapAmountFoldout;
+		private bool isShowStageShootTrapAmountFoldout;
 		private int stageShootTrapAmount;
 		#endregion
 
@@ -69,7 +69,7 @@ namespace GameStage
 		{
 			Debug.Log("開啟GameStageEditor");
 
-			EditorWindow.GetWindow(typeof(GameStageEditor), true, "GameStageEditor", true);
+			GetWindow(typeof(GameStageEditor), true, "GameStageEditor", true);
 		}
 
 		private void OnGUI()
@@ -263,12 +263,12 @@ namespace GameStage
 				if (_stageSoldierDataList.Count > 0)
 				{
 					EditorGUILayout.BeginHorizontal();
-					stageSoldierAmountFoldout = EditorGUILayout.Foldout(stageSoldierAmountFoldout, "SoldierSettings");
+					isShowStageSoldierAmountFoldout = EditorGUILayout.Foldout(isShowStageSoldierAmountFoldout, "SoldierSettings");
 					EditorGUILayout.EndHorizontal();
 
 					EditorGUILayout.TextArea("Suggest Settings:\n<b>Speed: 2f</b>", helpBoxStyle);
 
-					if (stageSoldierAmountFoldout)
+					if (isShowStageSoldierAmountFoldout)
 					{
 						try
 						{
@@ -301,12 +301,12 @@ namespace GameStage
 				if (_stageSpikeTrapDataList.Count > 0)
 				{
 					EditorGUILayout.BeginHorizontal();
-					stageSpikeTrapAmountFoldout = EditorGUILayout.Foldout(stageSpikeTrapAmountFoldout, "SpikeTrapSetting");
+					isShowStageSpikeTrapAmountFoldout = EditorGUILayout.Foldout(isShowStageSpikeTrapAmountFoldout, "SpikeTrapSetting");
 					EditorGUILayout.EndHorizontal();
 
 					EditorGUILayout.TextArea("Suggest Settings:\n<b>Interval: 2f</b>", helpBoxStyle);
 
-					if (stageSpikeTrapAmountFoldout)
+					if (isShowStageSpikeTrapAmountFoldout)
 					{
 						try
 						{
@@ -339,12 +339,12 @@ namespace GameStage
 				if (_stageSpikeTrapDataList.Count > 0)
 				{
 					EditorGUILayout.BeginHorizontal();
-					stageShootTrapAmountFoldout = EditorGUILayout.Foldout(stageShootTrapAmountFoldout, "ShootTrapSetting");
+					isShowStageShootTrapAmountFoldout = EditorGUILayout.Foldout(isShowStageShootTrapAmountFoldout, "ShootTrapSetting");
 					EditorGUILayout.EndHorizontal();
 
 					EditorGUILayout.TextArea("Suggest Settings:\n<b>Interval: 2f</b>\n<b>Speed: 100f</b>", helpBoxStyle);
 
-					if (stageShootTrapAmountFoldout)
+					if (isShowStageShootTrapAmountFoldout)
 					{
 						try
 						{
@@ -373,10 +373,10 @@ namespace GameStage
 		/// <summary>
 		/// 刷新物件資料List
 		/// </summary>
-		/// <typeparam name="T">IEditorLayout</typeparam>
+		/// <typeparam name="T"></typeparam>
 		/// <param name="amount">物件數量</param>
 		/// <param name="objDataList">物件資料List</param>
-		private void RefreshEnemyTrapDataList<T>(int amount, List<T> objDataList) where T : IEditorLayout
+		private void RefreshEnemyTrapDataList<T>(int amount, List<T> objDataList) where T : new()
 		{
 			if (objDataList.Count != amount)
 			{
@@ -391,24 +391,7 @@ namespace GameStage
 				{
 					for (int i = objDataList.Count; i < amount; i++)
 					{
-						switch (typeof(T))
-						{
-							case Type t when t == typeof(SoldierData):
-								_gameStageData.SoldierDataList.Add(new SoldierData());
-								break;
-
-							case Type t when t == typeof(SpikeTrapData):
-								_gameStageData.SpikeTrapDataList.Add(new SpikeTrapData());
-								break;
-
-							case Type t when t == typeof(ShootTrapData):
-								_gameStageData.ShootTrapDataList.Add(new ShootTrapData());
-								break;
-
-							default:
-								Debug.LogError("Soldier or Trap doesn't Exist");
-								break;
-						}
+						objDataList.Add(new T());
 					}
 				}
 			}

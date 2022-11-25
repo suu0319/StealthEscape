@@ -13,7 +13,7 @@ namespace Mediator
         /// <summary>
         /// 畫面淡出
         /// </summary>
-        protected virtual void ScreenFadeOut()
+        protected void ScreenFadeOut()
         {
             GameLoadingPanel.Instance.ScreenFadeOut();
         }
