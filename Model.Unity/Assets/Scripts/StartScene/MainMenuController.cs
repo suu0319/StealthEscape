@@ -15,7 +15,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     private Button _startBtn;
     [SerializeField]
-    private Button _levelBtn;
+    private Button _stageBtn;
     [SerializeField]
     private Button _quitBtn;
     [SerializeField]
@@ -49,7 +49,7 @@ public class MainMenuController : MonoBehaviour
     /// <summary>
     /// 開啟選擇關卡UI
     /// </summary>
-    private void ChooseLevel()
+    private void ChooseStage()
     {
         _mainMenu.SetActive(false);
         _gameStage.SetActive(true);
@@ -70,7 +70,7 @@ public class MainMenuController : MonoBehaviour
     private void InitMainMenuBtn()
     {
         _startBtn.onClick.AddListener(StartGame);
-        _levelBtn.onClick.AddListener(ChooseLevel);
+        _stageBtn.onClick.AddListener(ChooseStage);
         _quitBtn.onClick.AddListener(QuitGame);
         _backBtn.onClick.AddListener(BackMainMenu);
     }
