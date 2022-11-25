@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using Player;
+using Pool;
 
 namespace Trap
 {
@@ -49,5 +50,16 @@ namespace Trap
 
             StartCoroutine(OpenCloseTrap());
         }
+
+        #region 物件池測試
+        /// <summary>
+        /// 回收測試
+        /// </summary>
+        [ContextMenu("RecycleTest")]
+        private void RecycleTest()
+        {
+            ObjectPool.Instance.RecycleToPool("SpikeTrap", gameObject.transform.parent.gameObject);
+        }
+        #endregion
     }
 }

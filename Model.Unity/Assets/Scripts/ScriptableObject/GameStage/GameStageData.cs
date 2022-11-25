@@ -24,6 +24,7 @@ namespace GameStage
         public float SpikeTrapIntervalAuto = 0;
         public int ShootTrapAmountAuto = 0;
         public float ShootTrapIntervalAuto = 0;
+        public float ShootTrapSpeedAuto = 100f;
         #endregion
 
         #region 關卡進階設定

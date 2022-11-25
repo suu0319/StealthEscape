@@ -4,6 +4,7 @@ using UnityEngine.AI;
 using UnityEditor;
 using DG.Tweening;
 using Player;
+using Pool;
 
 namespace Enemy
 {
@@ -248,12 +249,12 @@ namespace Enemy
 
         #region 物件池測試
         /// <summary>
-        /// 回收士兵
+        /// 回收測試
         /// </summary>
-        [ContextMenu("Recycle Soldier")]
-        private void RecycleSoldier()
+        [ContextMenu("RecycleTest")]
+        private void RecycleTest()
         {
-            ObjectPool.ObjectPool.Instance.RecycleToPool("Soldier", gameObject);
+            ObjectPool.Instance.RecycleToPool("Soldier", gameObject);
         }
         #endregion
 

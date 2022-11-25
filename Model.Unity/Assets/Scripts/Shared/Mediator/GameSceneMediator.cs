@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using OptionMenu;
@@ -16,6 +17,8 @@ namespace Mediator
         [SerializeField]
         protected AudioSource AudioSource;
 
+        public Action InitGameSceneObj;
+
         protected override void InitSingleton() { }
 
         /// <summary>
@@ -29,6 +32,11 @@ namespace Mediator
             AudioSource.clip = GameManager.Instance.GameSceneData.BGM;
             AudioSource.Play();
         }
+
+        /// <summary>
+        /// 初始化創建遊戲場景物件(敵人、陷阱)
+        /// </summary>
+        protected abstract void InitCreateGameSceneObj();
 
         /// <summary>
         /// 初始化選項選單

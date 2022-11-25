@@ -1,5 +1,7 @@
 using UnityEngine;
 using Puzzle;
+using Pool;
+using Factory;
 using Manager;
 
 namespace Mediator 
@@ -12,10 +14,18 @@ namespace Mediator
         [SerializeField]
         internal PintuPuzzleTrigger PintuPuzzleTrigger;
 
+        [Header("Factory")]
+        [SerializeField]
+        private SoldierFactory _soldierFactory;
+        [SerializeField]
+        private SpikeTrapFactory _spikeTrapFactory;
+        [SerializeField]
+        private ShootTrapFactory _shootTrapFactory;
+
         private void Awake()
         {
             InitSingleton();
-            InitGameSceneData();
+            InitCreateGameSceneObj();
         }
 
         private void Start()
@@ -79,6 +89,16 @@ namespace Mediator
             {
                 Debug.Log("箭矢陷阱間隔: " + gameSceneData.ShootTrapInterval);
             }
+        }
+
+        protected override void InitCreateGameSceneObj()
+        {
+            InitGameSceneObj += InitGameSceneData;
+            InitGameSceneObj += ObjectPool.Instance.InitObjectPool;
+            InitGameSceneObj += _soldierFactory.InitSpawn;
+            InitGameSceneObj += _spikeTrapFactory.InitSpawn;
+            InitGameSceneObj += _shootTrapFactory.InitSpawn;
+            InitGameSceneObj.Invoke();
         }
     }
 }
