@@ -19,7 +19,7 @@ namespace SyncData
         [HideInInspector]
         public Vector3 Position;
         [HideInInspector]
-        public Vector3 RotationVector3;
+        public Vector3 RotationEuler;
         [HideInInspector]
         public Vector3 Scale;
         [HideInInspector]

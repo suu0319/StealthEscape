@@ -34,7 +34,7 @@ namespace Enemy
 
         [Header("DestPoint")]
         [SerializeField]
-        internal List<Vector3> PatrolPoint = new List<Vector3>();
+        internal List<Vector3> PatrolPointsList = new List<Vector3>();
 
         private int destpoints = 0;
 
@@ -132,8 +132,8 @@ namespace Enemy
         /// </summary>
         private void PatrolState()
         {
-            Agent.SetDestination(PatrolPoint[destpoints]);
-            destpoints = (destpoints + 1) % PatrolPoint.Count;
+            Agent.SetDestination(PatrolPointsList[destpoints]);
+            destpoints = (destpoints + 1) % PatrolPointsList.Count;
         }
 
         /// <summary>

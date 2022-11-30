@@ -35,7 +35,7 @@ namespace Player
         [SerializeField]
         private CharacterController _characterController;
         [SerializeField]
-        private LayerMask groundMask;
+        private LayerMask _groundMask;
         [SerializeField]
         private bool isGrounded = true;
 
@@ -69,7 +69,7 @@ namespace Player
         /// </summary>
         private void Move()
         {
-            isGrounded = Physics.CheckSphere(_groundCheck.position, groundDistance, groundMask);
+            isGrounded = Physics.CheckSphere(_groundCheck.position, groundDistance, _groundMask);
 
             if (isGrounded && velocity.y < 0)
             {

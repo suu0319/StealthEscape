@@ -4,7 +4,7 @@ using Pool;
 using Factory;
 using Manager;
 
-namespace Mediator 
+namespace Mediator
 {
     public class DesertGameSceneMediator : GameSceneMediator
     {

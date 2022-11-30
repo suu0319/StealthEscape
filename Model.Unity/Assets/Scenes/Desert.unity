@@ -423,78 +423,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: bd72cb0da4523894aa69559d8ccd3a45, type: 3}
---- !u!1 &613072082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 613072084}
-  - component: {fileID: 613072083}
-  - component: {fileID: 613072086}
-  - component: {fileID: 613072085}
-  m_Layer: 0
-  m_Name: Factory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &613072083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613072082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00cfcdbb6618ecb4683cead1a89a0643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectPoolName: Soldier
---- !u!4 &613072084
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613072082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &613072085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613072082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a4bad3a4cabf64592d76218094215a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectPoolName: ShootTrap
---- !u!114 &613072086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613072082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b40620d51cb1742ab14dcb47ddceea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectPoolName: SpikeTrap
 --- !u!1 &641496468 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198, type: 3}
@@ -643,62 +571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &787547862
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 787547864}
-  - component: {fileID: 787547863}
-  m_Layer: 0
-  m_Name: SyncScriptableObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &787547863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787547862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 649ad05159fa4c34e858799e7fca8c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PatrolPointsData: {fileID: 11400000, guid: 7e6934ae36dc4d043a4e78608f029db4, type: 2}
-  PositionData: {fileID: 11400000, guid: fc9e29a2c75bf1e44bfc56a50c9cea9d, type: 2}
-  PatrolPosition:
-  - {x: 22.99, y: 1.5, z: -83.06}
-  - {x: 21.74, y: 1.5, z: -120.17}
-  - {x: 11.86, y: 1.5, z: -120.15}
-  - {x: 13.69, y: 1.5, z: -84.06}
-  Position: {x: 27.177, y: 1.6580118, z: -81.7843}
-  RotationVector3: {x: -0, y: 180, z: 270}
-  Scale: {x: 1, y: 1, z: 1}
-  Rotation: {x: 0.7071068, y: -0.7071068, z: -0.000000030908623, w: 0.000000030908623}
-  IsShowEnemySettings: 1
-  IsShowTrapSettings: 1
---- !u!4 &787547864
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787547862}
-  m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: -0.000000030908623, w: 0.000000030908623}
-  m_LocalPosition: {x: 27.177, y: 1.6580118, z: -81.7843}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 270}
 --- !u!114 &810911470 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2845923756775552923, guid: 8f5d0f8667011064a9ae4cd05f589ce7, type: 3}
@@ -1321,20 +1193,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolList:
   - Name: Soldier
+    Amount: 5
     Prefab: {fileID: 8072699852407255165, guid: abd5eb9ccce8d5242ab4d8afae744194, type: 3}
     ParentObj: {fileID: 2114907075}
-    Amount: 0
-    randomExistList: 
   - Name: SpikeTrap
+    Amount: 100
     Prefab: {fileID: 1498791207746926, guid: b58fdf950bf832348af4bfaa2fd9f743, type: 3}
     ParentObj: {fileID: 1031438096}
-    Amount: 0
-    randomExistList: 
   - Name: ShootTrap
+    Amount: 1
     Prefab: {fileID: 7376934076013946938, guid: 17f7fea6c9f4f5a41abc0e5469d37997, type: 3}
     ParentObj: {fileID: 1889865013}
-    Amount: 0
-    randomExistList: 
 --- !u!4 &1100736786
 Transform:
   m_ObjectHideFlags: 0
@@ -1541,7 +1410,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501359089}
-  m_LocalRotation: {x: 0.09620284, y: -0.0000000074160242, z: 7.1676715e-10, w: 0.9953618}
+  m_LocalRotation: {x: 0.09620284, y: 0.0000000074160242, z: -7.1676715e-10, w: 0.9953618}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1863,6 +1732,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2c1ac940434a5242b54d72b66654687, type: 3}
+--- !u!1 &1833344099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1833344103}
+  - component: {fileID: 1833344102}
+  - component: {fileID: 1833344101}
+  - component: {fileID: 1833344100}
+  m_Layer: 0
+  m_Name: Factory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1833344100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833344099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a4bad3a4cabf64592d76218094215a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1833344101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833344099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b40620d51cb1742ab14dcb47ddceea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1833344102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833344099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cfcdbb6618ecb4683cead1a89a0643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1833344103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833344099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 56.58735, y: 18.93431, z: 3.5985565}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862808263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,9 +2029,9 @@ MonoBehaviour:
   SceneName: 
   AudioSource: {fileID: 2007606734}
   PintuPuzzleTrigger: {fileID: 934087030}
-  _soldierFactory: {fileID: 613072083}
-  _spikeTrapFactory: {fileID: 613072086}
-  _shootTrapFactory: {fileID: 613072085}
+  _soldierFactory: {fileID: 1833344102}
+  _spikeTrapFactory: {fileID: 1833344101}
+  _shootTrapFactory: {fileID: 1833344100}
 --- !u!82 &2007606734
 AudioSource:
   m_ObjectHideFlags: 0

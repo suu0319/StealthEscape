@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27887f8c1fa2e0a4ea90897a2e670344, type: 3}
-  m_Name: PatrolPointsData 14
+  m_Name: SoldierPatrolPointsData 6
   m_EditorClassIdentifier: 
-  name: "\u7B2C15\u7D44"
+  name: "\u7B2C7\u7D44"
   Position:
-  - {x: 43.32, y: 1.5, z: 193.8}
-  - {x: 39.5, y: 1.5, z: 173.4}
-  - {x: 65.4, y: 1.5, z: 170.2}
-  - {x: 66.1, y: 1.5, z: 193.4}
+  - {x: -26.2, y: 1.5, z: 47.6}
+  - {x: -20.5, y: 1.5, z: 1.6999998}
