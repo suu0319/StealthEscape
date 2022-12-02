@@ -6,7 +6,7 @@ using Manager;
 
 namespace Factory
 {
-    public class ShootTrapFactory : TrapFactory
+    public class ShootTrapFactory : BaseFactory
     {
         private const string shootTrapName = "ShootTrap";
 
@@ -33,14 +33,14 @@ namespace Factory
 
                     RandomExistList.Add(RandomIndex);
 
-                    SpawnFromPool<ShootTrapData>(GameStageData.ShootTrapDataList[RandomIndex]);
+                    SpawnFromPool(GameStageData.ShootTrapDataList[RandomIndex]);
                 }
             }
             else
             {
                 for (int i = 0; i < GameStageData.ShootTrapDataList.Count; i++)
                 {
-                    SpawnFromPool<ShootTrapData>(GameStageData.ShootTrapDataList[i]);
+                    SpawnFromPool(GameStageData.ShootTrapDataList[i]);
                 }
             }
         }
@@ -48,9 +48,8 @@ namespace Factory
         /// <summary>
         /// 生成(從物件池取出)
         /// </summary>
-        /// <typeparam name="T">ShootTrapData</typeparam>
         /// <param name="data">ShootTrapData</param>
-        internal override void SpawnFromPool<T>(T data)
+        internal void SpawnFromPool(ShootTrapData data)
         {
             Vector3 position = data.PositionData.Position;
             Quaternion rotation = data.PositionData.Rotation;
@@ -59,7 +58,7 @@ namespace Factory
 
             ShootTrap shootTrap = shootTrapObj.GetComponentInChildren<ShootTrap>();
             shootTrap.Interval = data.Interval;
-            shootTrap.Speed = (data as ShootTrapData).Speed;
+            shootTrap.Speed = data.Speed;
         }
 
         #region 物件池測試
@@ -73,7 +72,7 @@ namespace Factory
             {
                 RandomIndex = UnityEngine.Random.Range(0, ObjAmount);
 
-                SpawnFromPool<ShootTrapData>(GameStageData.ShootTrapDataList[RandomIndex]);
+                SpawnFromPool(GameStageData.ShootTrapDataList[RandomIndex]);
             }
             catch (Exception e)
             {

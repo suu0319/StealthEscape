@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21bb98884a74c4c49bf105531dc43585, type: 3}
   m_Name: ShootTrapPositionData 6
   m_EditorClassIdentifier: 
+  Prefab: {fileID: 7376934076013946938, guid: 17f7fea6c9f4f5a41abc0e5469d37997, type: 3}
   Position: {x: -31.4, y: 1, z: 61.043}
   Rotation: {x: -0.49999997, y: 0.49999997, z: -0.49999997, w: 0.49999997}

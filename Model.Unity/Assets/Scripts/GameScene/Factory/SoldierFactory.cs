@@ -6,7 +6,7 @@ using Manager;
 
 namespace Factory
 {
-    public class SoldierFactory : EnemyFactory
+    public class SoldierFactory : BaseFactory
     {
         private const string soldierName = "Soldier";
 
@@ -33,14 +33,14 @@ namespace Factory
 
                     RandomExistList.Add(RandomIndex);
 
-                    SpawnFromPool<SoldierData>(GameStageData.SoldierDataList[RandomIndex]);
+                    SpawnFromPool(GameStageData.SoldierDataList[RandomIndex]);
                 }
             }
             else
             {
                 for (int i = 0; i < GameStageData.SoldierDataList.Count; i++)
                 {
-                    SpawnFromPool<SoldierData>(GameStageData.SoldierDataList[i]);
+                    SpawnFromPool(GameStageData.SoldierDataList[i]);
                 }
             }
         }
@@ -48,9 +48,8 @@ namespace Factory
         /// <summary>
         /// 生成(從物件池取出)
         /// </summary>
-        /// <typeparam name="T">SoldierData</typeparam>
         /// <param name="data">SoldierData</param>
-        internal override void SpawnFromPool<T>(T data)
+        internal void SpawnFromPool(SoldierData data)
         {
             Vector3[] patrolPosition = data.PatrolPointsData.Position;
 
@@ -76,7 +75,7 @@ namespace Factory
             {
                 RandomIndex = UnityEngine.Random.Range(0, ObjAmount);
 
-                SpawnFromPool<SoldierData>(GameStageData.SoldierDataList[RandomIndex]);
+                SpawnFromPool(GameStageData.SoldierDataList[RandomIndex]);
             }
             catch (Exception e)
             {

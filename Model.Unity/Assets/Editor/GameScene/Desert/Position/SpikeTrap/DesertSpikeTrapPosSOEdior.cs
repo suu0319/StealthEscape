@@ -9,7 +9,7 @@ public class DesertSpikeTrapPosSOEdior : MyScriptableObjectEditor
     {
         DesertSpikeTrapPositionData mySO = (DesertSpikeTrapPositionData)target;
 
-        if (mySO.Prefab != null)
+        if (Obj != null)
         {
             Vector3 position = mySO.Position;
             Quaternion rotation = mySO.Rotation;
@@ -17,7 +17,7 @@ public class DesertSpikeTrapPosSOEdior : MyScriptableObjectEditor
             if (!IsChoose)
             {
                 IsChoose = true;
-                Obj = Instantiate(mySO.Prefab, position, rotation);
+                Obj = Instantiate(Obj, position, rotation);
             }
 
             Obj.transform.localPosition = position = Handles.PositionHandle(position, rotation);
@@ -33,7 +33,7 @@ public class DesertSpikeTrapPosSOEdior : MyScriptableObjectEditor
         }
         else 
         {
-            Debug.LogError("Prefab field is null");
+            Debug.LogError("Obj field is null");
         }
     }
 }

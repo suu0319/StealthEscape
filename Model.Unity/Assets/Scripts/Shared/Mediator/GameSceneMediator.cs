@@ -17,8 +17,6 @@ namespace Mediator
         [SerializeField]
         protected AudioSource AudioSource;
 
-        public Action InitGameSceneObj;
-
         protected override void InitSingleton() { }
 
         /// <summary>

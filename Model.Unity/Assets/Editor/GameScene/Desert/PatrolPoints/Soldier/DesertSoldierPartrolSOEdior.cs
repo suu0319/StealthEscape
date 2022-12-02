@@ -3,29 +3,33 @@ using UnityEditor;
 using Position;
 
 [CustomEditor(typeof(DesertSoldierPatrolPointsData))]
+[CanEditMultipleObjects]
 public class DesertSoldierPartrolSOEdior : MyScriptableObjectEditor
 {
     protected override void OnSceneGUI(SceneView sv)
     {
-        DesertSoldierPatrolPointsData mySO = (DesertSoldierPatrolPointsData)target;
-
-        Vector3[] patrolPoints = mySO.Position;
-
-        for (int i = 0; i < patrolPoints.Length; i++)
+        for (int i = 0; i < targets.Length; i++) 
         {
-            patrolPoints[i] = Handles.PositionHandle(patrolPoints[i], Quaternion.identity);
-            
-            Handles.color = Color.yellow;
-            Handles.DrawWireCube(patrolPoints[i], Vector3.one);
-        }
+            DesertSoldierPatrolPointsData mySO = (DesertSoldierPatrolPointsData)targets[i];
 
-        if (GUI.changed)
-        {
-            Undo.RegisterCompleteObjectUndo(target, "Back to last change");
+            Vector3[] patrolPoints = mySO.Position;
 
-            for (int i = 0; i < patrolPoints.Length; i++)
+            for (int y = 0; y < patrolPoints.Length; y++)
             {
-                mySO.Position[i] = patrolPoints[i];
+                patrolPoints[y] = Handles.PositionHandle(patrolPoints[y], Quaternion.identity);
+
+                Handles.color = Color.yellow;
+                Handles.DrawWireCube(patrolPoints[y], Vector3.one);
+            }
+
+            if (GUI.changed)
+            {
+                Undo.RegisterCompleteObjectUndo(target, "Back to last change");
+
+                for (int y = 0; y < patrolPoints.Length; y++)
+                {
+                    mySO.Position[y] = patrolPoints[y];
+                }
             }
         }
     }

@@ -3,6 +3,7 @@ using UnityEditor;
 
 public abstract class MyScriptableObjectEditor : Editor
 {
+    [SerializeField]
     protected GameObject Obj;
 
     protected bool IsChoose = false;

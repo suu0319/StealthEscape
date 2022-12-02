@@ -10,6 +10,8 @@ namespace Manager
         [SerializeField]
         private GameObject _canvas;
 
+        private static bool isHaveClone = false;
+
         private void Awake()
         {
             Init();
@@ -20,8 +22,13 @@ namespace Manager
         /// </summary>
         private void Init()
         {
-            GenerateManager(_gameManager);
-            GenerateManager(_canvas);
+            if (!isHaveClone) 
+            {
+                isHaveClone = true;
+
+                GenerateManager(_gameManager);
+                GenerateManager(_canvas);
+            }
         }
 
         /// <summary>
@@ -29,11 +36,8 @@ namespace Manager
         /// </summary>
         private void GenerateManager(GameObject gameObject)
         {
-            if (!GameObject.Find(gameObject.name))
-            {
-                var temp = Instantiate(gameObject);
-                temp.name = gameObject.name;
-            }
+            var temp = Instantiate(gameObject);
+            temp.name = gameObject.name;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using Puzzle;
 using Pool;
@@ -16,11 +17,7 @@ namespace Mediator
 
         [Header("Factory")]
         [SerializeField]
-        private SoldierFactory _soldierFactory;
-        [SerializeField]
-        private SpikeTrapFactory _spikeTrapFactory;
-        [SerializeField]
-        private ShootTrapFactory _shootTrapFactory;
+        private List<BaseFactory> factoryList = new List<BaseFactory>();
 
         private void Awake()
         {
@@ -93,12 +90,13 @@ namespace Mediator
 
         protected override void InitCreateGameSceneObj()
         {
-            InitGameSceneObj += InitGameSceneData;
-            InitGameSceneObj += ObjectPool.Instance.InitObjectPool;
-            InitGameSceneObj += _soldierFactory.InitSpawn;
-            InitGameSceneObj += _spikeTrapFactory.InitSpawn;
-            InitGameSceneObj += _shootTrapFactory.InitSpawn;
-            InitGameSceneObj.Invoke();
+            InitGameSceneData();
+            ObjectPool.Instance.InitObjectPool();
+
+            foreach(var factory in factoryList) 
+            {
+                factory.InitSpawn();
+            }
         }
     }
 }

@@ -11,6 +11,8 @@ namespace Pool
        
         public GameObject Prefab;
         public GameObject ParentObj;
+
+        public Queue<GameObject> objQueue;
     }
 
     public class ObjectPool : MonoBehaviour
@@ -19,7 +21,7 @@ namespace Pool
 
         [SerializeField]
         private List<Pool> poolList;
-        private Dictionary<string, Queue<GameObject>> poolDict;
+        private Dictionary<string, Pool> poolDict;
 
         private void Awake()
         {
@@ -46,7 +48,7 @@ namespace Pool
         /// </summary>
         internal void InitObjectPool()
         {
-            poolDict = new Dictionary<string, Queue<GameObject>>();
+            poolDict = new Dictionary<string, Pool>();
 
             foreach (Pool pool in poolList)
             {
@@ -60,7 +62,9 @@ namespace Pool
                     objectPool.Enqueue(obj);
                 }
 
-                poolDict.Add(pool.Name, objectPool);
+                pool.objQueue = objectPool;
+
+                poolDict.Add(pool.Name, pool);
             }
         }
 
@@ -79,22 +83,16 @@ namespace Pool
                 return null;
             }
 
-            if (poolDict[name].Count == 0)
+            if (poolDict[name].objQueue.Count == 0)
             {
-                foreach (Pool pool in poolList)
-                {
-                    if (pool.Name == name) 
-                    {
-                        GameObject obj = Instantiate(pool.Prefab);
-                        obj.transform.parent = pool.ParentObj.transform;
-                        obj.SetActive(false);
-                        poolDict[name].Enqueue(obj);
-                        pool.Amount++;
-                    }
-                }
+                GameObject obj = Instantiate(poolDict[name].Prefab);
+                obj.transform.parent = poolDict[name].ParentObj.transform;
+                obj.SetActive(false);
+                poolDict[name].objQueue.Enqueue(obj);
+                poolDict[name].Amount++;
             }
 
-            GameObject objectToSpawn = poolDict[name].Dequeue();
+            GameObject objectToSpawn = poolDict[name].objQueue.Dequeue();
 
             objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
@@ -111,7 +109,7 @@ namespace Pool
         /// <param name="gameObject">物件</param>
         internal void RecycleToPool(string name, GameObject gameObject)
         {
-            poolDict[name].Enqueue(gameObject);
+            poolDict[name].objQueue.Enqueue(gameObject);
             gameObject.SetActive(false);
         }
     }

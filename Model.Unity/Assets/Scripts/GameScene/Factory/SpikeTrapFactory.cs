@@ -6,7 +6,7 @@ using Manager;
 
 namespace Factory
 {
-    public class SpikeTrapFactory : TrapFactory
+    public class SpikeTrapFactory : BaseFactory
     {
         private const string spikeTrapName = "SpikeTrap";
 
@@ -33,14 +33,14 @@ namespace Factory
 
                     RandomExistList.Add(RandomIndex);
 
-                    SpawnFromPool<SpikeTrapData>(GameStageData.SpikeTrapDataList[RandomIndex]);
+                    SpawnFromPool(GameStageData.SpikeTrapDataList[RandomIndex]);
                 }
             }
             else
             {
                 for (int i = 0; i < GameStageData.SpikeTrapDataList.Count; i++)
                 {
-                    SpawnFromPool<SpikeTrapData>(GameStageData.SpikeTrapDataList[i]);
+                    SpawnFromPool(GameStageData.SpikeTrapDataList[i]);
                 }
             }
         }
@@ -48,9 +48,8 @@ namespace Factory
         /// <summary>
         /// 生成(從物件池取出)
         /// </summary>
-        /// <typeparam name="T">SpikeTrapData</typeparam>
         /// <param name="data">SpikeTrapData</param>
-        internal override void SpawnFromPool<T>(T data)
+        internal void SpawnFromPool(SpikeTrapData data)
         {
             Vector3 position = data.PositionData.Position;
             Quaternion rotation = data.PositionData.Rotation;
@@ -72,7 +71,7 @@ namespace Factory
             {
                 RandomIndex = UnityEngine.Random.Range(0, ObjAmount);
 
-                SpawnFromPool<SpikeTrapData>(GameStageData.SpikeTrapDataList[RandomIndex]);
+                SpawnFromPool(GameStageData.SpikeTrapDataList[RandomIndex]);
             }
             catch (Exception e)
             {

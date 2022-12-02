@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb94cdd2a8af854c95b05305e14eab9, type: 3}
   m_Name: SpikeTrapPositionData 15
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  Prefab: {fileID: 1498791207746926, guid: b58fdf950bf832348af4bfaa2fd9f743, type: 3}
   Position: {x: -46.46, y: 0.06, z: 50.92}
   Rotation: {x: 0, y: 0, z: 0, w: 1}
