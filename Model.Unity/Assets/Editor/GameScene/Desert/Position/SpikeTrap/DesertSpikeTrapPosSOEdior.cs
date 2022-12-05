@@ -3,35 +3,45 @@ using UnityEditor;
 using Position;
 
 [CustomEditor(typeof(DesertSpikeTrapPositionData))]
+[CanEditMultipleObjects]
 public class DesertSpikeTrapPosSOEdior : MyScriptableObjectEditor
 {
     protected override void OnSceneGUI(SceneView sv)
     {
-        DesertSpikeTrapPositionData mySO = (DesertSpikeTrapPositionData)target;
-
         if (Obj != null)
         {
-            Vector3 position = mySO.Position;
-            Quaternion rotation = mySO.Rotation;
-
-            if (!IsChoose)
+            for (int i = 0; i < targets.Length; i++)
             {
-                IsChoose = true;
-                Obj = Instantiate(Obj, position, rotation);
-            }
+                DesertSpikeTrapPositionData mySO = (DesertSpikeTrapPositionData)targets[i];
 
-            Obj.transform.localPosition = position = Handles.PositionHandle(position, rotation);
-            Obj.transform.localRotation = rotation = Handles.RotationHandle(rotation, position);
+                Vector3 position = mySO.Position;
+                Quaternion rotation = mySO.Rotation;
 
-            if (GUI.changed)
-            {
-                Undo.RecordObject(target, "Back to last change");
+                if (!IsChoose)
+                {
+                    IsChoose = true;
 
-                Obj.transform.localPosition = mySO.Position = position;
-                Obj.transform.localRotation = mySO.Rotation = rotation;
+                    ObjArray = new GameObject[targets.Length];
+
+                    for (int y = 0; y < targets.Length; y++)
+                    {
+                        ObjArray[y] = Instantiate(Obj, position, rotation);
+                    }
+                }
+
+                ObjArray[i].transform.localPosition = position = Handles.PositionHandle(position, rotation);
+                ObjArray[i].transform.localRotation = rotation = Handles.RotationHandle(rotation, position);
+
+                if (GUI.changed)
+                {
+                    Undo.RegisterCompleteObjectUndo(targets, "Back to last change");
+
+                    ObjArray[i].transform.localPosition = mySO.Position = position;
+                    ObjArray[i].transform.localRotation = mySO.Rotation = rotation;
+                }
             }
         }
-        else 
+        else
         {
             Debug.LogError("Obj field is null");
         }

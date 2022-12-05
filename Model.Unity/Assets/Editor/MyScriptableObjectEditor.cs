@@ -5,6 +5,7 @@ public abstract class MyScriptableObjectEditor : Editor
 {
     [SerializeField]
     protected GameObject Obj;
+    protected GameObject[] ObjArray;
 
     protected bool IsChoose = false;
 
@@ -17,9 +18,12 @@ public abstract class MyScriptableObjectEditor : Editor
     {
         IsChoose = false;
 
-        if (Obj != null) 
+        if (ObjArray != null)
         {
-            DestroyImmediate(Obj);
+            for (int i = 0; i < ObjArray.Length; i++)
+            {
+                DestroyImmediate(ObjArray[i]);
+            }
         }
 
         SceneView.duringSceneGui -= OnSceneGUI;

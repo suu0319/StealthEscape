@@ -12,7 +12,7 @@ namespace Pool
         public GameObject Prefab;
         public GameObject ParentObj;
 
-        public Queue<GameObject> objQueue;
+        public Queue<GameObject> ObjQueue;
     }
 
     public class ObjectPool : MonoBehaviour
@@ -62,7 +62,7 @@ namespace Pool
                     objectPool.Enqueue(obj);
                 }
 
-                pool.objQueue = objectPool;
+                pool.ObjQueue = objectPool;
 
                 poolDict.Add(pool.Name, pool);
             }
@@ -83,16 +83,16 @@ namespace Pool
                 return null;
             }
 
-            if (poolDict[name].objQueue.Count == 0)
+            if (poolDict[name].ObjQueue.Count == 0)
             {
                 GameObject obj = Instantiate(poolDict[name].Prefab);
                 obj.transform.parent = poolDict[name].ParentObj.transform;
                 obj.SetActive(false);
-                poolDict[name].objQueue.Enqueue(obj);
+                poolDict[name].ObjQueue.Enqueue(obj);
                 poolDict[name].Amount++;
             }
 
-            GameObject objectToSpawn = poolDict[name].objQueue.Dequeue();
+            GameObject objectToSpawn = poolDict[name].ObjQueue.Dequeue();
 
             objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
@@ -109,7 +109,7 @@ namespace Pool
         /// <param name="gameObject">物件</param>
         internal void RecycleToPool(string name, GameObject gameObject)
         {
-            poolDict[name].objQueue.Enqueue(gameObject);
+            poolDict[name].ObjQueue.Enqueue(gameObject);
             gameObject.SetActive(false);
         }
     }

@@ -24,7 +24,7 @@ public class DesertSoldierPartrolSOEdior : MyScriptableObjectEditor
 
             if (GUI.changed)
             {
-                Undo.RegisterCompleteObjectUndo(target, "Back to last change");
+                Undo.RegisterCompleteObjectUndo(targets, "Back to last change");
 
                 for (int y = 0; y < patrolPoints.Length; y++)
                 {

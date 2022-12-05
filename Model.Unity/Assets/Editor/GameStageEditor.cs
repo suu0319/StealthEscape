@@ -48,12 +48,12 @@ namespace GameStage
 		#endregion
 
 		#region 難度選擇參數(自動)
-		private int stageSoldierAmountAuto;
-		private float stageSoldierSpeedAuto;
-		private int stageSpikeTrapAmountAuto;
-		private float stageSpikeTrapIntervalAuto;
-		private int stageShootTrapAmountAuto;
-		private float stageShootTrapIntervalAuto;
+		internal int stageSoldierAmountAuto;
+		internal float stageSoldierSpeedAuto;
+		internal int stageSpikeTrapAmountAuto;
+		internal float stageSpikeTrapIntervalAuto;
+		internal int stageShootTrapAmountAuto;
+		internal float stageShootTrapIntervalAuto;
 		#endregion
 
 		#region 關卡UGUI(ScrollView)
