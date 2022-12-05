@@ -15,7 +15,7 @@ MonoBehaviour:
   IsCheat: 0
   PlayerSpeed: 6
   StageDataList:
-  - Level: 2
+  - Level: 0
     Image: {fileID: 21300000, guid: 00c75b5a063ba8945afc7ca039fb840c, type: 3}
     SceneName: Desert
     BGM: {fileID: 8300000, guid: f0e1d6b6919b5d444a5e42a7faf68d75, type: 3}
@@ -26,6 +26,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 5
     ShootTrapAmountAuto: 13
     ShootTrapIntervalAuto: 4
+    ShootTrapSpeedAuto: 100
     SoldierDataList:
     - Speed: 6
       PatrolPointsData: {fileID: 11400000, guid: d41446e840b97504c8549e16f3aaa241, type: 2}
@@ -266,13 +267,14 @@ MonoBehaviour:
     Image: {fileID: 21300000, guid: ab4c09065dd80f144964d08ca20e4969, type: 3}
     SceneName: 
     BGM: {fileID: 0}
-    IsManual: 0
-    SoldierAmountAuto: 16
-    SoldierSpeedAuto: 6
-    SpikeTrapAmountAuto: 11
-    SpikeTrapIntervalAuto: 2
-    ShootTrapAmountAuto: 16
-    ShootTrapIntervalAuto: 3
+    IsManual: 1
+    SoldierAmountAuto: 10
+    SoldierSpeedAuto: 3
+    SpikeTrapAmountAuto: 45
+    SpikeTrapIntervalAuto: 5
+    ShootTrapAmountAuto: 13
+    ShootTrapIntervalAuto: 4
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -290,6 +292,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -307,6 +310,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -324,6 +328,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -335,12 +340,13 @@ MonoBehaviour:
     SceneName: 
     BGM: {fileID: 0}
     IsManual: 0
-    SoldierAmountAuto: 16
-    SoldierSpeedAuto: 6
-    SpikeTrapAmountAuto: 11
-    SpikeTrapIntervalAuto: 2
-    ShootTrapAmountAuto: 16
-    ShootTrapIntervalAuto: 3
+    SoldierAmountAuto: 10
+    SoldierSpeedAuto: 3
+    SpikeTrapAmountAuto: 45
+    SpikeTrapIntervalAuto: 5
+    ShootTrapAmountAuto: 13
+    ShootTrapIntervalAuto: 4
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -358,6 +364,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -375,6 +382,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -392,6 +400,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -409,6 +418,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -426,6 +436,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -443,6 +454,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -460,6 +472,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -477,6 +490,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -494,6 +508,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -511,6 +526,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -528,6 +544,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -545,6 +562,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -562,6 +580,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -579,6 +598,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -596,6 +616,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -613,6 +634,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -630,6 +652,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -647,6 +670,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -664,6 +688,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -681,6 +706,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -698,6 +724,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -715,6 +742,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -732,6 +760,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -749,6 +778,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -766,6 +796,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -783,6 +814,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -800,6 +832,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -817,6 +850,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -834,6 +868,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -851,6 +886,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -868,6 +904,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -885,6 +922,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -902,6 +940,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -919,6 +958,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -936,6 +976,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -953,6 +994,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -970,6 +1012,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -987,6 +1030,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1004,6 +1048,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1021,6 +1066,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1038,6 +1084,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1055,6 +1102,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1072,6 +1120,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1089,6 +1138,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1106,6 +1156,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1123,6 +1174,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1140,6 +1192,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1157,6 +1210,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1174,6 +1228,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1191,6 +1246,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1208,6 +1264,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1225,6 +1282,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1242,6 +1300,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1259,6 +1318,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1276,6 +1336,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1293,6 +1354,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1310,6 +1372,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1327,6 +1390,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1344,6 +1408,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1361,6 +1426,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1378,6 +1444,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1395,6 +1462,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1412,6 +1480,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1429,6 +1498,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1446,6 +1516,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1463,6 +1534,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1480,6 +1552,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1497,6 +1570,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1514,6 +1588,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1531,6 +1606,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1548,6 +1624,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1565,6 +1642,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1582,6 +1660,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1599,6 +1678,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1616,6 +1696,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1633,6 +1714,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1650,6 +1732,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1667,6 +1750,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1684,6 +1768,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1701,6 +1786,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1718,6 +1804,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1735,6 +1822,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1752,6 +1840,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1769,6 +1858,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1786,6 +1876,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1803,6 +1894,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1820,6 +1912,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1837,6 +1930,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1854,6 +1948,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1871,6 +1966,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1888,6 +1984,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1905,6 +2002,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1922,6 +2020,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1939,6 +2038,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1956,6 +2056,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1973,6 +2074,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -1990,6 +2092,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2007,6 +2110,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2024,6 +2128,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2041,6 +2146,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2058,6 +2164,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2075,6 +2182,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2092,6 +2200,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2109,6 +2218,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2126,6 +2236,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2143,6 +2254,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2160,6 +2272,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2177,6 +2290,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2194,6 +2308,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2211,6 +2326,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2228,6 +2344,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2245,6 +2362,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2262,6 +2380,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2279,6 +2398,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2296,6 +2416,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2313,6 +2434,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2330,6 +2452,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2347,6 +2470,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2364,6 +2488,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2381,6 +2506,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2398,6 +2524,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2415,6 +2542,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2432,6 +2560,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2449,6 +2578,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2466,6 +2596,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2483,6 +2614,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2500,6 +2632,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2517,6 +2650,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2534,6 +2668,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2551,6 +2686,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2568,6 +2704,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2585,6 +2722,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2602,6 +2740,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2619,6 +2758,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2636,6 +2776,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2653,6 +2794,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2670,6 +2812,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2687,6 +2830,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2704,6 +2848,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2721,6 +2866,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2738,6 +2884,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2755,6 +2902,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2772,6 +2920,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2789,6 +2938,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2806,6 +2956,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2823,6 +2974,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2840,6 +2992,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2857,6 +3010,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2874,6 +3028,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2891,6 +3046,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2908,6 +3064,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2925,6 +3082,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2942,6 +3100,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2959,6 +3118,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2976,6 +3136,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -2993,6 +3154,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3010,6 +3172,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3027,6 +3190,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3044,6 +3208,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3061,6 +3226,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3078,6 +3244,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3095,6 +3262,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3112,6 +3280,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3129,6 +3298,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3146,6 +3316,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3163,6 +3334,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3180,6 +3352,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3197,6 +3370,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3214,6 +3388,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3231,6 +3406,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3248,6 +3424,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3265,6 +3442,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3282,6 +3460,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3299,6 +3478,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3316,6 +3496,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3333,6 +3514,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3350,6 +3532,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3367,6 +3550,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3384,6 +3568,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3401,6 +3586,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3418,6 +3604,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3435,6 +3622,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3452,6 +3640,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3469,6 +3658,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3486,6 +3676,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3503,6 +3694,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3520,6 +3712,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3537,6 +3730,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3554,6 +3748,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3571,6 +3766,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3588,6 +3784,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3605,6 +3802,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3622,6 +3820,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3639,6 +3838,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3656,6 +3856,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3673,6 +3874,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3690,6 +3892,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3707,6 +3910,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3724,6 +3928,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3741,6 +3946,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3758,6 +3964,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3775,6 +3982,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3792,6 +4000,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3809,6 +4018,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3826,6 +4036,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3843,6 +4054,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3860,6 +4072,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3877,6 +4090,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3894,6 +4108,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3911,6 +4126,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3928,6 +4144,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3945,6 +4162,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3962,6 +4180,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3979,6 +4198,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -3996,6 +4216,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4013,6 +4234,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4030,6 +4252,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4047,6 +4270,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4064,6 +4288,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4081,6 +4306,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4098,6 +4324,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4115,6 +4342,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4132,6 +4360,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4149,6 +4378,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4166,6 +4396,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4183,6 +4414,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4200,6 +4432,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4217,6 +4450,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4234,6 +4468,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4251,6 +4486,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4268,6 +4504,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4285,6 +4522,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4302,6 +4540,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4319,6 +4558,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4336,6 +4576,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4353,6 +4594,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4370,6 +4612,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4387,6 +4630,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4404,6 +4648,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4421,6 +4666,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4438,6 +4684,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4455,6 +4702,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4472,6 +4720,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4489,6 +4738,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4506,6 +4756,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4523,6 +4774,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4540,6 +4792,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4557,6 +4810,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4574,6 +4828,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4591,6 +4846,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4608,6 +4864,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4625,6 +4882,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4642,6 +4900,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4659,6 +4918,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4676,6 +4936,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4693,6 +4954,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4710,6 +4972,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4727,6 +4990,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4744,6 +5008,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4761,6 +5026,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4778,6 +5044,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4795,6 +5062,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4812,6 +5080,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4829,6 +5098,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4846,6 +5116,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4863,6 +5134,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4880,6 +5152,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4897,6 +5170,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4914,6 +5188,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4931,6 +5206,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4948,6 +5224,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4965,6 +5242,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4982,6 +5260,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -4999,6 +5278,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5016,6 +5296,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5033,6 +5314,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5050,6 +5332,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5067,6 +5350,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5084,6 +5368,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5101,6 +5386,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5118,6 +5404,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5135,6 +5422,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5152,6 +5440,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5169,6 +5458,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5186,6 +5476,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5203,6 +5494,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5220,6 +5512,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5237,6 +5530,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5254,6 +5548,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5271,6 +5566,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5288,6 +5584,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5305,6 +5602,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5322,6 +5620,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5339,6 +5638,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5356,6 +5656,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5373,6 +5674,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5390,6 +5692,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5407,6 +5710,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5424,6 +5728,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5441,6 +5746,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5458,6 +5764,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5475,6 +5782,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5492,6 +5800,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5509,6 +5818,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5526,6 +5836,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5543,6 +5854,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5560,6 +5872,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5577,6 +5890,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5594,6 +5908,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5611,6 +5926,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5628,6 +5944,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5645,6 +5962,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5662,6 +5980,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5679,6 +5998,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5696,6 +6016,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5713,6 +6034,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5730,6 +6052,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5747,6 +6070,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5764,6 +6088,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5781,6 +6106,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5798,6 +6124,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5815,6 +6142,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5832,6 +6160,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5849,6 +6178,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5866,6 +6196,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5883,6 +6214,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5900,6 +6232,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5917,6 +6250,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5934,6 +6268,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5951,6 +6286,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5968,6 +6304,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -5985,6 +6322,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6002,6 +6340,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6019,6 +6358,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6036,6 +6376,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6053,6 +6394,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6070,6 +6412,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6087,6 +6430,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6104,6 +6448,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6121,6 +6466,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6138,6 +6484,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6155,6 +6502,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6172,6 +6520,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6189,6 +6538,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6206,6 +6556,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6223,6 +6574,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6240,6 +6592,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6257,6 +6610,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6274,6 +6628,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6291,6 +6646,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6308,6 +6664,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6325,6 +6682,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6342,6 +6700,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6359,6 +6718,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6376,6 +6736,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6393,6 +6754,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6410,6 +6772,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6427,6 +6790,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6444,6 +6808,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6461,6 +6826,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6478,6 +6844,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6495,6 +6862,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6512,6 +6880,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6529,6 +6898,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6546,6 +6916,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6563,6 +6934,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6580,6 +6952,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6597,6 +6970,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6614,6 +6988,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6631,6 +7006,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6648,6 +7024,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6665,6 +7042,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6682,6 +7060,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6699,6 +7078,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6716,6 +7096,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6733,6 +7114,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6750,6 +7132,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6767,6 +7150,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6784,6 +7168,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6801,6 +7186,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6818,6 +7204,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6835,6 +7222,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6852,6 +7240,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6869,6 +7258,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6886,6 +7276,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6903,6 +7294,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6920,6 +7312,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6937,6 +7330,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6954,6 +7348,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6971,6 +7366,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -6988,6 +7384,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7005,6 +7402,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7022,6 +7420,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7039,6 +7438,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7056,6 +7456,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7073,6 +7474,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7090,6 +7492,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7107,6 +7510,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7124,6 +7528,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7141,6 +7546,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7158,6 +7564,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7175,6 +7582,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7192,6 +7600,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7209,6 +7618,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7226,6 +7636,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7243,6 +7654,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7260,6 +7672,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7277,6 +7690,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7294,6 +7708,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7311,6 +7726,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7328,6 +7744,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7345,6 +7762,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7362,6 +7780,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7379,6 +7798,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7396,6 +7816,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7413,6 +7834,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7430,6 +7852,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7447,6 +7870,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7464,6 +7888,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7481,6 +7906,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7498,6 +7924,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7515,6 +7942,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7532,6 +7960,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7549,6 +7978,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7566,6 +7996,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7583,6 +8014,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7600,6 +8032,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7617,6 +8050,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7634,6 +8068,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7651,6 +8086,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7668,6 +8104,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7685,6 +8122,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7702,6 +8140,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7719,6 +8158,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7736,6 +8176,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7753,6 +8194,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7770,6 +8212,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7787,6 +8230,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7804,6 +8248,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7821,6 +8266,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7838,6 +8284,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7855,6 +8302,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7872,6 +8320,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7889,6 +8338,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7906,6 +8356,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7923,6 +8374,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7940,6 +8392,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7957,6 +8410,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7974,6 +8428,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -7991,6 +8446,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8008,6 +8464,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8025,6 +8482,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8042,6 +8500,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8059,6 +8518,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8076,6 +8536,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8093,6 +8554,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8110,6 +8572,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8127,6 +8590,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8144,6 +8608,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8161,6 +8626,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8178,6 +8644,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8195,6 +8662,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8212,6 +8680,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8229,6 +8698,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8246,6 +8716,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8263,6 +8734,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8280,6 +8752,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8297,6 +8770,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8314,6 +8788,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8331,6 +8806,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8348,6 +8824,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8365,6 +8842,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8382,6 +8860,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8399,6 +8878,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8416,6 +8896,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8433,6 +8914,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8450,6 +8932,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8467,6 +8950,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8484,6 +8968,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8501,6 +8986,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8518,6 +9004,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8535,6 +9022,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8552,6 +9040,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8569,6 +9058,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8586,6 +9076,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8603,6 +9094,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8620,6 +9112,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8637,6 +9130,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8654,6 +9148,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8671,6 +9166,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8688,6 +9184,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8705,6 +9202,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8722,6 +9220,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
@@ -8739,6 +9238,7 @@ MonoBehaviour:
     SpikeTrapIntervalAuto: 2
     ShootTrapAmountAuto: 16
     ShootTrapIntervalAuto: 3
+    ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []

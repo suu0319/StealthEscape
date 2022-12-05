@@ -2,58 +2,22 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using Enemy;
-using Trap;
-using Position;
 
 namespace GameStage
 {
 	public class GameStageEditor : EditorWindow
 	{
+		private SerializedObject _globalSerializedObject;
+		private SerializedProperty _serializedProperty;
+
 		[SerializeField]
 		private GameStageConfig _gameStageConfig;
 		private GameStageData _gameStageData;
 
-		#region 全域相關
-		private bool isCheat = false;
-		private float playerSpeed = 6f;
-		#endregion
-
 		#region 關卡相關(基本)
 		private Level stageLevel;
-		private Sprite _stageImage;
-		private string stageSceneName;
 		private int stageNum = 0;
-		private AudioClip _stageBGM;
-
 		private bool isManual = false;
-		#endregion
-
-		#region 關卡士兵敵人設定
-		private List<SoldierData> _stageSoldierDataList;
-		private bool isShowStageSoldierAmountFoldout;
-		private int stageSoldierAmount;
-		#endregion
-
-		#region 關卡地刺陷阱人設定
-		private List<SpikeTrapData> _stageSpikeTrapDataList;
-		private bool isShowStageSpikeTrapAmountFoldout;
-		private int stageSpikeTrapAmount;
-		#endregion
-
-		#region 關卡箭矢陷阱人設定
-		private List<ShootTrapData> _stageShootTrapDataList;
-		private bool isShowStageShootTrapAmountFoldout;
-		private int stageShootTrapAmount;
-		#endregion
-
-		#region 難度選擇參數(自動)
-		internal int stageSoldierAmountAuto;
-		internal float stageSoldierSpeedAuto;
-		internal int stageSpikeTrapAmountAuto;
-		internal float stageSpikeTrapIntervalAuto;
-		internal int stageShootTrapAmountAuto;
-		internal float stageShootTrapIntervalAuto;
 		#endregion
 
 		#region 關卡UGUI(ScrollView)
@@ -84,8 +48,7 @@ namespace GameStage
 		{
 			GlobalSettings();
 			SyncConfig();
-			BaseSettings();
-			AdvancedSettings();
+			StageSettings();
 		}
 
 		/// <summary>
@@ -93,6 +56,8 @@ namespace GameStage
 		/// </summary>
 		private void SyncConfig()
 		{
+			_serializedProperty = _globalSerializedObject.FindProperty("StageDataList");
+
 			EditorGUILayout.BeginHorizontal();
 
 			_scrollPosBtn = EditorGUILayout.BeginScrollView(_scrollPosBtn, GUILayout.Width(250));
@@ -115,27 +80,6 @@ namespace GameStage
 
 			#region Editor、GameStageConfig資料同步
 			stageLevel = _gameStageData.Level;
-			_stageImage = _gameStageData.Image;
-			stageSceneName = _gameStageData.SceneName;
-			_stageBGM = _gameStageData.BGM;
-
-			_stageSoldierDataList = _gameStageData.SoldierDataList;
-			stageSoldierAmount = _stageSoldierDataList.Count;
-
-			_stageSpikeTrapDataList = _gameStageData.SpikeTrapDataList;
-			stageSpikeTrapAmount = _stageSpikeTrapDataList.Count;
-
-			_stageShootTrapDataList = _gameStageData.ShootTrapDataList;
-			stageShootTrapAmount = _stageShootTrapDataList.Count;
-
-
-			stageSoldierAmountAuto = _gameStageData.SoldierAmountAuto;
-			stageSoldierSpeedAuto = _gameStageData.SoldierSpeedAuto;
-			stageSpikeTrapAmountAuto = _gameStageData.SpikeTrapAmountAuto;
-			stageSpikeTrapIntervalAuto = _gameStageData.SpikeTrapIntervalAuto;
-			stageShootTrapAmountAuto = _gameStageData.ShootTrapAmountAuto;
-			stageShootTrapIntervalAuto = _gameStageData.ShootTrapIntervalAuto;
-
 			#endregion
 
 			_scrollPosContent = EditorGUILayout.BeginScrollView(_scrollPosContent);
@@ -146,255 +90,111 @@ namespace GameStage
 		/// </summary>
 		private void GlobalSettings()
 		{
+			_globalSerializedObject = new SerializedObject(_gameStageConfig);
+
 			GUILayout.Label("Global Settings", EditorStyles.boldLabel);
 			#region 作弊
-			isCheat = _gameStageConfig.IsCheat;
-			_gameStageConfig.IsCheat = EditorGUILayout.Toggle("IsCheat", isCheat);
+			EditorGUILayout.PropertyField(_globalSerializedObject.FindProperty("IsCheat"), false);
 			#endregion
 
 			#region 玩家速度
-			playerSpeed = _gameStageConfig.PlayerSpeed;
-			_gameStageConfig.PlayerSpeed = EditorGUILayout.FloatField("PlayerSpeed", playerSpeed);
+			EditorGUILayout.PropertyField(_globalSerializedObject.FindProperty("PlayerSpeed"), false);
 			#endregion
+
+			_globalSerializedObject.ApplyModifiedProperties();
 		}
 
 		/// <summary>
-		/// 基本設定
+		/// 關卡設定
 		/// </summary>
-		private void BaseSettings()
+		private void StageSettings()
 		{
+            var property = _serializedProperty.GetArrayElementAtIndex(stageNum);
+
 			GUILayout.Label("Base Settings", EditorStyles.boldLabel);
-			#region 關卡縮圖
 			EditorGUILayout.BeginHorizontal();
-			EditorGUILayout.PrefixLabel("Image");
-			_gameStageData.Image = (Sprite)EditorGUILayout.ObjectField(_stageImage, typeof(Sprite), true);
-			EditorGUILayout.EndHorizontal();
-			#endregion
+            EditorGUILayout.PropertyField(property.FindPropertyRelative("Level"));
+            EditorGUILayout.EndHorizontal();
 
-			#region 關卡標題
 			EditorGUILayout.BeginHorizontal();
-			_gameStageData.SceneName = EditorGUILayout.TextField("SceneName", stageSceneName);
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("Image"));
 			EditorGUILayout.EndHorizontal();
-			#endregion
 
-			#region 關卡音樂
 			EditorGUILayout.BeginHorizontal();
-			EditorGUILayout.PrefixLabel("BGM");
-			_gameStageData.BGM = (AudioClip)EditorGUILayout.ObjectField(_stageBGM, typeof(AudioClip), true);
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("SceneName"));
 			EditorGUILayout.EndHorizontal();
-			#endregion
 
-			#region 手動開啟(進階設定)
-			isManual = _gameStageConfig.StageDataList[stageNum].IsManual;
-			_gameStageConfig.StageDataList[stageNum].IsManual = EditorGUILayout.Toggle("Manual", isManual);
-			#endregion
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("BGM"));
+			EditorGUILayout.EndHorizontal();
 
-			using (new EditorGUI.DisabledScope(isManual))
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("IsManual"));
+			EditorGUILayout.EndHorizontal();
+
+			isManual = property.FindPropertyRelative("IsManual").boolValue;
+
+			EditorGUILayout.Space();
+			GUILayout.Label("Advanced Settings", EditorStyles.boldLabel);
+
+			using (new EditorGUI.DisabledScope(isManual)) 
 			{
-				#region 關卡難度(難度選擇自動)
-				EditorGUILayout.BeginHorizontal();
-				_gameStageData.Level = (Level)EditorGUILayout.EnumPopup("Level", stageLevel);
 				InitStageLevelAutoSettings();
-				EditorGUILayout.EndHorizontal();
-				#endregion
-
 				EditorGUILayout.HelpBox("Random Create", MessageType.Warning);
 
-				#region 關卡士兵敵人數量(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				_gameStageData.SoldierAmountAuto = EditorGUILayout.IntField("Soldier Amount", stageSoldierAmountAuto);
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("SoldierAmountAuto"));
 				EditorGUILayout.EndHorizontal();
-				#endregion
 
-				#region 關卡士兵敵人速度(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				_gameStageData.SoldierSpeedAuto = EditorGUILayout.FloatField("Soldier Speed", stageSoldierSpeedAuto);
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("SoldierSpeedAuto"));
 				EditorGUILayout.EndHorizontal();
-				#endregion
 
-				#region 關卡地刺陷阱數量(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				_gameStageData.SpikeTrapAmountAuto = EditorGUILayout.IntField("SpikeTrap Amount", stageSpikeTrapAmountAuto);
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("SpikeTrapAmountAuto"));
 				EditorGUILayout.EndHorizontal();
-				#endregion
 
-				#region 關卡地刺陷阱速度(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				_gameStageData.SpikeTrapIntervalAuto = EditorGUILayout.FloatField("SpikeTrap Interval", stageSpikeTrapIntervalAuto);
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("SpikeTrapIntervalAuto"));
 				EditorGUILayout.EndHorizontal();
-				#endregion
 
-				#region 關卡箭矢陷阱數量(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				_gameStageData.ShootTrapAmountAuto = EditorGUILayout.IntField("ShootTrap Amount", stageShootTrapAmountAuto);
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("ShootTrapAmountAuto"));
 				EditorGUILayout.EndHorizontal();
-				#endregion
 
-				#region 關卡箭矢陷阱速度(難度選擇自動)
 				EditorGUILayout.BeginHorizontal();
-				_gameStageData.ShootTrapIntervalAuto = EditorGUILayout.FloatField("ShootTrap Interval", stageShootTrapIntervalAuto);
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("ShootTrapIntervalAuto"));
 				EditorGUILayout.EndHorizontal();
-				#endregion
+
+				EditorGUILayout.BeginHorizontal();
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("ShootTrapSpeedAuto"));
+				EditorGUILayout.EndHorizontal();
 			}
-		}
 
-		/// <summary>
-		/// 進階設定
-		/// </summary>
-		private void AdvancedSettings()
-		{
-			using (new EditorGUI.DisabledScope(!isManual))
+			using (new EditorGUI.DisabledScope(!isManual)) 
 			{
 				GUIStyle helpBoxStyle = GUI.skin.GetStyle("HelpBox");
 				helpBoxStyle.fontSize = 15;
 				helpBoxStyle.richText = true;
 
-				GUILayout.Label("Advanced Settings", EditorStyles.boldLabel);
-
-				GUILayout.Label("Soldier Enemy Settings", EditorStyles.largeLabel);
-				#region 關卡士兵敵人設定
+				EditorGUILayout.TextArea("Soldier Suggest Settings:\n<b>Speed: 2f</b>", helpBoxStyle);
 				EditorGUILayout.BeginHorizontal();
-				stageSoldierAmount = EditorGUILayout.IntField("Soldier Amount", _gameStageData.SoldierDataList.Count);
-
-				RefreshEnemyTrapDataList<SoldierData>(stageSoldierAmount, _gameStageData.SoldierDataList);
-
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("SoldierDataList"));
 				EditorGUILayout.EndHorizontal();
 
-				if (_stageSoldierDataList.Count > 0)
-				{
-					EditorGUILayout.BeginHorizontal();
-					isShowStageSoldierAmountFoldout = EditorGUILayout.Foldout(isShowStageSoldierAmountFoldout, "SoldierSettings");
-					EditorGUILayout.EndHorizontal();
-
-					EditorGUILayout.TextArea("Suggest Settings:\n<b>Speed: 2f</b>", helpBoxStyle);
-
-					if (isShowStageSoldierAmountFoldout)
-					{
-						try
-						{
-							for (int i = 0; i < _stageSoldierDataList.Count; i++)
-							{
-								EditorGUILayout.BeginHorizontal();
-								_gameStageData.SoldierDataList[i].Speed = EditorGUILayout.FloatField("Soldier " + (i + 1) + " Speed:", _stageSoldierDataList[i].Speed);
-								_gameStageData.SoldierDataList[i].PatrolPointsData = (PatrolPointsData)EditorGUILayout.ObjectField("\tPatrolPoints:", _stageSoldierDataList[i].PatrolPointsData, _gameStageData.SoldierPatrolPointsConfig.PatrolPointsDataList[0].GetType(), true);
-								EditorGUILayout.EndHorizontal();
-							}
-						}
-						catch (Exception e)
-						{
-							Debug.LogError("GameStageData.SoldierPatrolPointsConfig is null, " + e.Message);
-						}
-					}
-				}
-				#endregion
-				GUILayout.Label(string.Empty);
-
-				GUILayout.Label("SpikeTrap Settings", EditorStyles.largeLabel);
-				#region 關卡地刺陷阱設定
+				EditorGUILayout.TextArea("SpikeTrap Suggest Settings:\n<b>Interval: 2f</b>", helpBoxStyle);
 				EditorGUILayout.BeginHorizontal();
-				stageSpikeTrapAmount = EditorGUILayout.IntField("SpikeTrap Amount", _gameStageData.SpikeTrapDataList.Count);
-
-				RefreshEnemyTrapDataList<SpikeTrapData>(stageSpikeTrapAmount, _gameStageData.SpikeTrapDataList);
-
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("SpikeTrapDataList"));
 				EditorGUILayout.EndHorizontal();
 
-				if (_stageSpikeTrapDataList.Count > 0)
-				{
-					EditorGUILayout.BeginHorizontal();
-					isShowStageSpikeTrapAmountFoldout = EditorGUILayout.Foldout(isShowStageSpikeTrapAmountFoldout, "SpikeTrapSetting");
-					EditorGUILayout.EndHorizontal();
-
-					EditorGUILayout.TextArea("Suggest Settings:\n<b>Interval: 2f</b>", helpBoxStyle);
-
-					if (isShowStageSpikeTrapAmountFoldout)
-					{
-						try
-						{
-							for (int i = 0; i < _stageSpikeTrapDataList.Count; i++)
-							{
-								EditorGUILayout.BeginHorizontal();
-								_gameStageData.SpikeTrapDataList[i].Interval = EditorGUILayout.FloatField("SpikeTrap " + (i + 1) + " Interval:", _stageSpikeTrapDataList[i].Interval);
-								_gameStageData.SpikeTrapDataList[i].PositionData = (PositionData)EditorGUILayout.ObjectField("\tPosition:", _stageSpikeTrapDataList[i].PositionData, _gameStageData.SpikeTrapPositionConfig.PositionDataList[0].GetType(), true);
-								EditorGUILayout.EndHorizontal();
-							}
-						}
-						catch (Exception e)
-						{
-							Debug.LogError("GameStageData.SpikeTrapPositionConfig is null, " + e.Message);
-						}
-					}
-				}
-				#endregion
-				GUILayout.Label(string.Empty);
-
-				GUILayout.Label("ShootTrap Settings", EditorStyles.largeLabel);
-				#region 關卡箭矢陷阱設定
+				EditorGUILayout.TextArea("ShootTrap Suggest Settings:\n<b>Interval: 2f</b>\n<b>Speed: 100f</b>", helpBoxStyle);
 				EditorGUILayout.BeginHorizontal();
-				stageShootTrapAmount = EditorGUILayout.IntField("ShootTrap Amount", _gameStageData.ShootTrapDataList.Count);
-
-				RefreshEnemyTrapDataList<ShootTrapData>(stageShootTrapAmount, _gameStageData.ShootTrapDataList);
-				
+				EditorGUILayout.PropertyField(property.FindPropertyRelative("ShootTrapDataList"));
 				EditorGUILayout.EndHorizontal();
-
-				if (_stageSpikeTrapDataList.Count > 0)
-				{
-					EditorGUILayout.BeginHorizontal();
-					isShowStageShootTrapAmountFoldout = EditorGUILayout.Foldout(isShowStageShootTrapAmountFoldout, "ShootTrapSetting");
-					EditorGUILayout.EndHorizontal();
-
-					EditorGUILayout.TextArea("Suggest Settings:\n<b>Interval: 2f</b>\n<b>Speed: 100f</b>", helpBoxStyle);
-
-					if (isShowStageShootTrapAmountFoldout)
-					{
-						try
-						{
-							for (int i = 0; i < _stageShootTrapDataList.Count; i++)
-							{
-								EditorGUILayout.BeginHorizontal();
-								_gameStageData.ShootTrapDataList[i].Interval = EditorGUILayout.FloatField("ShootTrap " + (i + 1) + " Interval:", _stageShootTrapDataList[i].Interval);
-								_gameStageData.ShootTrapDataList[i].Speed = EditorGUILayout.FloatField("\tSpeed:", _stageShootTrapDataList[i].Speed);
-								_gameStageData.ShootTrapDataList[i].PositionData = (PositionData)EditorGUILayout.ObjectField("\tPosition:", _stageShootTrapDataList[i].PositionData, _gameStageData.ShootTrapPositionConfig.PositionDataList[0].GetType(), true);
-								EditorGUILayout.EndHorizontal();
-							}
-						}
-						catch (Exception e)
-						{
-							Debug.LogError("GameStageData.ShootTrapPositionConfig is null, " + e.Message);
-						}
-					}
-				}
-				#endregion
-				GUILayout.Label(string.Empty);
 			}
 
+			_globalSerializedObject.ApplyModifiedProperties();
 			EditorGUILayout.EndScrollView();
-		}
-
-		/// <summary>
-		/// 刷新物件資料List
-		/// </summary>
-		/// <typeparam name="T"></typeparam>
-		/// <param name="amount">物件數量</param>
-		/// <param name="objDataList">物件資料List</param>
-		private void RefreshEnemyTrapDataList<T>(int amount, List<T> objDataList) where T : new()
-		{
-			if (objDataList.Count != amount)
-			{
-				if (objDataList.Count > amount)
-				{
-					for (int i = objDataList.Count; i > amount; i--)
-					{
-						objDataList.RemoveAt(objDataList.Count - 1);
-					}
-				}
-				else if (objDataList.Count < amount)
-				{
-					for (int i = objDataList.Count; i < amount; i++)
-					{
-						objDataList.Add(new T());
-					}
-				}
-			}
 		}
 
 		/// <summary>
@@ -405,30 +205,30 @@ namespace GameStage
 			switch (stageLevel)
 			{
 				case Level.Easy:
-					stageSoldierAmountAuto = 10;
-					stageSoldierSpeedAuto = 3f;
-					stageSpikeTrapAmountAuto = 45;
-					stageSpikeTrapIntervalAuto = 5f;
-					stageShootTrapAmountAuto = 13;
-					stageShootTrapIntervalAuto = 4f;
+					_gameStageData.SoldierAmountAuto = 10;
+					_gameStageData.SoldierSpeedAuto = 3f;
+					_gameStageData.SpikeTrapAmountAuto = 45;
+					_gameStageData.SpikeTrapIntervalAuto = 5f;
+					_gameStageData.ShootTrapAmountAuto = 13;
+					_gameStageData.ShootTrapIntervalAuto = 4f;
 					break;
 
 				case Level.Normal:
-					stageSoldierAmountAuto = 13;
-					stageSoldierSpeedAuto = 5f;
-					stageSpikeTrapAmountAuto = 60;
-					stageSpikeTrapIntervalAuto = 3f;
-					stageShootTrapAmountAuto = 13;
-					stageShootTrapIntervalAuto = 4f;
+					_gameStageData.SoldierAmountAuto = 13;
+					_gameStageData.SoldierSpeedAuto = 5f;
+					_gameStageData.SpikeTrapAmountAuto = 60;
+					_gameStageData.SpikeTrapIntervalAuto = 3f;
+					_gameStageData.ShootTrapAmountAuto = 13;
+					_gameStageData.ShootTrapIntervalAuto = 4f;
 					break;
 
 				case Level.Hard:
-					stageSoldierAmountAuto = 16;
-					stageSoldierSpeedAuto = 6f;
-					stageSpikeTrapAmountAuto = 75;
-					stageSpikeTrapIntervalAuto = 2f;
-					stageShootTrapAmountAuto = 16;
-					stageShootTrapIntervalAuto = 3f;
+					_gameStageData.SoldierAmountAuto = 16;
+					_gameStageData.SoldierSpeedAuto = 6f;
+					_gameStageData.SpikeTrapAmountAuto = 75;
+					_gameStageData.SpikeTrapIntervalAuto = 2f;
+					_gameStageData.ShootTrapAmountAuto = 16;
+					_gameStageData.ShootTrapIntervalAuto = 3f;
 					break;
 			}
 		}
