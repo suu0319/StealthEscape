@@ -1279,15 +1279,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolList:
   - Name: Soldier
-    Amount: 5
+    OriginAmount: 5
     Prefab: {fileID: 8072699852407255165, guid: abd5eb9ccce8d5242ab4d8afae744194, type: 3}
     ParentObj: {fileID: 2114907075}
   - Name: SpikeTrap
-    Amount: 100
+    OriginAmount: 100
     Prefab: {fileID: 1498791207746926, guid: b58fdf950bf832348af4bfaa2fd9f743, type: 3}
     ParentObj: {fileID: 1031438096}
   - Name: ShootTrap
-    Amount: 1
+    OriginAmount: 5
     Prefab: {fileID: 7376934076013946938, guid: 17f7fea6c9f4f5a41abc0e5469d37997, type: 3}
     ParentObj: {fileID: 1889865013}
 --- !u!4 &1100736786
@@ -1496,7 +1496,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501359089}
-  m_LocalRotation: {x: 0.09620284, y: 0.0000000074160242, z: -7.1676715e-10, w: 0.9953618}
+  m_LocalRotation: {x: 0.09620284, y: 8.239195e-18, z: 4.3571375e-18, w: 0.99536175}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2121,7 +2121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: 
   AudioSource: {fileID: 2007606734}
-  PintuPuzzleTrigger: {fileID: 934087030}
   factoryList:
   - {fileID: 880414036}
   - {fileID: 1825986316}
@@ -11493,6 +11492,10 @@ PrefabInstance:
       propertyPath: _pintuPuzzleObj
       value: 
       objectReference: {fileID: 1370199098}
+    - target: {fileID: 2845923757029068780, guid: 8f5d0f8667011064a9ae4cd05f589ce7, type: 3}
+      propertyPath: _pintuPuzzleTrigger
+      value: 
+      objectReference: {fileID: 934087030}
     - target: {fileID: 2845923757051590014, guid: 8f5d0f8667011064a9ae4cd05f589ce7, type: 3}
       propertyPath: _mediator
       value: 

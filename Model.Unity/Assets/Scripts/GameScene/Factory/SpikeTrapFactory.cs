@@ -57,7 +57,15 @@ namespace Factory
             GameObject spikeTrapObj = ObjectPool.Instance.SpawnFromPool(spikeTrapName, position, rotation);
 
             SpikeTrap spikeTrap = spikeTrapObj.GetComponentInChildren<SpikeTrap>();
-            spikeTrap.Interval = data.Interval;
+
+            if (!GameStageData.IsManual)
+            {
+                spikeTrap.Interval = GameStageData.SpikeTrapIntervalAuto;
+            }
+            else
+            {
+                spikeTrap.Interval = data.Interval;
+            }
         }
 
         #region 物件池測試

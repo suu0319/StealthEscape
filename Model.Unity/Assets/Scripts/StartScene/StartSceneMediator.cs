@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using GameStage;
+using Manager;
 
 namespace Mediator
 {
@@ -35,6 +37,7 @@ namespace Mediator
         private void Start()
         {
             ScreenFadeOut();
+            GameManager.Instance.InitGameData();
         }
 
         /// <summary>
@@ -83,29 +86,29 @@ namespace Mediator
             switch (_level.value)
             {
                 case 0:
-                    _gameStageData.SoldierAmountAuto = 10;
-                    _gameStageData.SoldierSpeedAuto = 3f;
-                    _gameStageData.SpikeTrapAmountAuto = 45;
-                    _gameStageData.SpikeTrapIntervalAuto = 5f;
-                    _gameStageData.ShootTrapAmountAuto = 13;
-                    _gameStageData.ShootTrapIntervalAuto = 4f;
+                    _gameStageData.SoldierAmountAuto = (int)Math.Round((float)_gameStageData.SoldierDataList.Count * 0.8f);
+                    _gameStageData.SoldierSpeedAuto = (6f * 0.6f);
+                    _gameStageData.SpikeTrapAmountAuto = (int)Math.Round((float)_gameStageData.SpikeTrapDataList.Count * 0.8f);
+                    _gameStageData.SpikeTrapIntervalAuto = (2f * 2.5f);
+                    _gameStageData.ShootTrapAmountAuto = (int)Math.Round((float)_gameStageData.ShootTrapDataList.Count * 0.8f);
+                    _gameStageData.ShootTrapIntervalAuto = (3f * 2f);
                     break;
 
                 case 1:
-                    _gameStageData.SoldierAmountAuto = 13;
-                    _gameStageData.SoldierSpeedAuto = 5f;
-                    _gameStageData.SpikeTrapAmountAuto = 60;
-                    _gameStageData.SpikeTrapIntervalAuto = 3f;
-                    _gameStageData.ShootTrapAmountAuto = 13;
-                    _gameStageData.ShootTrapIntervalAuto = 4f;
+                    _gameStageData.SoldierAmountAuto = (int)Math.Round((float)_gameStageData.SoldierDataList.Count * 0.8f);
+                    _gameStageData.SoldierSpeedAuto = (6f * 0.8f);
+                    _gameStageData.SpikeTrapAmountAuto = (int)Math.Round((float)_gameStageData.SpikeTrapDataList.Count * 0.8f);
+                    _gameStageData.SpikeTrapIntervalAuto = (2f * 1.5f);
+                    _gameStageData.ShootTrapAmountAuto = (int)Math.Round((float)_gameStageData.ShootTrapDataList.Count * 0.8f);
+                    _gameStageData.ShootTrapIntervalAuto = (3f * 1.2f);
                     break;
 
                 case 2:
-                    _gameStageData.SoldierAmountAuto = 16;
+                    _gameStageData.SoldierAmountAuto = _gameStageData.SoldierDataList.Count;
                     _gameStageData.SoldierSpeedAuto = 6f;
-                    _gameStageData.SpikeTrapAmountAuto = 75;
+                    _gameStageData.SpikeTrapAmountAuto = _gameStageData.SpikeTrapDataList.Count;
                     _gameStageData.SpikeTrapIntervalAuto = 2f;
-                    _gameStageData.ShootTrapAmountAuto = 16;
+                    _gameStageData.ShootTrapAmountAuto = _gameStageData.ShootTrapDataList.Count;
                     _gameStageData.ShootTrapIntervalAuto = 3f;
                     break;
             }

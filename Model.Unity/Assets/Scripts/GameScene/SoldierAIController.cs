@@ -8,7 +8,7 @@ using Pool;
 
 namespace Enemy
 {
-    public class SoldierAIController : MonoBehaviour, IModelEvent
+    public class SoldierAIController : MonoBehaviour, IModelEvent, IExposureObserver
     {
         [Header("Script")]
         [SerializeField]
@@ -88,6 +88,8 @@ namespace Enemy
             _playerController = PlayerController.Instance;
             _forwardAlertAngle = _alertAngle / 2;
             _alertSprite.color = _patrolStateColor;
+
+            _playerController.AddEnemyObserver(this);
         }
 
         private void Update()
@@ -145,12 +147,14 @@ namespace Enemy
             {
                 Agent.speed *= 1.5f;
                 _soldierAIStateController.SwitchTracklState();
+
+                _alertSprite.color = _trackStateColor;
+                Agent.SetDestination(_playerController.PlayerTransform.position);
+
+                _playerController.PlayerExposure();
             }
 
-            _alertSprite.color = _trackStateColor;
-            Agent.SetDestination(_playerController.PlayerTransform.position);
-
-            if (PlayerController.Instance.IsDeath)
+            if (_playerController.IsDeath)
             {
                 Agent.speed = 0f;
                 _soldierAIStateController.SwitchIdleState();
@@ -159,6 +163,15 @@ namespace Enemy
             {
                 isAttack = true;
                 _soldierAIStateController.SwitchAttackState();
+            }
+        }
+
+        //玩家被發現
+        public void PlayerExposure()
+        {
+            if ((!_animator.GetBool("Track")) && (_distance < 80f))
+            {
+                TrackState();
             }
         }
 
@@ -270,6 +283,9 @@ namespace Enemy
             var StartLine = Quaternion.Euler(0, -_alertAngle / 2, 0) * transform.forward;
             Handles.DrawSolidArc(transform.position, transform.up, StartLine, _alertAngle, _alertRadius);
             Handles.color = color;
+
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, 80f);
         }
 #endif
     }

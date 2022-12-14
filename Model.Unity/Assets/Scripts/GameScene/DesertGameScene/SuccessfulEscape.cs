@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 using DG.Tweening;
 using GameLoading;
@@ -22,6 +23,7 @@ public class SuccessfulEscape : MonoBehaviour
     private void Start()
     {
         Init();
+        GameManager.Instance.SaveGameData();
     }
 
     /// <summary>

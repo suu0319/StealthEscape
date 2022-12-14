@@ -9,12 +9,6 @@ namespace Mediator
 {
     public class DesertGameSceneMediator : GameSceneMediator
     {
-        public static DesertGameSceneMediator Instance;
-
-        [Header("Script")]
-        [SerializeField]
-        internal PintuPuzzleTrigger PintuPuzzleTrigger;
-
         [Header("Factory")]
         [SerializeField]
         private List<BaseFactory> factoryList = new List<BaseFactory>();
@@ -32,21 +26,6 @@ namespace Mediator
             InitGameOverMenu();
             GetSceneIndex();
             ScreenFadeOut();
-        }
-
-        /// <summary>
-        /// Singleton初始化
-        /// </summary>
-        protected override void InitSingleton()
-        {
-            if (Instance != null && Instance != this)
-            {
-                Destroy(this);
-            }
-            else
-            {
-                Instance = this;
-            }
         }
 
         /// <summary>

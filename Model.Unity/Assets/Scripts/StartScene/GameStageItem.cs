@@ -33,13 +33,13 @@ namespace GameStage
             _btn.onClick.RemoveListener(StartSceneMediator.Instance.GameStageController.LoadGame);
             _btn.onClick.RemoveListener(StartSceneMediator.Instance.GameStagePanel.AppearDisabledGameMsg);
 
-            if (data.Idx <= GameManager.Instance.PassLevelNum)
+            if (data.Idx <= GameManager.Instance.GameData.PassLevelNum)
             {
-
                 _btn.onClick.AddListener(StartSceneMediator.Instance.GameStageController.LoadGame);
             }
             else
             {
+                _btnImage.color = new Color32(128, 128, 128, 255);
                 _btn.onClick.AddListener(StartSceneMediator.Instance.GameStagePanel.AppearDisabledGameMsg);
             }
 

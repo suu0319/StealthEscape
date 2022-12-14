@@ -1,12 +1,15 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Manager;
 
 namespace Player
 {
-    public class PlayerController : MonoBehaviour, IModelEvent
+    public class PlayerController : MonoBehaviour, IModelEvent, IExposureSubject
     {
         public static PlayerController Instance;
+
+        public List<IExposureObserver> EnemyList { get; set; }
 
         [Header("Script")]
         [SerializeField]
@@ -39,6 +42,11 @@ namespace Player
         
         internal bool IsDeath = false;
 
+        public PlayerController() 
+        {
+            EnemyList = new List<IExposureObserver>();
+        }
+
         private void Awake()
         {
             InitSingleton();
@@ -57,6 +65,35 @@ namespace Player
             else
             {
                 Instance = this;
+            }
+        }
+
+        /// <summary>
+        /// 增加敵人觀察者
+        /// </summary>
+        /// <param name="observer">觀察者</param>
+        public void AddEnemyObserver(IExposureObserver observer)
+        {
+            EnemyList.Add(observer);
+        }
+
+        /// <summary>
+        /// 刪除敵人觀察者
+        /// </summary>
+        /// <param name="observer">觀察者</param>
+        public void RemoveEnemyObserver(IExposureObserver observer)
+        {
+            EnemyList.Remove(observer);
+        }
+
+        /// <summary>
+        /// 玩家被發現
+        /// </summary>
+        public void PlayerExposure()
+        {
+            foreach (var v in EnemyList)
+            {
+                v.PlayerExposure();
             }
         }
 

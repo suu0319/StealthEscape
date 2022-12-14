@@ -57,8 +57,17 @@ namespace Factory
             GameObject shootTrapObj = ObjectPool.Instance.SpawnFromPool(shootTrapName, position, rotation);
 
             ShootTrap shootTrap = shootTrapObj.GetComponentInChildren<ShootTrap>();
-            shootTrap.Interval = data.Interval;
-            shootTrap.Speed = data.Speed;
+
+            if (!GameStageData.IsManual)
+            {
+                shootTrap.Interval = GameStageData.ShootTrapIntervalAuto;
+                shootTrap.Speed = GameStageData.ShootTrapSpeedAuto;
+            }
+            else
+            {
+                shootTrap.Interval = data.Interval;
+                shootTrap.Speed = data.Speed;
+            }
         }
 
         #region 物件池測試

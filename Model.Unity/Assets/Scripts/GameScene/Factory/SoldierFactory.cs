@@ -56,7 +56,15 @@ namespace Factory
             GameObject soldierObj = ObjectPool.Instance.SpawnFromPool(soldierName, patrolPosition[0], Quaternion.identity);
             
             SoldierAIController soldierAIController = soldierObj.GetComponent<SoldierAIController>();
-            soldierAIController.Agent.speed = data.Speed;
+
+            if (!GameStageData.IsManual)
+            {
+                soldierAIController.Agent.speed = GameStageData.SoldierSpeedAuto;
+            }
+            else
+            {
+                soldierAIController.Agent.speed = data.Speed;
+            }
 
             for (int y = 0; y < patrolPosition.Length; y++)
             {

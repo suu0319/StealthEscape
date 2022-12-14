@@ -9,6 +9,10 @@ namespace Puzzle
 {
 	public class PintuPuzzleController : MonoBehaviour
 	{
+		[Header("PintuPuzzle")]
+		[SerializeField]
+		private PintuPuzzleTrigger _pintuPuzzleTrigger;
+
 		[Header("Player Operate Button")]
 		[SerializeField]
 		private GameObject _joyStick;
@@ -123,7 +127,7 @@ namespace Puzzle
 							_eventBtnObj.SetActive(false);
 							_pintuPuzzleObj.SetActive(false);
 
-							DesertGameSceneMediator.Instance.PintuPuzzleTrigger.AudioSource.Play();
+							_pintuPuzzleTrigger.AudioSource.Play();
 						}
                         else
 						{

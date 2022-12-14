@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac86548ea93d604b9b05f51d806e088, type: 3}
   m_Name: GameStageConfig
   m_EditorClassIdentifier: 
-  IsCheat: 0
+  IsCheat: 1
   PlayerSpeed: 6
   StageDataList:
   - Level: 0
     Image: {fileID: 21300000, guid: 00c75b5a063ba8945afc7ca039fb840c, type: 3}
-    SceneName: Desert
+    SceneName: Desert(Easy)
     BGM: {fileID: 8300000, guid: f0e1d6b6919b5d444a5e42a7faf68d75, type: 3}
-    IsManual: 0
-    SoldierAmountAuto: 10
-    SoldierSpeedAuto: 3
-    SpikeTrapAmountAuto: 45
+    IsManual: 1
+    SoldierAmountAuto: 13
+    SoldierSpeedAuto: 3.6000001
+    SpikeTrapAmountAuto: 60
     SpikeTrapIntervalAuto: 5
     ShootTrapAmountAuto: 13
-    ShootTrapIntervalAuto: 4
+    ShootTrapIntervalAuto: 6
     ShootTrapSpeedAuto: 100
     SoldierDataList:
     - Speed: 6
@@ -263,42 +263,42 @@ MonoBehaviour:
     SoldierPatrolPointsConfig: {fileID: 11400000, guid: b6404747c3263db4791dc31770e6b056, type: 2}
     SpikeTrapPositionConfig: {fileID: 11400000, guid: 379f974490a46f348ac04a253b5eda8c, type: 2}
     ShootTrapPositionConfig: {fileID: 11400000, guid: 250533862d0550848adbeac26f934c21, type: 2}
-  - Level: 0
-    Image: {fileID: 21300000, guid: ab4c09065dd80f144964d08ca20e4969, type: 3}
-    SceneName: 
-    BGM: {fileID: 0}
-    IsManual: 1
-    SoldierAmountAuto: 10
-    SoldierSpeedAuto: 3
-    SpikeTrapAmountAuto: 45
-    SpikeTrapIntervalAuto: 5
-    ShootTrapAmountAuto: 13
-    ShootTrapIntervalAuto: 4
+  - Level: 1
+    Image: {fileID: 21300000, guid: 00c75b5a063ba8945afc7ca039fb840c, type: 3}
+    SceneName: Desert(Normal)
+    BGM: {fileID: 8300000, guid: f0e1d6b6919b5d444a5e42a7faf68d75, type: 3}
+    IsManual: 0
+    SoldierAmountAuto: 0
+    SoldierSpeedAuto: 4.8
+    SpikeTrapAmountAuto: 0
+    SpikeTrapIntervalAuto: 3
+    ShootTrapAmountAuto: 0
+    ShootTrapIntervalAuto: 3.6000001
     ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
-    SoldierPatrolPointsConfig: {fileID: 0}
-    SpikeTrapPositionConfig: {fileID: 0}
-    ShootTrapPositionConfig: {fileID: 0}
-  - Level: 0
-    Image: {fileID: 21300000, guid: ab4c09065dd80f144964d08ca20e4969, type: 3}
-    SceneName: 
-    BGM: {fileID: 0}
+    SoldierPatrolPointsConfig: {fileID: 11400000, guid: b6404747c3263db4791dc31770e6b056, type: 2}
+    SpikeTrapPositionConfig: {fileID: 11400000, guid: 379f974490a46f348ac04a253b5eda8c, type: 2}
+    ShootTrapPositionConfig: {fileID: 11400000, guid: 250533862d0550848adbeac26f934c21, type: 2}
+  - Level: 2
+    Image: {fileID: 21300000, guid: 00c75b5a063ba8945afc7ca039fb840c, type: 3}
+    SceneName: Desert(Hard)
+    BGM: {fileID: 8300000, guid: 8008c508e2db11d4586e5a25890eff4a, type: 3}
     IsManual: 0
-    SoldierAmountAuto: 16
+    SoldierAmountAuto: 0
     SoldierSpeedAuto: 6
-    SpikeTrapAmountAuto: 11
+    SpikeTrapAmountAuto: 0
     SpikeTrapIntervalAuto: 2
-    ShootTrapAmountAuto: 16
+    ShootTrapAmountAuto: 0
     ShootTrapIntervalAuto: 3
     ShootTrapSpeedAuto: 100
     SoldierDataList: []
     SpikeTrapDataList: []
     ShootTrapDataList: []
-    SoldierPatrolPointsConfig: {fileID: 0}
-    SpikeTrapPositionConfig: {fileID: 0}
-    ShootTrapPositionConfig: {fileID: 0}
+    SoldierPatrolPointsConfig: {fileID: 11400000, guid: b6404747c3263db4791dc31770e6b056, type: 2}
+    SpikeTrapPositionConfig: {fileID: 11400000, guid: 379f974490a46f348ac04a253b5eda8c, type: 2}
+    ShootTrapPositionConfig: {fileID: 11400000, guid: 250533862d0550848adbeac26f934c21, type: 2}
   - Level: 0
     Image: {fileID: 21300000, guid: ab4c09065dd80f144964d08ca20e4969, type: 3}
     SceneName: 

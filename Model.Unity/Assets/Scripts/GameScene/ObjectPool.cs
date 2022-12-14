@@ -7,7 +7,7 @@ namespace Pool
     public class Pool
     {
         public string Name;
-        public int Amount;
+        public int OriginAmount;
        
         public GameObject Prefab;
         public GameObject ParentObj;
@@ -54,7 +54,7 @@ namespace Pool
             {
                 Queue<GameObject> objectPool = new Queue<GameObject>();
 
-                for (int i = 0; i < pool.Amount; i++)
+                for (int i = 0; i < pool.OriginAmount; i++)
                 {
                     GameObject obj = Instantiate(pool.Prefab);
                     obj.transform.parent = pool.ParentObj.transform;
@@ -83,23 +83,23 @@ namespace Pool
                 return null;
             }
 
+            GameObject obj;
+
             if (poolDict[name].ObjQueue.Count == 0)
             {
-                GameObject obj = Instantiate(poolDict[name].Prefab);
+                obj = Instantiate(poolDict[name].Prefab);
                 obj.transform.parent = poolDict[name].ParentObj.transform;
-                obj.SetActive(false);
-                poolDict[name].ObjQueue.Enqueue(obj);
-                poolDict[name].Amount++;
+            }
+            else 
+            {
+                obj = poolDict[name].ObjQueue.Dequeue();           
             }
 
-            GameObject objectToSpawn = poolDict[name].ObjQueue.Dequeue();
+            obj.transform.position = position;
+            obj.transform.rotation = rotation;
+            obj.SetActive(true);
 
-            objectToSpawn.transform.position = position;
-            objectToSpawn.transform.rotation = rotation;
-
-            objectToSpawn.SetActive(true);
-
-            return objectToSpawn;
+            return obj;
         }
 
         /// <summary>

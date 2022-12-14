@@ -1,9 +1,16 @@
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using GameStage;
 
 namespace Manager
 {
+    [System.Serializable]
+    public class GameData 
+    {
+        public int PassLevelNum = 0;
+    }
+
     [System.Serializable]
     public class GameSceneData
     {
@@ -41,14 +48,14 @@ namespace Manager
     {
         public static GameManager Instance;
 
+        public GameData GameData;
+
         [Header("Config")]
         [SerializeField]
         internal GameStageConfig GameStageConfig;
 
         [SerializeField]
         internal GameSceneData GameSceneData;
-
-        internal int PassLevelNum = 0;
 
         private void Awake()
         {
@@ -68,6 +75,39 @@ namespace Manager
             {
                 Instance = this;
                 DontDestroyOnLoad(this);
+            }
+        }
+
+        /// <summary>
+        /// 初始化遊戲資料
+        /// </summary>
+        internal void InitGameData()
+        {
+            string path;
+
+            if (!File.Exists(Path.Combine(Application.persistentDataPath, "GameData")))
+            {
+                path = JsonUtility.ToJson(GameData, true);
+                File.WriteAllText(Path.Combine(Application.persistentDataPath, "GameData"), path);
+            }
+
+            path = File.ReadAllText(Path.Combine(Application.persistentDataPath, "GameData"));
+            GameData = JsonUtility.FromJson<GameData>(path);
+        }
+
+        /// <summary>
+        /// 儲存遊戲資料
+        /// </summary>
+        internal void SaveGameData()
+        {
+            string path;
+
+            if (GameData.PassLevelNum <= GameSceneData.StageIndex)
+            {
+                GameData.PassLevelNum++;
+
+                path = JsonUtility.ToJson(GameData, true);
+                File.WriteAllText(Path.Combine(Application.persistentDataPath, "GameData"), path);
             }
         }
 
