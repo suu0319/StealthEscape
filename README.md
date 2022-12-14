@@ -1,6 +1,6 @@
 # StealthEscape
 ## About
-Android平台\n
+Android平台 
 第三人稱潛行，躲避敵人與陷阱來抵達終點!
 ## Control    
 ```  
