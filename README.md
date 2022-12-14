@@ -1,7 +1,7 @@
 # StealthEscape
 ## About
 Android平台  
-第三人稱潛行，躲避敵人與陷阱來抵達終點!
+第三人稱潛行逃脫遊戲，躲避敵人與陷阱來抵達終點!
 ## Control    
 ```  
 左方Joystick: 操作角色
