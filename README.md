@@ -15,6 +15,7 @@ Android平台
 - Animation、Animator
 - Coroutine
 - NavMesh
+- SpriteAtlas
 - EditorWindow
 - ScriptableObject
 - LogViewer
