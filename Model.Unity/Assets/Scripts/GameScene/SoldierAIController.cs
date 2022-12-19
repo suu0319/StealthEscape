@@ -143,13 +143,14 @@ namespace Enemy
         /// </summary>
         private void TrackState()
         {
+            Agent.SetDestination(_playerController.PlayerTransform.position);
+
             if (!_animator.GetBool("Track"))
             {
                 Agent.speed *= 1.5f;
                 _soldierAIStateController.SwitchTracklState();
 
                 _alertSprite.color = _trackStateColor;
-                Agent.SetDestination(_playerController.PlayerTransform.position);
 
                 _playerController.PlayerExposure();
             }

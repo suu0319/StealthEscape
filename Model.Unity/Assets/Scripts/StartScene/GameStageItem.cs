@@ -11,6 +11,10 @@ namespace GameStage
         [Header("Item Image")]
         [SerializeField]
         private Image _btnImage;
+        [SerializeField]
+        private Color _defaultColor;
+        [SerializeField]
+        private Color _passColor;
 
         [Header("Item Button")]
         [SerializeField]
@@ -35,11 +39,12 @@ namespace GameStage
 
             if (data.Idx <= GameManager.Instance.GameData.PassLevelNum)
             {
+                _btnImage.color = _passColor;
                 _btn.onClick.AddListener(StartSceneMediator.Instance.GameStageController.LoadGame);
             }
             else
             {
-                _btnImage.color = new Color32(128, 128, 128, 255);
+                _btnImage.color = _defaultColor;
                 _btn.onClick.AddListener(StartSceneMediator.Instance.GameStagePanel.AppearDisabledGameMsg);
             }
 

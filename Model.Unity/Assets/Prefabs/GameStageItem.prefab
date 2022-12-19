@@ -142,7 +142,7 @@ MonoBehaviour:
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!114 &7391656821150065806
 MonoBehaviour:
@@ -157,6 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _btnImage: {fileID: 5806039961683026446}
+  _defaultColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+  _passColor: {r: 1, g: 1, b: 1, a: 1}
   _btn: {fileID: 5806039961683026447}
   _title: {fileID: 5806039960672743473}
 --- !u!1 &5806039961683026481

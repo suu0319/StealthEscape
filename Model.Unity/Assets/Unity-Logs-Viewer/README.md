@@ -1,4 +1,4 @@
-# Unity-Logs-Viewer
+﻿# Unity-Logs-Viewer
 
 
 Please note with new unity you can view device logs on editor console window, check the new attach menu in editor console window.
