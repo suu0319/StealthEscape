@@ -51,24 +51,57 @@ namespace Factory
         /// <param name="data">SoldierData</param>
         internal void SpawnFromPool(SoldierData data)
         {
-            Vector3[] patrolPosition = data.PatrolPointsData.Position;
+            Vector3[] patrolPosition;
 
-            GameObject soldierObj = ObjectPool.Instance.SpawnFromPool(soldierName, patrolPosition[0], Quaternion.identity);
-            
-            SoldierAIController soldierAIController = soldierObj.GetComponent<SoldierAIController>();
+            GameObject soldierObj;
 
-            if (!GameStageData.IsManual)
+            SoldierAIController soldierAIController;
+
+            try
             {
-                soldierAIController.Agent.speed = GameStageData.SoldierSpeedAuto;
+                patrolPosition = data.PatrolPointsData.Position;
+
+                soldierObj = ObjectPool.Instance.SpawnFromPool(soldierName, patrolPosition[0], Quaternion.identity);
+
+                soldierAIController = soldierObj.GetComponent<SoldierAIController>();
+
+                if (!GameStageData.IsManual)
+                {
+                    soldierAIController.Agent.speed = GameStageData.SoldierSpeedAuto;
+                }
+                else
+                {
+                    soldierAIController.Agent.speed = data.Speed;
+                }
+
+                for (int y = 0; y < patrolPosition.Length; y++)
+                {
+                    soldierAIController.PatrolPointsList.Add(patrolPosition[y]);
+                }
             }
-            else
+            catch (Exception e)
             {
-                soldierAIController.Agent.speed = data.Speed;
-            }
+                Debug.LogError(e.Message);
 
-            for (int y = 0; y < patrolPosition.Length; y++)
-            {
-                soldierAIController.PatrolPointsList.Add(patrolPosition[y]);
+                patrolPosition = GameStageData.SoldierPatrolPointsConfig.PatrolPointsDataList[RandomIndex].Position;
+
+                soldierObj = ObjectPool.Instance.SpawnFromPool(soldierName, patrolPosition[0], Quaternion.identity);
+
+                soldierAIController = soldierObj.GetComponent<SoldierAIController>();
+
+                RandomIndex = UnityEngine.Random.Range(0, ObjAmount);
+
+                while (RandomExistList.Contains(RandomIndex))
+                {
+                    RandomIndex = UnityEngine.Random.Range(0, ObjAmount);
+                }
+
+                RandomExistList.Add(RandomIndex);
+
+                for (int y = 0; y < patrolPosition.Length; y++)
+                {
+                    soldierAIController.PatrolPointsList.Add(patrolPosition[y]);
+                }
             }
         }
 
@@ -79,16 +112,8 @@ namespace Factory
         [ContextMenu("SpawnTest")]
         protected override void SpawnTest()
         {
-            try
-            {
-                RandomIndex = UnityEngine.Random.Range(0, ObjAmount);
-
-                SpawnFromPool(GameStageData.SoldierDataList[RandomIndex]);
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("物件池已空: " + e.Message);
-            }
+            RandomIndex = UnityEngine.Random.Range(0, ObjAmount);
+            SpawnFromPool(GameStageData.SoldierDataList[RandomIndex]);
         }
         #endregion
     }

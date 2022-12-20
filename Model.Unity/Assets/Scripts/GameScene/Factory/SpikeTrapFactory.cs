@@ -75,16 +75,8 @@ namespace Factory
         [ContextMenu("SpawnTest")]
         protected override void SpawnTest()
         {
-            try
-            {
-                RandomIndex = UnityEngine.Random.Range(0, ObjAmount);
-
-                SpawnFromPool(GameStageData.SpikeTrapDataList[RandomIndex]);
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("物件池已空: " + e.Message);
-            }
+            RandomIndex = UnityEngine.Random.Range(0, ObjAmount);
+            SpawnFromPool(GameStageData.SpikeTrapDataList[RandomIndex]);
         }
         #endregion
     }

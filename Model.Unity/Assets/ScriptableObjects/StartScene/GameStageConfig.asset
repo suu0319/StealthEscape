@@ -19,7 +19,7 @@ MonoBehaviour:
     Image: {fileID: 21300000, guid: 00c75b5a063ba8945afc7ca039fb840c, type: 3}
     SceneName: Desert(Easy)
     BGM: {fileID: 8300000, guid: f0e1d6b6919b5d444a5e42a7faf68d75, type: 3}
-    IsManual: 0
+    IsManual: 1
     SoldierAmountAuto: 13
     SoldierSpeedAuto: 3.6000001
     SpikeTrapAmountAuto: 60
@@ -268,16 +268,246 @@ MonoBehaviour:
     SceneName: Desert(Normal)
     BGM: {fileID: 8300000, guid: f0e1d6b6919b5d444a5e42a7faf68d75, type: 3}
     IsManual: 0
-    SoldierAmountAuto: 0
+    SoldierAmountAuto: 13
     SoldierSpeedAuto: 4.8
-    SpikeTrapAmountAuto: 0
+    SpikeTrapAmountAuto: 60
     SpikeTrapIntervalAuto: 3
-    ShootTrapAmountAuto: 0
+    ShootTrapAmountAuto: 13
     ShootTrapIntervalAuto: 3.6000001
     ShootTrapSpeedAuto: 100
-    SoldierDataList: []
-    SpikeTrapDataList: []
-    ShootTrapDataList: []
+    SoldierDataList:
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    - Speed: 0
+      PatrolPointsData: {fileID: 0}
+    SpikeTrapDataList:
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    - Interval: 0
+      PositionData: {fileID: 0}
+    ShootTrapDataList:
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
+    - Interval: 0
+      PositionData: {fileID: 0}
+      Speed: 0
     SoldierPatrolPointsConfig: {fileID: 11400000, guid: b6404747c3263db4791dc31770e6b056, type: 2}
     SpikeTrapPositionConfig: {fileID: 11400000, guid: 379f974490a46f348ac04a253b5eda8c, type: 2}
     ShootTrapPositionConfig: {fileID: 11400000, guid: 250533862d0550848adbeac26f934c21, type: 2}

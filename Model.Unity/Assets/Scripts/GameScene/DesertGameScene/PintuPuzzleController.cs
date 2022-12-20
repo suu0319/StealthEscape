@@ -105,7 +105,7 @@ namespace Puzzle
 
 				if (touch.phase == TouchPhase.Moved && raycastResults.Count > 0)
 				{
-					GameObject raycastResultsFirst = raycastResults[0].gameObject;
+					Transform raycastResultsFirst = raycastResults[0].gameObject.transform;
 
 					if (raycastResultsFirst.tag == "PintuUI")
 					{
@@ -114,10 +114,10 @@ namespace Puzzle
 
 					if (raycastResults.Count == 2)
 					{
-						GameObject raycastResultsSecond = raycastResults[1].gameObject;
-						int temp = raycastResultsFirst.transform.GetSiblingIndex();
-						raycastResultsFirst.transform.SetSiblingIndex(raycastResultsSecond.transform.GetSiblingIndex());
-						raycastResultsSecond.transform.SetSiblingIndex(temp);
+						Transform raycastResultsSecond = raycastResults[1].gameObject.transform;
+						int temp = raycastResultsFirst.GetSiblingIndex();
+						raycastResultsFirst.SetSiblingIndex(raycastResultsSecond.transform.GetSiblingIndex());
+						raycastResultsSecond.SetSiblingIndex(temp);
 
 						if (VerifyPintuPuzzle())
 						{
