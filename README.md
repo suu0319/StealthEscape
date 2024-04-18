@@ -38,4 +38,4 @@ Android平台
 ![image](https://user-images.githubusercontent.com/59763965/207558577-6ae2a755-937c-4e15-ab0d-5f890fc4171d.png)
 
 ## Download  
-[GoogleDrive](https://drive.google.com/file/d/17LtEgsJktxPiQ7x9dhvZbTYkN3it9erQ/view?usp=sharing)
+[GoogleDrive](https://drive.google.com/file/d/17LtEgsJktxPiQ7x9dhvZbTYkN3it9erQ/view?usp=sharing)](https://drive.google.com/file/d/1EC5p_LRRR2muFhwhWf_w4FLeW5oEt7u3/view?usp=sharing)
