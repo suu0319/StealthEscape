@@ -1,14 +1,16 @@
 # StealthEscape
-## About
-Android平台  
-第三人稱潛行逃脫遊戲，躲避敵人與陷阱來抵達終點!
+##Platform
+Android
+
+## Intro
+Third-person sneak escape game, avoid enemies and traps to reach the end!
 
 ## Control    
 ```  
-左方Joystick: 操作角色
-右方攻擊鍵: 攻擊
-右上方暫停鍵: 暫停
-空白處滑動: 轉動鏡頭
+Left Joystick: Control Character
+Right Attack Button: Attack
+Top-Right Pause Button: Pause
+Swipe on Empty Area: Rotate Camera
 ```  
 
 ## Skills  
